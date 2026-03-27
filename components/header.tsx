@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
@@ -8,20 +8,67 @@ import { Menu, X } from "lucide-react"
 const navigation = [
   { name: "Services", href: "#services" },
   { name: "How We Work", href: "#expertise" },
-  { name: "Results", href: "#stats" },
+  { name: "Pricing", href: "#pricing" },
   { name: "FAQ", href: "#faq" },
   { name: "Contact", href: "#contact" },
 ]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("")
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+      
+      // Find active section
+      const sections = navigation.map(item => item.href.replace("#", ""))
+      for (const section of sections.reverse()) {
+        const element = document.getElementById(section)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          if (rect.top <= 150) {
+            setActiveSection(section)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const targetId = href.replace("#", "")
+    const element = document.getElementById(targetId)
+    
+    if (element) {
+      const headerOffset = 80
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.scrollY - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
+    }
+    
+    setMobileMenuOpen(false)
+  }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? "bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-sm" 
+        : "bg-transparent"
+    }`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
+            <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center transition-transform group-hover:scale-110">
               <span className="text-primary-foreground font-bold text-lg">V</span>
             </div>
             <span className="text-2xl font-bold text-foreground">Volska</span>
@@ -43,45 +90,71 @@ export function Header() {
           </button>
         </div>
 
-        <div className="hidden lg:flex lg:gap-x-8 lg:items-center">
+        <div className="hidden lg:flex lg:gap-x-1 lg:items-center">
           {navigation.map((item) => (
-            <Link 
+            <a 
               key={item.name}
-              href={item.href} 
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              href={item.href}
+              onClick={(e) => scrollToSection(e, item.href)}
+              className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full ${
+                activeSection === item.href.replace("#", "")
+                  ? "text-primary bg-primary/10"
+                  : "text-foreground hover:text-primary hover:bg-muted"
+              }`}
             >
               {item.name}
-            </Link>
+              {activeSection === item.href.replace("#", "") && (
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full" />
+              )}
+            </a>
           ))}
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-          <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button 
+            size="sm" 
+            className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105"
+            onClick={(e) => scrollToSection(e as unknown as React.MouseEvent<HTMLAnchorElement>, "#contact")}
+          >
             Book a Free Call
           </Button>
         </div>
       </nav>
 
       {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border">
-          <div className="space-y-1 px-4 py-4">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block py-3 text-sm font-medium text-foreground hover:text-primary"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <div className="pt-4 border-t border-border">
-              <Button className="w-full bg-primary text-primary-foreground">Book a Free Call</Button>
-            </div>
+      <div className={`lg:hidden overflow-hidden transition-all duration-300 ${
+        mobileMenuOpen ? "max-h-96 border-t border-border" : "max-h-0"
+      }`}>
+        <div className="space-y-1 px-4 py-4 bg-background/95 backdrop-blur-md">
+          {navigation.map((item, index) => (
+            <a
+              key={item.name}
+              href={item.href}
+              onClick={(e) => scrollToSection(e, item.href)}
+              className={`block py-3 text-sm font-medium transition-all duration-300 ${
+                activeSection === item.href.replace("#", "")
+                  ? "text-primary pl-4 border-l-2 border-primary"
+                  : "text-foreground hover:text-primary hover:pl-2"
+              }`}
+              style={{ 
+                transitionDelay: mobileMenuOpen ? `${index * 50}ms` : "0ms",
+                opacity: mobileMenuOpen ? 1 : 0,
+                transform: mobileMenuOpen ? "translateX(0)" : "translateX(-10px)"
+              }}
+            >
+              {item.name}
+            </a>
+          ))}
+          <div className="pt-4 border-t border-border">
+            <Button 
+              className="w-full bg-primary text-primary-foreground"
+              onClick={(e) => scrollToSection(e as unknown as React.MouseEvent<HTMLAnchorElement>, "#contact")}
+            >
+              Book a Free Call
+            </Button>
           </div>
         </div>
-      )}
+      </div>
     </header>
   )
 }
