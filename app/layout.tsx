@@ -13,6 +13,8 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk'
 });
 
+// main trigger
+
 export const metadata: Metadata = {
   title: 'Landing Pages from €300 in 48 Hours | AI Automation | Volska',
   description: 'Professional landing pages starting at €300, delivered in 48 hours. Lead generation systems with Telegram/email notifications. AI automation for Excel, documents, and workflows. Save 10+ hours weekly. Based in Poland, serving USA & Europe.',
