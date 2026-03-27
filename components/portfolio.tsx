@@ -53,7 +53,7 @@ export function Portfolio() {
   const [selectedItem, setSelectedItem] = useState<typeof portfolioItems[0] | null>(null)
 
   return (
-    <section id="portfolio" className="py-24 bg-muted/30">
+    <section id="portfolio" className="py-24 bg-secondary">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
