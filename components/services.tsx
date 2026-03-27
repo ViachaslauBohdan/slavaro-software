@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import { useLanguage } from "@/lib/language-context"
 import { 
   CheckCircle, 
   Globe,
@@ -20,91 +21,84 @@ import {
   ArrowRight
 } from "lucide-react"
 
-const landingPageFeatures = [
-  {
-    icon: Globe,
-    title: "Modern, professional website",
-    description: "A website that builds trust and credibility with your visitors from the first second."
-  },
-  {
-    icon: TrendingUp,
-    title: "Clear conversion-focused structure",
-    description: "Designed specifically to turn visitors into inquiries and leads."
-  },
-  {
-    icon: Smartphone,
-    title: "Fully responsive design",
-    description: "Looks perfect on mobile, tablet, and desktop devices."
-  },
-  {
-    icon: Zap,
-    title: "Fast loading & clean UX",
-    description: "Optimized for speed and a seamless user experience."
-  },
-  {
-    icon: MessageSquare,
-    title: "Lead generation included",
-    description: "Simple contact form with name, phone, and request fields."
-  },
-  {
-    icon: Clock,
-    title: "Instant notifications",
-    description: "Get notified via Telegram and email the moment someone reaches out."
-  }
-]
-
-const automationFeatures = [
-  {
-    icon: TableProperties,
-    title: "Excel & Google Sheets",
-    description: "Automate workflows, reporting, and data processing."
-  },
-  {
-    icon: MessageSquare,
-    title: "Lead handling",
-    description: "Forms to notifications to simple CRM logic, all automated."
-  },
-  {
-    icon: Mail,
-    title: "Email processing",
-    description: "Auto-responses, sorting, and smart email workflows."
-  },
-  {
-    icon: FileText,
-    title: "Document generation",
-    description: "PDFs, summaries, offers - generated automatically."
-  },
-  {
-    icon: Settings,
-    title: "System integrations",
-    description: "Connect your tools and systems seamlessly."
-  },
-  {
-    icon: Bot,
-    title: "Custom automation",
-    description: "Any repetitive task can be automated to save time."
-  }
-]
-
-const landingPageBenefits = [
-  "Start receiving client inquiries immediately",
-  "Improve your online presence",
-  "Convert visitors into real business opportunities"
-]
-
-const automationBenefits = [
-  "Save hours every week",
-  "Reduce operational costs",
-  "Build scalable processes instead of manual tasks"
-]
-
 export function Services() {
+  const { t, language } = useLanguage()
   const { ref: landingRef, isVisible: landingVisible } = useScrollAnimation()
   const { ref: landingImageRef, isVisible: landingImageVisible } = useScrollAnimation()
   const { ref: landingFeaturesRef, isVisible: landingFeaturesVisible } = useScrollAnimation()
   const { ref: autoRef, isVisible: autoVisible } = useScrollAnimation()
   const { ref: autoImageRef, isVisible: autoImageVisible } = useScrollAnimation()
   const { ref: autoFeaturesRef, isVisible: autoFeaturesVisible } = useScrollAnimation()
+
+  const landingPageFeatures = [
+    {
+      icon: Globe,
+      title: t.services.landingPages.features.responsive.title,
+      description: t.services.landingPages.features.responsive.description
+    },
+    {
+      icon: TrendingUp,
+      title: t.services.landingPages.features.leadGen.title,
+      description: t.services.landingPages.features.leadGen.description
+    },
+    {
+      icon: Smartphone,
+      title: t.services.landingPages.features.seo.title,
+      description: t.services.landingPages.features.seo.description
+    },
+    {
+      icon: Zap,
+      title: t.services.landingPages.features.fast.title,
+      description: t.services.landingPages.features.fast.description
+    },
+  ]
+
+  const automationFeatures = [
+    {
+      icon: TableProperties,
+      title: t.services.automation.features.excel.title,
+      description: t.services.automation.features.excel.description
+    },
+    {
+      icon: Mail,
+      title: t.services.automation.features.email.title,
+      description: t.services.automation.features.email.description
+    },
+    {
+      icon: FileText,
+      title: t.services.automation.features.documents.title,
+      description: t.services.automation.features.documents.description
+    },
+    {
+      icon: Settings,
+      title: t.services.automation.features.integration.title,
+      description: t.services.automation.features.integration.description
+    },
+  ]
+
+  const landingPageBenefits = language === "en" 
+    ? [
+        "Start receiving client inquiries immediately",
+        "Improve your online presence",
+        "Convert visitors into real business opportunities"
+      ]
+    : [
+        "Zacznij otrzymywać zapytania natychmiast",
+        "Popraw swoją obecność online",
+        "Zamień odwiedzających w prawdziwe możliwości biznesowe"
+      ]
+
+  const automationBenefits = language === "en"
+    ? [
+        "Save hours every week",
+        "Reduce operational costs",
+        "Build scalable processes instead of manual tasks"
+      ]
+    : [
+        "Oszczędź godziny każdego tygodnia",
+        "Obniż koszty operacyjne",
+        "Buduj skalowalne procesy zamiast manualnych zadań"
+      ]
 
   const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
     e.preventDefault()
@@ -126,6 +120,16 @@ export function Services() {
   return (
     <section id="services" className="py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {t.services.title}
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            {t.services.subtitle}
+          </p>
+        </div>
+
         {/* Landing Pages Section */}
         <div className="mb-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -142,7 +146,7 @@ export function Services() {
                 style={{ transitionDelay: "100ms" }}
               >
                 <Globe className="h-4 w-4" />
-                Landing Pages
+                {t.services.landingPages.title}
               </div>
               <h2 
                 className={`text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4 transition-all duration-700 ${
@@ -150,7 +154,7 @@ export function Services() {
                 }`}
                 style={{ transitionDelay: "150ms" }}
               >
-                High-conversion websites built in 48 hours
+                {t.services.landingPages.title}
               </h2>
               <p 
                 className={`text-lg text-muted-foreground mb-8 transition-all duration-700 ${
@@ -158,8 +162,7 @@ export function Services() {
                 }`}
                 style={{ transitionDelay: "200ms" }}
               >
-                Designed to bring you real clients. A modern, professional website that builds trust 
-                and turns visitors into leads.
+                {t.services.landingPages.description}
               </p>
               
               <div className="space-y-4 mb-8">
@@ -169,7 +172,7 @@ export function Services() {
                   }`}
                   style={{ transitionDelay: "250ms" }}
                 >
-                  Business impact:
+                  {language === "en" ? "Business impact:" : "Korzyści dla biznesu:"}
                 </h3>
                 {landingPageBenefits.map((benefit, idx) => (
                   <div 
@@ -192,7 +195,7 @@ export function Services() {
                 style={{ transitionDelay: "600ms" }}
                 onClick={(e) => scrollToSection(e, "#contact")}
               >
-                Get your landing page
+                {t.services.landingPages.cta}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -224,9 +227,13 @@ export function Services() {
                   <div className="p-2 rounded-lg bg-primary/10">
                     <Smartphone className="h-4 w-4 text-primary" />
                   </div>
-                  <span className="text-sm font-medium text-foreground">Responsive</span>
+                  <span className="text-sm font-medium text-foreground">
+                    {language === "en" ? "Responsive" : "Responsywny"}
+                  </span>
                 </div>
-                <p className="text-xs text-muted-foreground">Perfect on all devices</p>
+                <p className="text-xs text-muted-foreground">
+                  {language === "en" ? "Perfect on all devices" : "Idealny na wszystkich urządzeniach"}
+                </p>
               </div>
 
               <div 
@@ -239,13 +246,15 @@ export function Services() {
                   <Clock className="h-5 w-5 text-accent" />
                   <span className="text-xl font-bold text-foreground">48h</span>
                 </div>
-                <p className="text-xs text-muted-foreground">Delivery</p>
+                <p className="text-xs text-muted-foreground">
+                  {language === "en" ? "Delivery" : "Dostawa"}
+                </p>
               </div>
             </div>
           </div>
 
           {/* Feature grid */}
-          <div ref={landingFeaturesRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-16">
+          <div ref={landingFeaturesRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
             {landingPageFeatures.map((feature, idx) => (
               <Card 
                 key={feature.title} 
@@ -301,7 +310,9 @@ export function Services() {
                   <TrendingUp className="h-5 w-5 text-accent" />
                   <span className="text-xl font-bold text-foreground">10+ hrs</span>
                 </div>
-                <p className="text-xs text-muted-foreground">Saved weekly</p>
+                <p className="text-xs text-muted-foreground">
+                  {language === "en" ? "Saved weekly" : "Oszczędności tygodniowo"}
+                </p>
               </div>
 
               <div 
@@ -316,7 +327,9 @@ export function Services() {
                   </div>
                   <span className="text-sm font-medium text-foreground">AI-Powered</span>
                 </div>
-                <p className="text-xs text-muted-foreground">Smart automation</p>
+                <p className="text-xs text-muted-foreground">
+                  {language === "en" ? "Smart automation" : "Inteligentna automatyzacja"}
+                </p>
               </div>
             </div>
 
@@ -333,7 +346,7 @@ export function Services() {
                 style={{ transitionDelay: "100ms" }}
               >
                 <Bot className="h-4 w-4" />
-                AI Automation
+                {t.services.automation.title}
               </div>
               <h2 
                 className={`text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4 transition-all duration-700 ${
@@ -341,7 +354,7 @@ export function Services() {
                 }`}
                 style={{ transitionDelay: "150ms" }}
               >
-                Automate repetitive work and run faster
+                {t.services.automation.title}
               </h2>
               <p 
                 className={`text-lg text-muted-foreground mb-8 transition-all duration-700 ${
@@ -349,8 +362,7 @@ export function Services() {
                 }`}
                 style={{ transitionDelay: "200ms" }}
               >
-                Make your business run more efficiently. Less manual work, fewer errors, 
-                and more time to focus on what matters - growing your business.
+                {t.services.automation.description}
               </p>
               
               <div className="space-y-4 mb-8">
@@ -360,7 +372,7 @@ export function Services() {
                   }`}
                   style={{ transitionDelay: "250ms" }}
                 >
-                  What changes for you:
+                  {language === "en" ? "What changes for you:" : "Co się zmieni dla Ciebie:"}
                 </h3>
                 {automationBenefits.map((benefit, idx) => (
                   <div 
@@ -383,14 +395,14 @@ export function Services() {
                 style={{ transitionDelay: "600ms" }}
                 onClick={(e) => scrollToSection(e, "#contact")}
               >
-                Explore automation options
+                {t.services.automation.cta}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
 
           {/* Automation feature grid */}
-          <div ref={autoFeaturesRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-16">
+          <div ref={autoFeaturesRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
             {automationFeatures.map((feature, idx) => (
               <Card 
                 key={feature.title} 

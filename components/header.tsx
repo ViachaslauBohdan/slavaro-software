@@ -4,19 +4,21 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-
-const navigation = [
-  { name: "Services", href: "#services" },
-  { name: "How We Work", href: "#expertise" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "FAQ", href: "#faq" },
-  { name: "Contact", href: "#contact" },
-]
+import { useLanguage } from "@/lib/language-context"
+import { LanguageSwitcher } from "@/components/language-switcher"
 
 export function Header() {
+  const { t } = useLanguage()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
   const [scrolled, setScrolled] = useState(false)
+
+  const navigation = [
+    { name: t.nav.services, href: "#services" },
+    { name: t.nav.pricing, href: "#pricing" },
+    { name: t.nav.faq, href: "#faq" },
+    { name: t.nav.contact, href: "#contact" },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +40,7 @@ export function Header() {
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [navigation])
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
@@ -72,7 +74,8 @@ export function Header() {
           </Link>
         </div>
         
-        <div className="flex lg:hidden">
+        <div className="flex items-center gap-3 lg:hidden">
+          <LanguageSwitcher />
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
@@ -107,13 +110,14 @@ export function Header() {
           ))}
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-4">
+          <LanguageSwitcher />
           <Button 
             size="sm" 
             className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105"
             onClick={(e) => scrollToSection(e as unknown as React.MouseEvent<HTMLAnchorElement>, "#contact")}
           >
-            Book a Free Call
+            {t.nav.getStarted}
           </Button>
         </div>
       </nav>
@@ -147,7 +151,7 @@ export function Header() {
               className="w-full bg-primary text-primary-foreground"
               onClick={(e) => scrollToSection(e as unknown as React.MouseEvent<HTMLAnchorElement>, "#contact")}
             >
-              Book a Free Call
+              {t.nav.getStarted}
             </Button>
           </div>
         </div>

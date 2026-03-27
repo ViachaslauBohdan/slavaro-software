@@ -5,19 +5,21 @@ import { Badge } from "@/components/ui/badge"
 import { Clock, Zap, MessageSquare, TrendingUp, Bot } from "lucide-react"
 import Image from "next/image"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-
-const highlights = [
-  { icon: Clock, text: "Landing pages delivered in 48 hours" },
-  { icon: Zap, text: "AI automation to eliminate manual work" },
-  { icon: MessageSquare, text: "Instant lead notifications via Telegram & email" },
-  { icon: TrendingUp, text: "Convert visitors into real clients" },
-  { icon: Bot, text: "Scalable processes instead of manual tasks" },
-]
+import { useLanguage } from "@/lib/language-context"
 
 export function Hero() {
+  const { t, language } = useLanguage()
   const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation()
   const { ref: imagesRef, isVisible: imagesVisible } = useScrollAnimation()
   const { ref: trustRef, isVisible: trustVisible } = useScrollAnimation()
+
+  const highlights = [
+    { icon: Clock, text: language === "en" ? "Landing pages delivered in 48 hours" : "Strony gotowe w 48 godzin" },
+    { icon: Zap, text: language === "en" ? "AI automation to eliminate manual work" : "Automatyzacja AI eliminująca manualną pracę" },
+    { icon: MessageSquare, text: language === "en" ? "Instant lead notifications via Telegram & email" : "Natychmiastowe powiadomienia przez Telegram i email" },
+    { icon: TrendingUp, text: language === "en" ? "Convert visitors into real clients" : "Zamień odwiedzających w klientów" },
+    { icon: Bot, text: language === "en" ? "Scalable processes instead of manual tasks" : "Skalowalne procesy zamiast manualnych zadań" },
+  ]
 
   const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
     e.preventDefault()
@@ -42,7 +44,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-bg.jpg"
-          alt="Modern office workspace"
+          alt={t.hero.imageAlt.workspace}
           fill
           className="object-cover"
           priority
@@ -69,7 +71,7 @@ export function Hero() {
               }`}
               style={{ transitionDelay: "100ms" }}
             >
-              Landing Pages & AI Automation
+              {t.hero.badge}
             </Badge>
             
             <h1 
@@ -78,7 +80,7 @@ export function Hero() {
               }`}
               style={{ transitionDelay: "200ms" }}
             >
-              <span className="text-primary">Landing pages</span> in 48 hours & <span className="text-primary">AI automation</span> that works
+              {t.hero.title} <span className="text-primary">{t.hero.titleHighlight}</span>
             </h1>
             
             <p 
@@ -87,8 +89,7 @@ export function Hero() {
               }`}
               style={{ transitionDelay: "300ms" }}
             >
-              High-conversion websites built to bring you real clients. AI automation to eliminate 
-              repetitive work. Start receiving inquiries immediately.
+              {t.hero.description}
             </p>
 
             <div 
@@ -102,15 +103,15 @@ export function Hero() {
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base shadow-lg hover:scale-105 transition-transform"
                 onClick={(e) => scrollToSection(e, "#contact")}
               >
-                Book a free discovery call
+                {t.hero.cta}
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="px-8 py-6 text-base bg-background/50 backdrop-blur-sm hover:scale-105 transition-transform"
-                onClick={(e) => scrollToSection(e, "#services")}
+                onClick={(e) => scrollToSection(e, "#pricing")}
               >
-                View our work
+                {t.hero.ctaSecondary}
               </Button>
             </div>
 
@@ -148,7 +149,7 @@ export function Hero() {
               >
                 <Image
                   src="/images/landing-mockup.jpg"
-                  alt="Professional landing page on computer screen"
+                  alt={t.hero.imageAlt.workspace}
                   fill
                   className="object-cover"
                 />
@@ -164,7 +165,7 @@ export function Hero() {
               >
                 <Image
                   src="/images/team-working.jpg"
-                  alt="Professional team collaborating"
+                  alt={t.hero.imageAlt.team}
                   fill
                   className="object-cover"
                 />
@@ -179,7 +180,7 @@ export function Hero() {
               >
                 <Image
                   src="/images/automation-dashboard.jpg"
-                  alt="Automation dashboard on laptop"
+                  alt={t.hero.imageAlt.automation}
                   fill
                   className="object-cover"
                 />
@@ -199,8 +200,8 @@ export function Hero() {
                   <Clock className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">48h</p>
-                  <p className="text-xs text-muted-foreground">Delivery time</p>
+                  <p className="text-2xl font-bold text-foreground">{t.hero.highlights.delivery}</p>
+                  <p className="text-xs text-muted-foreground">{t.hero.floatingBadge}</p>
                 </div>
               </div>
             </div>
@@ -215,10 +216,13 @@ export function Hero() {
           }`}
         >
           <p className="text-center text-sm font-medium text-muted-foreground mb-8">
-            Trusted by businesses ready to grow
+            {language === "en" ? "Trusted by businesses ready to grow" : "Zaufali nam firmy gotowe na rozwój"}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-            {["Startups", "SMBs", "Agencies", "Consultants", "E-commerce", "Service Businesses"].map((client, index) => (
+            {(language === "en" 
+              ? ["Startups", "SMBs", "Agencies", "Consultants", "E-commerce", "Service Businesses"]
+              : ["Startupy", "MŚP", "Agencje", "Konsultanci", "E-commerce", "Usługi"]
+            ).map((client, index) => (
               <div
                 key={client}
                 className={`text-xl font-semibold text-muted-foreground/50 hover:text-primary transition-all duration-500 cursor-default ${

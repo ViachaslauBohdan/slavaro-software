@@ -4,68 +4,55 @@ import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-
-const tiers = [
-  {
-    name: "Starter",
-    subtitle: "Landing Page",
-    price: "€300 – €500",
-    priceNote: "one-time",
-    description: "Perfect for small businesses that need a professional online presence and client inquiries.",
-    popular: true,
-    popularText: "Most popular for local businesses",
-    color: "primary",
-    features: [
-      "Modern landing page (mobile + desktop)",
-      "Clear structure focused on getting leads",
-      "Contact form (name, phone, request)",
-      "Instant notifications (Telegram / email)",
-      "Fast deployment (48–72 hours)",
-    ],
-    result: "Start receiving client inquiries from your website",
-  },
-  {
-    name: "Growth",
-    subtitle: "Lead System",
-    price: "€500 – €800",
-    priceNote: "one-time",
-    description: "Best for businesses that want a complete system to capture and manage leads.",
-    popular: false,
-    color: "accent",
-    includesStarter: true,
-    features: [
-      "Everything in Starter, plus:",
-      "Improved conversion-focused layout",
-      "Lead handling logic (basic CRM-like flow)",
-      "Automated responses to inquiries",
-      "Better UX to increase conversions",
-    ],
-    result: "More leads and better handling of incoming requests",
-  },
-  {
-    name: "Pro",
-    subtitle: "Automation System",
-    price: "€800 – €2000+",
-    priceNote: "one-time",
-    description: "For businesses that want to reduce manual work and automate operations.",
-    popular: false,
-    color: "foreground",
-    features: [
-      "Automation of repetitive processes",
-      "Excel / Google Sheets workflows",
-      "Email and lead automation",
-      "Document generation (PDF, reports)",
-      "Integration between your tools",
-    ],
-    result: "Save time, reduce errors, and scale your operations",
-  },
-]
+import { useLanguage } from "@/lib/language-context"
 
 export function Pricing() {
+  const { t, language } = useLanguage()
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation()
   const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation()
   const { ref: supportRef, isVisible: supportVisible } = useScrollAnimation()
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation()
+
+  const tiers = [
+    {
+      name: t.pricing.starter.name,
+      subtitle: t.pricing.starter.subtitle,
+      price: language === "en" ? "€300 – €500" : "1300 – 2000 zł",
+      priceNote: language === "en" ? "one-time" : "jednorazowo",
+      description: t.pricing.starter.description,
+      popular: true,
+      popularText: t.pricing.popular,
+      color: "primary",
+      features: t.pricing.starter.features,
+      result: t.pricing.starter.result,
+    },
+    {
+      name: t.pricing.growth.name,
+      subtitle: t.pricing.growth.subtitle,
+      price: language === "en" ? "€500 – €800" : "2000 – 3500 zł",
+      priceNote: language === "en" ? "one-time" : "jednorazowo",
+      description: t.pricing.growth.description,
+      popular: false,
+      color: "accent",
+      features: t.pricing.growth.features,
+      result: t.pricing.growth.result,
+    },
+    {
+      name: t.pricing.pro.name,
+      subtitle: t.pricing.pro.subtitle,
+      price: language === "en" ? "€800 – €2000+" : "3500 – 8000+ zł",
+      priceNote: language === "en" ? "one-time" : "jednorazowo",
+      description: t.pricing.pro.description,
+      popular: false,
+      color: "foreground",
+      features: t.pricing.pro.features,
+      result: t.pricing.pro.result,
+    },
+  ]
+
+  const supportFeatures = language === "en" 
+    ? ["Hosting and maintenance", "Monitoring and updates", "Small improvements when needed"]
+    : ["Hosting i utrzymanie", "Monitoring i aktualizacje", "Drobne poprawki w razie potrzeby"]
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
@@ -94,10 +81,10 @@ export function Pricing() {
           }`}
         >
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Pricing
+            {t.pricing.title}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Choose the right solution for your business
+            {t.pricing.subtitle}
           </p>
         </div>
 
@@ -147,7 +134,9 @@ export function Pricing() {
               </div>
 
               <div className="mb-6">
-                <p className="text-sm font-medium text-foreground mb-4">Includes</p>
+                <p className="text-sm font-medium text-foreground mb-4">
+                  {language === "en" ? "Includes" : "Zawiera"}
+                </p>
                 <ul className="space-y-3">
                   {tier.features.map((feature, idx) => (
                     <li 
@@ -165,7 +154,7 @@ export function Pricing() {
               </div>
 
               <div className="mt-auto pt-6 border-t border-border">
-                <p className="text-sm font-medium text-foreground mb-4">Result</p>
+                <p className="text-sm font-medium text-foreground mb-4">{t.pricing.result}</p>
                 <p className="text-sm text-primary font-medium">
                   {tier.result}
                 </p>
@@ -179,7 +168,7 @@ export function Pricing() {
                 }`}
                 asChild
               >
-                <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>Get Started</a>
+                <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>{t.pricing.getStarted}</a>
               </Button>
             </div>
           ))}
@@ -198,15 +187,15 @@ export function Pricing() {
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <h3 className="text-lg font-semibold text-foreground">
-                    Ongoing Support
+                    {t.pricing.support.title}
                   </h3>
-                  <Badge variant="secondary">Optional</Badge>
+                  <Badge variant="secondary">{language === "en" ? "Optional" : "Opcjonalne"}</Badge>
                 </div>
                 <p className="text-2xl font-bold text-foreground mb-3">
-                  €50 – €100 <span className="text-sm font-normal text-muted-foreground">/ month</span>
+                  {language === "en" ? "€50 – €100" : "200 – 400 zł"} <span className="text-sm font-normal text-muted-foreground">{t.pricing.perMonth}</span>
                 </p>
                 <ul className="space-y-2">
-                  {["Hosting and maintenance", "Monitoring and updates", "Small improvements when needed"].map((item, idx) => (
+                  {supportFeatures.map((item, idx) => (
                     <li 
                       key={item}
                       className={`flex items-center gap-2 text-sm text-muted-foreground transition-all duration-500 ${
@@ -222,10 +211,14 @@ export function Pricing() {
               </div>
               <div className="text-center md:text-right">
                 <p className="text-sm text-primary font-medium mb-4">
-                  Your system stays online, updated, and working without your involvement
+                  {language === "en" 
+                    ? "Your system stays online, updated, and working without your involvement" 
+                    : "Twój system działa online, jest aktualizowany i nie wymaga Twojego zaangażowania"}
                 </p>
                 <Button variant="outline" className="hover:scale-105 transition-transform" asChild>
-                  <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>Add to any plan</a>
+                  <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>
+                    {language === "en" ? "Add to any plan" : "Dodaj do dowolnego planu"}
+                  </a>
                 </Button>
               </div>
             </div>
@@ -240,14 +233,18 @@ export function Pricing() {
           }`}
         >
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            Get your website or automation system this week
+            {language === "en" 
+              ? "Get your website or automation system this week" 
+              : "Otrzymaj swoją stronę lub system automatyzacji w tym tygodniu"}
           </h3>
           <Button 
             size="lg" 
             className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform" 
             asChild
           >
-            <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>Request a Demo</a>
+            <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>
+              {t.cta.button}
+            </a>
           </Button>
         </div>
       </div>
