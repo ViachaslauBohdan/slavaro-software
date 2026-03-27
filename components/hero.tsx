@@ -22,12 +22,12 @@ export function Hero() {
       
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
-          <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm font-medium">
+          <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm font-medium border-primary/20">
             AI-Enabled Software Development
           </Badge>
           
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
-            AI-enabled software development company
+            AI-enabled <span className="text-primary">software development</span> company
           </h1>
           
           <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto text-pretty">

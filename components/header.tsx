@@ -42,8 +42,11 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold text-foreground">Vention</span>
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+            <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-lg">V</span>
+            </div>
+            <span className="text-2xl font-bold text-foreground">Volska</span>
           </Link>
         </div>
         
