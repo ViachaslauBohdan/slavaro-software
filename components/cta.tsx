@@ -2,11 +2,8 @@
 
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { useLanguage } from "@/lib/language-context"
 
 export function CTA() {
-  const { t, language } = useLanguage()
-
   const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
     e.preventDefault()
     const targetId = href.replace("#", "")
@@ -41,10 +38,10 @@ export function CTA() {
 
           <div className="relative p-8 lg:p-16 text-center">
             <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl text-balance">
-              {t.cta.title}
+              Ready to grow your business?
             </h2>
             <p className="mt-6 text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-              {t.cta.description}
+              Get a professional landing page this week or automate your workflows to save hours every day.
             </p>
             <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
               <Button 
@@ -53,7 +50,7 @@ export function CTA() {
                 className="px-8 py-6 text-base shadow-lg hover:scale-105 transition-transform"
                 onClick={(e) => scrollToSection(e, "#contact")}
               >
-                {t.cta.button}
+                Request a Free Quote
               </Button>
               <Button 
                 size="lg" 
@@ -61,7 +58,7 @@ export function CTA() {
                 className="px-8 py-6 text-base bg-transparent text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 hover:text-primary-foreground hover:scale-105 transition-transform"
                 onClick={(e) => scrollToSection(e, "#pricing")}
               >
-                {language === "en" ? "View Pricing" : "Zobacz Cennik"}
+                View Pricing
               </Button>
             </div>
           </div>

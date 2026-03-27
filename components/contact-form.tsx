@@ -6,9 +6,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, Phone, MessageSquare, Clock, Zap, Bot } from "lucide-react"
+import { Mail, MessageSquare, Clock, Zap, Bot } from "lucide-react"
 import Image from "next/image"
-import { useLanguage } from "@/lib/language-context"
 import {
   Select,
   SelectContent,
@@ -18,13 +17,12 @@ import {
 } from "@/components/ui/select"
 
 export function ContactForm() {
-  const { t, language } = useLanguage()
   const [agreed, setAgreed] = useState(false)
 
   const contactInfo = [
     {
       icon: Mail,
-      label: t.contact.info.email,
+      label: "Email",
       value: "hello@volska.com",
       href: "mailto:hello@volska.com"
     },
@@ -37,9 +35,9 @@ export function ContactForm() {
   ]
 
   const benefits = [
-    { icon: Clock, text: language === "en" ? "48-hour landing page delivery" : "Strona gotowa w 48 godzin" },
-    { icon: Zap, text: language === "en" ? "Instant lead notifications" : "Natychmiastowe powiadomienia" },
-    { icon: Bot, text: language === "en" ? "AI automation that saves hours" : "Automatyzacja oszczędzająca godziny" },
+    { icon: Clock, text: "48-hour landing page delivery" },
+    { icon: Zap, text: "Instant lead notifications" },
+    { icon: Bot, text: "AI automation that saves hours" },
   ]
 
   return (
@@ -61,10 +59,10 @@ export function ContactForm() {
           {/* Contact Info */}
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              {t.contact.title}
+              Let&apos;s Talk
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              {t.contact.subtitle}
+              Tell us about your project and we&apos;ll get back to you with a proposal within 24 hours.
             </p>
 
             <div className="mt-10 space-y-6">
@@ -92,8 +90,8 @@ export function ContactForm() {
                   <Clock className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">{t.contact.info.response}</p>
-                  <p className="font-medium text-foreground">{t.contact.info.responseValue}</p>
+                  <p className="text-sm text-muted-foreground">Response Time</p>
+                  <p className="font-medium text-foreground">Within 24 hours</p>
                 </div>
               </div>
             </div>
@@ -110,14 +108,14 @@ export function ContactForm() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-primary/80" />
               </div>
               <div className="relative p-6">
-                <h3 className="font-semibold text-primary-foreground mb-4">{t.contact.benefits.title}</h3>
+                <h3 className="font-semibold text-primary-foreground mb-4">What you get with Volska Group</h3>
                 <div className="space-y-4">
-                  {t.contact.benefits.items.map((benefit) => (
-                    <div key={benefit} className="flex items-center gap-3">
+                  {benefits.map((benefit) => (
+                    <div key={benefit.text} className="flex items-center gap-3">
                       <div className="p-1.5 rounded-full bg-primary-foreground/20">
-                        <Zap className="h-4 w-4 text-primary-foreground" />
+                        <benefit.icon className="h-4 w-4 text-primary-foreground" />
                       </div>
-                      <span className="text-primary-foreground/90">{benefit}</span>
+                      <span className="text-primary-foreground/90">{benefit.text}</span>
                     </div>
                   ))}
                 </div>
@@ -128,11 +126,9 @@ export function ContactForm() {
           {/* Contact Form */}
           <Card className="shadow-xl border-border/50">
             <CardHeader>
-              <CardTitle>{language === "en" ? "Get a free quote" : "Otrzymaj bezpłatną wycenę"}</CardTitle>
+              <CardTitle>Get a free quote</CardTitle>
               <CardDescription>
-                {language === "en" 
-                  ? "Tell us about your project and we'll get back to you with a proposal." 
-                  : "Opowiedz nam o swoim projekcie, a my skontaktujemy się z propozycją."}
+                Tell us about your project and we&apos;ll get back to you with a proposal.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -140,15 +136,15 @@ export function ContactForm() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      {t.contact.form.name}
+                      Name
                     </label>
-                    <Input id="name" placeholder={t.contact.form.namePlaceholder} />
+                    <Input id="name" placeholder="Your name" />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                      {t.contact.form.phone}
+                      Phone
                     </label>
-                    <Input id="phone" type="tel" placeholder={t.contact.form.phonePlaceholder} />
+                    <Input id="phone" type="tel" placeholder="+1 (555) 000-0000" />
                   </div>
                 </div>
 
@@ -161,29 +157,29 @@ export function ContactForm() {
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
-                    {t.contact.form.service}
+                    Service Needed
                   </label>
                   <Select>
                     <SelectTrigger>
-                      <SelectValue placeholder={t.contact.form.servicePlaceholder} />
+                      <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="landing-page">{t.contact.form.serviceOptions.landing}</SelectItem>
-                      <SelectItem value="lead-system">{t.contact.form.serviceOptions.leadSystem}</SelectItem>
-                      <SelectItem value="ai-automation">{t.contact.form.serviceOptions.automation}</SelectItem>
-                      <SelectItem value="support">{t.contact.form.serviceOptions.support}</SelectItem>
-                      <SelectItem value="other">{t.contact.form.serviceOptions.other}</SelectItem>
+                      <SelectItem value="landing-page">Landing Page (€300-500)</SelectItem>
+                      <SelectItem value="lead-system">Lead System (€500-800)</SelectItem>
+                      <SelectItem value="ai-automation">AI Automation (€800-2000+)</SelectItem>
+                      <SelectItem value="support">Ongoing Support</SelectItem>
+                      <SelectItem value="other">Other / Not sure</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    {t.contact.form.message}
+                    Tell us about your project
                   </label>
                   <Textarea 
                     id="message" 
-                    placeholder={t.contact.form.messagePlaceholder}
+                    placeholder="Describe your business and what you need..."
                     rows={4}
                   />
                 </div>
@@ -195,9 +191,7 @@ export function ContactForm() {
                     onCheckedChange={(checked) => setAgreed(checked as boolean)}
                   />
                   <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed">
-                    {language === "en" 
-                      ? "I agree to the Privacy Policy and consent to being contacted about my inquiry." 
-                      : "Zgadzam się z Polityką Prywatności i wyrażam zgodę na kontakt w sprawie mojego zapytania."}
+                    I agree to the Privacy Policy and consent to being contacted about my inquiry.
                   </label>
                 </div>
 
@@ -206,13 +200,11 @@ export function ContactForm() {
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                   disabled={!agreed}
                 >
-                  {t.contact.form.submit}
+                  Send Request
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground">
-                  {language === "en" 
-                    ? "We typically respond within 2-4 hours during business hours." 
-                    : "Zazwyczaj odpowiadamy w ciągu 2-4 godzin w godzinach pracy."}
+                  We typically respond within 2-4 hours during business hours.
                 </p>
               </form>
             </CardContent>

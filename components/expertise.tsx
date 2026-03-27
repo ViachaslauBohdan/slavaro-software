@@ -2,7 +2,6 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
-import { useLanguage } from "@/lib/language-context"
 import { 
   Globe, 
   Bot, 
@@ -17,32 +16,30 @@ import {
   Palette
 } from "lucide-react"
 
+const landingPageProcess = [
+  { icon: MessageSquare, step: "01", title: "Brief", description: "Tell us about your business and goals" },
+  { icon: Palette, step: "02", title: "Design", description: "We create a custom design for your brand" },
+  { icon: Smartphone, step: "03", title: "Build", description: "Development with all features included" },
+  { icon: Zap, step: "04", title: "Launch", description: "Go live and start receiving leads" },
+]
+
+const automationProcess = [
+  { icon: TableProperties, step: "01", title: "Analysis", description: "We analyze your current workflows" },
+  { icon: Bot, step: "02", title: "Design", description: "Create automation architecture" },
+  { icon: FileText, step: "03", title: "Build", description: "Implement and test the system" },
+  { icon: TrendingUp, step: "04", title: "Optimize", description: "Monitor and improve performance" },
+]
+
+const whyChooseUs = [
+  { icon: Clock, title: "Fast Delivery", description: "Landing pages in 48 hours, automation in days not weeks" },
+  { icon: TrendingUp, title: "Affordable Pricing", description: "Professional quality at fair prices, no hidden fees" },
+  { icon: MessageSquare, title: "Direct Communication", description: "Work directly with the team, quick responses" },
+  { icon: Shield, title: "Ongoing Support", description: "We don't disappear after delivery" },
+  { icon: Bot, title: "Smart Automation", description: "AI-powered solutions that actually save you time" },
+  { icon: Zap, title: "Fast & Reliable", description: "Quick turnaround with quality you can count on" },
+]
+
 export function Expertise() {
-  const { t, language } = useLanguage()
-
-  const landingPageProcess = [
-    { icon: MessageSquare, step: "01", title: t.expertise.landingProcess.steps.step1.title, description: t.expertise.landingProcess.steps.step1.description },
-    { icon: Palette, step: "02", title: t.expertise.landingProcess.steps.step2.title, description: t.expertise.landingProcess.steps.step2.description },
-    { icon: Smartphone, step: "03", title: t.expertise.landingProcess.steps.step3.title, description: t.expertise.landingProcess.steps.step3.description },
-    { icon: Zap, step: "04", title: t.expertise.landingProcess.steps.step4.title, description: t.expertise.landingProcess.steps.step4.description },
-  ]
-
-  const automationProcess = [
-    { icon: TableProperties, step: "01", title: t.expertise.automationProcess.steps.step1.title, description: t.expertise.automationProcess.steps.step1.description },
-    { icon: Bot, step: "02", title: t.expertise.automationProcess.steps.step2.title, description: t.expertise.automationProcess.steps.step2.description },
-    { icon: FileText, step: "03", title: t.expertise.automationProcess.steps.step3.title, description: t.expertise.automationProcess.steps.step3.description },
-    { icon: TrendingUp, step: "04", title: t.expertise.automationProcess.steps.step4.title, description: t.expertise.automationProcess.steps.step4.description },
-  ]
-
-  const whyChooseUs = [
-    { icon: Clock, title: t.expertise.whyUs.reasons.fast.title, description: t.expertise.whyUs.reasons.fast.description },
-    { icon: TrendingUp, title: t.expertise.whyUs.reasons.affordable.title, description: t.expertise.whyUs.reasons.affordable.description },
-    { icon: MessageSquare, title: t.expertise.whyUs.reasons.quality.title, description: t.expertise.whyUs.reasons.quality.description },
-    { icon: Shield, title: t.expertise.whyUs.reasons.support.title, description: t.expertise.whyUs.reasons.support.description },
-    { icon: Bot, title: language === "en" ? "Smart Automation" : "Inteligentna Automatyzacja", description: language === "en" ? "AI-powered solutions that actually save you time" : "Rozwiązania AI, które naprawdę oszczędzają Twój czas" },
-    { icon: Zap, title: language === "en" ? "Fast & Reliable" : "Szybko i Niezawodnie", description: language === "en" ? "Quick turnaround with quality you can count on" : "Szybka realizacja z jakością, na którą możesz liczyć" },
-  ]
-
   return (
     <section id="expertise" className="py-20 lg:py-32 bg-secondary/30 relative overflow-hidden">
       {/* Subtle background pattern */}
@@ -56,10 +53,10 @@ export function Expertise() {
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {t.expertise.title}
+            How We Work
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            {t.expertise.subtitle}
+            Simple, transparent process. You know exactly what to expect.
           </p>
         </div>
 
@@ -69,7 +66,7 @@ export function Expertise() {
             <div className="p-2 rounded-lg bg-primary/10">
               <Globe className="h-5 w-5 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold text-foreground">{t.expertise.landingProcess.title}</h3>
+            <h3 className="text-xl font-semibold text-foreground">Landing Page Process</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {landingPageProcess.map((item) => (
@@ -93,7 +90,7 @@ export function Expertise() {
             <div className="p-2 rounded-lg bg-accent/10">
               <Bot className="h-5 w-5 text-accent" />
             </div>
-            <h3 className="text-xl font-semibold text-foreground">{t.expertise.automationProcess.title}</h3>
+            <h3 className="text-xl font-semibold text-foreground">Automation Process</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {automationProcess.map((item) => (
@@ -126,7 +123,7 @@ export function Expertise() {
 
           <div className="relative p-8 lg:p-12">
             <h3 className="text-2xl font-bold tracking-tight text-primary-foreground text-center mb-10">
-              {t.expertise.whyUs.title}
+              Why Choose Volska Group?
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {whyChooseUs.map((item) => (

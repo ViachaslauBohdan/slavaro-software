@@ -5,20 +5,18 @@ import { Badge } from "@/components/ui/badge"
 import { Clock, Zap, MessageSquare, TrendingUp, Bot } from "lucide-react"
 import Image from "next/image"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { useLanguage } from "@/lib/language-context"
 
 export function Hero() {
-  const { t, language } = useLanguage()
   const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation()
   const { ref: imagesRef, isVisible: imagesVisible } = useScrollAnimation()
   const { ref: trustRef, isVisible: trustVisible } = useScrollAnimation()
 
   const highlights = [
-    { icon: Clock, text: language === "en" ? "Landing pages delivered in 48 hours" : "Strony gotowe w 48 godzin" },
-    { icon: Zap, text: language === "en" ? "AI automation to eliminate manual work" : "Automatyzacja AI eliminująca manualną pracę" },
-    { icon: MessageSquare, text: language === "en" ? "Instant lead notifications via Telegram & email" : "Natychmiastowe powiadomienia przez Telegram i email" },
-    { icon: TrendingUp, text: language === "en" ? "Convert visitors into real clients" : "Zamień odwiedzających w klientów" },
-    { icon: Bot, text: language === "en" ? "Scalable processes instead of manual tasks" : "Skalowalne procesy zamiast manualnych zadań" },
+    { icon: Clock, text: "Landing pages delivered in 48 hours" },
+    { icon: Zap, text: "AI automation to eliminate manual work" },
+    { icon: MessageSquare, text: "Instant lead notifications via Telegram & email" },
+    { icon: TrendingUp, text: "Convert visitors into real clients" },
+    { icon: Bot, text: "Scalable processes instead of manual tasks" },
   ]
 
   const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
@@ -44,7 +42,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-bg.jpg"
-          alt={t.hero.imageAlt.workspace}
+          alt="Modern office workspace"
           fill
           className="object-cover"
           priority
@@ -71,7 +69,7 @@ export function Hero() {
               }`}
               style={{ transitionDelay: "100ms" }}
             >
-              {t.hero.badge}
+              Landing Pages & AI Automation
             </Badge>
             
             <h1 
@@ -80,7 +78,7 @@ export function Hero() {
               }`}
               style={{ transitionDelay: "200ms" }}
             >
-              {t.hero.title} <span className="text-primary">{t.hero.titleHighlight}</span>
+              Professional websites that <span className="text-primary">convert in 48 hours</span>
             </h1>
             
             <p 
@@ -89,7 +87,7 @@ export function Hero() {
               }`}
               style={{ transitionDelay: "300ms" }}
             >
-              {t.hero.description}
+              High-conversion landing pages and AI automation that saves you 10+ hours weekly. Start receiving client inquiries immediately.
             </p>
 
             <div 
@@ -103,7 +101,7 @@ export function Hero() {
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base shadow-lg hover:scale-105 transition-transform"
                 onClick={(e) => scrollToSection(e, "#contact")}
               >
-                {t.hero.cta}
+                Get Started
               </Button>
               <Button 
                 size="lg" 
@@ -111,7 +109,7 @@ export function Hero() {
                 className="px-8 py-6 text-base bg-background/50 backdrop-blur-sm hover:scale-105 transition-transform"
                 onClick={(e) => scrollToSection(e, "#pricing")}
               >
-                {t.hero.ctaSecondary}
+                View Pricing
               </Button>
             </div>
 
@@ -149,7 +147,7 @@ export function Hero() {
               >
                 <Image
                   src="/images/landing-mockup.jpg"
-                  alt={t.hero.imageAlt.workspace}
+                  alt="Landing page mockup"
                   fill
                   className="object-cover"
                 />
@@ -165,7 +163,7 @@ export function Hero() {
               >
                 <Image
                   src="/images/team-working.jpg"
-                  alt={t.hero.imageAlt.team}
+                  alt="Team collaboration"
                   fill
                   className="object-cover"
                 />
@@ -180,7 +178,7 @@ export function Hero() {
               >
                 <Image
                   src="/images/automation-dashboard.jpg"
-                  alt={t.hero.imageAlt.automation}
+                  alt="Automation dashboard"
                   fill
                   className="object-cover"
                 />
@@ -200,8 +198,8 @@ export function Hero() {
                   <Clock className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">{t.hero.highlights.delivery}</p>
-                  <p className="text-xs text-muted-foreground">{t.hero.floatingBadge}</p>
+                  <p className="text-2xl font-bold text-foreground">48h</p>
+                  <p className="text-xs text-muted-foreground">Delivery time</p>
                 </div>
               </div>
             </div>
@@ -216,13 +214,10 @@ export function Hero() {
           }`}
         >
           <p className="text-center text-sm font-medium text-muted-foreground mb-8">
-            {language === "en" ? "Trusted by businesses ready to grow" : "Zaufali nam firmy gotowe na rozwój"}
+            Trusted by businesses ready to grow
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-            {(language === "en" 
-              ? ["Startups", "SMBs", "Agencies", "Consultants", "E-commerce", "Service Businesses"]
-              : ["Startupy", "MŚP", "Agencje", "Konsultanci", "E-commerce", "Usługi"]
-            ).map((client, index) => (
+            {["Startups", "SMBs", "Agencies", "Consultants", "E-commerce", "Service Businesses"].map((client, index) => (
               <div
                 key={client}
                 className={`text-xl font-semibold text-muted-foreground/50 hover:text-primary transition-all duration-500 cursor-default ${

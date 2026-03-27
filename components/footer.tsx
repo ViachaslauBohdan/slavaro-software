@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { Linkedin, Twitter, MessageSquare } from "lucide-react"
-import { useLanguage } from "@/lib/language-context"
 
 const socialLinks = [
   { name: "LinkedIn", icon: Linkedin, href: "#" },
@@ -10,27 +9,25 @@ const socialLinks = [
   { name: "Telegram", icon: MessageSquare, href: "https://t.me/volskagroup" },
 ]
 
+const footerLinks = {
+  services: [
+    { name: "Landing Pages", href: "#services" },
+    { name: "Lead Systems", href: "#services" },
+    { name: "AI Automation", href: "#services" },
+    { name: "Ongoing Support", href: "#pricing" },
+  ],
+  company: [
+    { name: "Pricing", href: "#pricing" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Contact", href: "#contact" },
+  ],
+  legal: [
+    { name: "Privacy Policy", href: "#" },
+    { name: "Terms of Service", href: "#" },
+  ],
+}
+
 export function Footer() {
-  const { t, language } = useLanguage()
-
-  const footerLinks = {
-    services: [
-      { name: t.footer.services.landing, href: "#services" },
-      { name: t.footer.services.leadSystem, href: "#services" },
-      { name: t.footer.services.automation, href: "#services" },
-      { name: t.footer.services.support, href: "#pricing" },
-    ],
-    company: [
-      { name: t.footer.company.pricing, href: "#pricing" },
-      { name: t.footer.company.faq, href: "#faq" },
-      { name: t.footer.company.contact, href: "#contact" },
-    ],
-    legal: [
-      { name: t.footer.legal.privacy, href: "#" },
-      { name: t.footer.legal.terms, href: "#" },
-    ],
-  }
-
   return (
     <footer className="bg-foreground text-background">
       <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-20">
@@ -41,7 +38,7 @@ export function Footer() {
               <span className="text-2xl font-bold">Volska Group</span>
             </Link>
             <p className="mt-4 text-sm text-background/70 max-w-xs">
-              {t.footer.description}
+              Professional landing pages and AI automation for businesses ready to grow. Based in Poland, serving clients worldwide.
             </p>
             <div className="flex gap-4 mt-6">
               {socialLinks.map((social) => (
@@ -59,7 +56,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-semibold mb-4">{t.footer.services.title}</h3>
+            <h3 className="text-sm font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
@@ -76,7 +73,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-sm font-semibold mb-4">{t.footer.company.title}</h3>
+            <h3 className="text-sm font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -96,7 +93,7 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-background/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/70">
-              &copy; {new Date().getFullYear()} Volska Group. {t.footer.copyright}
+              &copy; {new Date().getFullYear()} Volska Group. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               {footerLinks.legal.map((link) => (
