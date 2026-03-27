@@ -67,11 +67,8 @@ export function Header() {
     }`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center transition-transform group-hover:scale-110">
-              <span className="text-primary-foreground font-bold text-lg">V</span>
-            </div>
-            <span className="text-2xl font-bold text-foreground">Volska</span>
+          <Link href="/" className="-m-1.5 p-1.5 group">
+            <span className="text-2xl font-bold text-foreground transition-colors group-hover:text-primary">Volska Group</span>
           </Link>
         </div>
         

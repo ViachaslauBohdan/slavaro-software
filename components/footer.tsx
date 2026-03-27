@@ -33,11 +33,8 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-accent rounded-md flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-lg">V</span>
-              </div>
-              <span className="text-2xl font-bold">Volska</span>
+            <Link href="/">
+              <span className="text-2xl font-bold">Volska Group</span>
             </Link>
             <p className="mt-4 text-sm text-background/70 max-w-xs">
               Landing pages in 48 hours and AI automation that saves you hours every week. 
@@ -96,7 +93,7 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-background/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/70">
-              &copy; {new Date().getFullYear()} Volska. All rights reserved.
+              &copy; {new Date().getFullYear()} Volska Group. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               {footerLinks.legal.map((link) => (
