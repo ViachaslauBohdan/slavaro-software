@@ -110,46 +110,45 @@ export function Header() {
           <Button 
             size="sm" 
             className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105"
-            onClick={(e) => scrollToSection(e as unknown as React.MouseEvent<HTMLAnchorElement>, "#contact")}
+            asChild
           >
-            Get Started
+            <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>
+              Get Started
+            </a>
           </Button>
         </div>
       </nav>
 
-      <div className={`lg:hidden overflow-hidden transition-all duration-300 ${
-        mobileMenuOpen ? "max-h-96 border-t border-border" : "max-h-0"
-      }`}>
-        <div className="space-y-1 px-4 py-4 bg-background/95 backdrop-blur-md">
-          {navItems.map((item, index) => (
-            <a
-              key={item.name}
-              href={item.href}
-              onClick={(e) => scrollToSection(e, item.href)}
-              className={`block py-3 text-sm font-medium transition-all duration-300 ${
-                activeSection === item.href.replace("#", "")
-                  ? "text-primary pl-4 border-l-2 border-primary"
-                  : "text-foreground hover:text-primary hover:pl-2"
-              }`}
-              style={{ 
-                transitionDelay: mobileMenuOpen ? `${index * 50}ms` : "0ms",
-                opacity: mobileMenuOpen ? 1 : 0,
-                transform: mobileMenuOpen ? "translateX(0)" : "translateX(-10px)"
-              }}
-            >
-              {item.name}
-            </a>
-          ))}
-          <div className="pt-4 border-t border-border">
-            <Button 
-              className="w-full bg-primary text-primary-foreground"
-              onClick={(e) => scrollToSection(e as unknown as React.MouseEvent<HTMLAnchorElement>, "#contact")}
-            >
-              Get Started
-            </Button>
+      {mobileMenuOpen && (
+        <div className="lg:hidden border-t border-border">
+          <div className="space-y-1 px-4 py-4 bg-background/95 backdrop-blur-md">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => scrollToSection(e, item.href)}
+                className={`block py-3 text-sm font-medium transition-colors ${
+                  activeSection === item.href.replace("#", "")
+                    ? "text-primary pl-4 border-l-2 border-primary"
+                    : "text-foreground hover:text-primary"
+                }`}
+              >
+                {item.name}
+              </a>
+            ))}
+            <div className="pt-4 border-t border-border">
+              <Button 
+                className="w-full bg-primary text-primary-foreground"
+                asChild
+              >
+                <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>
+                  Get Started
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </header>
   )
 }

@@ -4,13 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Clock, Zap, MessageSquare, TrendingUp, Bot } from "lucide-react"
 import Image from "next/image"
-import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 export function Hero() {
-  const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation()
-  const { ref: imagesRef, isVisible: imagesVisible } = useScrollAnimation()
-  const { ref: trustRef, isVisible: trustVisible } = useScrollAnimation()
-
   const highlights = [
     { icon: Clock, text: "Landing pages delivered in 48 hours" },
     { icon: Zap, text: "AI automation to eliminate manual work" },
@@ -54,48 +49,23 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <div
-            ref={contentRef}
-            className={`transition-all duration-700 ease-out ${
-              contentVisible 
-                ? "opacity-100 translate-y-0" 
-                : "opacity-0 translate-y-8"
-            }`}
-          >
+          <div>
             <Badge 
               variant="secondary" 
-              className={`mb-6 px-4 py-2 text-sm font-medium border-primary/20 bg-background/80 backdrop-blur-sm transition-all duration-500 ${
-                contentVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
-              }`}
-              style={{ transitionDelay: "100ms" }}
+              className="mb-6 px-4 py-2 text-sm font-medium border-primary/20 bg-background/80 backdrop-blur-sm"
             >
               Landing Pages & AI Automation
             </Badge>
             
-            <h1 
-              className={`text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance transition-all duration-700 ${
-                contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-              style={{ transitionDelay: "200ms" }}
-            >
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
               Professional websites that <span className="text-primary">convert in 48 hours</span>
             </h1>
             
-            <p 
-              className={`mt-6 text-lg leading-8 text-muted-foreground max-w-xl text-pretty transition-all duration-700 ${
-                contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-              style={{ transitionDelay: "300ms" }}
-            >
+            <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-xl text-pretty">
               High-conversion landing pages and AI automation that saves you 10+ hours weekly. Start receiving client inquiries immediately.
             </p>
 
-            <div 
-              className={`mt-10 flex items-center gap-4 flex-wrap transition-all duration-700 ${
-                contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-              style={{ transitionDelay: "400ms" }}
-            >
+            <div className="mt-10 flex items-center gap-4 flex-wrap">
               <Button 
                 size="lg" 
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base shadow-lg hover:scale-105 transition-transform"
@@ -116,13 +86,7 @@ export function Hero() {
             {/* Highlights */}
             <div className="mt-12 space-y-3">
               {highlights.slice(0, 3).map((item, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center gap-3 transition-all duration-500 ${
-                    contentVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
-                  }`}
-                  style={{ transitionDelay: `${500 + index * 100}ms` }}
-                >
+                <div key={index} className="flex items-center gap-3">
                   <div className="p-1.5 rounded-full bg-primary/10">
                     <item.icon className="h-4 w-4 text-primary" />
                   </div>
@@ -133,18 +97,10 @@ export function Hero() {
           </div>
 
           {/* Right side - Image tiles */}
-          <div 
-            ref={imagesRef}
-            className="relative hidden lg:block"
-          >
+          <div className="relative hidden lg:block">
             <div className="grid grid-cols-2 gap-4">
               {/* Main large image */}
-              <div 
-                className={`col-span-2 relative h-64 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-border transition-all duration-700 ${
-                  imagesVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
-                }`}
-                style={{ transitionDelay: "200ms" }}
-              >
+              <div className="col-span-2 relative h-64 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-border">
                 <Image
                   src="/images/landing-mockup.jpg"
                   alt="Landing page mockup"
@@ -155,12 +111,7 @@ export function Hero() {
               </div>
               
               {/* Smaller tiles */}
-              <div 
-                className={`relative h-48 rounded-xl overflow-hidden shadow-xl ring-1 ring-border transition-all duration-700 ${
-                  imagesVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
-                }`}
-                style={{ transitionDelay: "400ms" }}
-              >
+              <div className="relative h-48 rounded-xl overflow-hidden shadow-xl ring-1 ring-border">
                 <Image
                   src="/images/team-working.jpg"
                   alt="Team collaboration"
@@ -170,12 +121,7 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
               </div>
               
-              <div 
-                className={`relative h-48 rounded-xl overflow-hidden shadow-xl ring-1 ring-border transition-all duration-700 ${
-                  imagesVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-                }`}
-                style={{ transitionDelay: "500ms" }}
-              >
+              <div className="relative h-48 rounded-xl overflow-hidden shadow-xl ring-1 ring-border">
                 <Image
                   src="/images/automation-dashboard.jpg"
                   alt="Automation dashboard"
@@ -187,12 +133,7 @@ export function Hero() {
             </div>
 
             {/* Floating badge */}
-            <div 
-              className={`absolute -bottom-4 -left-4 bg-card border border-border rounded-xl p-4 shadow-lg transition-all duration-700 ${
-                imagesVisible ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-90 -rotate-3"
-              }`}
-              style={{ transitionDelay: "600ms" }}
-            >
+            <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl p-4 shadow-lg">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
                   <Clock className="h-6 w-6 text-accent" />
@@ -207,23 +148,15 @@ export function Hero() {
         </div>
 
         {/* Trust indicators */}
-        <div 
-          ref={trustRef}
-          className={`mt-20 pt-12 border-t border-border/50 transition-all duration-700 ${
-            trustVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div className="mt-20 pt-12 border-t border-border/50">
           <p className="text-center text-sm font-medium text-muted-foreground mb-8">
             Trusted by businesses ready to grow
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-            {["Startups", "SMBs", "Agencies", "Consultants", "E-commerce", "Service Businesses"].map((client, index) => (
+            {["Startups", "SMBs", "Agencies", "Consultants", "E-commerce", "Service Businesses"].map((client) => (
               <div
                 key={client}
-                className={`text-xl font-semibold text-muted-foreground/50 hover:text-primary transition-all duration-500 cursor-default ${
-                  trustVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                className="text-xl font-semibold text-muted-foreground/50 hover:text-primary transition-colors cursor-default"
               >
                 {client}
               </div>
