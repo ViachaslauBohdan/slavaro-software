@@ -1,12 +1,11 @@
 "use client"
 
-// English-only version
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
-const navigation = [
+const navItems = [
   { name: "Services", href: "#services" },
   { name: "How it works", href: "#expertise" },
   { name: "Pricing", href: "#pricing" },
@@ -23,7 +22,7 @@ export function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
       
-      const sections = navigation.map(item => item.href.replace("#", ""))
+      const sections = navItems.map(item => item.href.replace("#", ""))
       for (const section of sections.reverse()) {
         const element = document.getElementById(section)
         if (element) {
@@ -88,7 +87,7 @@ export function Header() {
         </div>
 
         <div className="hidden lg:flex lg:gap-x-1 lg:items-center">
-          {navigation.map((item) => (
+          {navItems.map((item) => (
             <a 
               key={item.name}
               href={item.href}
@@ -118,12 +117,11 @@ export function Header() {
         </div>
       </nav>
 
-      {/* Mobile menu */}
       <div className={`lg:hidden overflow-hidden transition-all duration-300 ${
         mobileMenuOpen ? "max-h-96 border-t border-border" : "max-h-0"
       }`}>
         <div className="space-y-1 px-4 py-4 bg-background/95 backdrop-blur-md">
-          {navigation.map((item, index) => (
+          {navItems.map((item, index) => (
             <a
               key={item.name}
               href={item.href}
