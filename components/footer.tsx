@@ -1,56 +1,38 @@
 import Link from "next/link"
-import { Linkedin, Twitter, Facebook, Youtube, Instagram } from "lucide-react"
+import { Linkedin, Twitter, MessageSquare } from "lucide-react"
 
 const footerLinks = {
   services: [
-    { name: "Software Development", href: "#" },
-    { name: "SaaS Development", href: "#" },
-    { name: "Web Development", href: "#" },
-    { name: "Mobile Development", href: "#" },
-    { name: "QA and Testing", href: "#" },
-    { name: "DevOps Services", href: "#" },
-  ],
-  expertise: [
-    { name: "Artificial Intelligence", href: "#" },
-    { name: "Cloud Consulting", href: "#" },
-    { name: "Blockchain", href: "#" },
-    { name: "Big Data", href: "#" },
-    { name: "Data Engineering", href: "#" },
-    { name: "AR/VR Development", href: "#" },
-  ],
-  industries: [
-    { name: "Fintech", href: "#" },
-    { name: "Healthtech", href: "#" },
-    { name: "Edtech", href: "#" },
-    { name: "Ecommerce", href: "#" },
-    { name: "Proptech", href: "#" },
-    { name: "Automotive", href: "#" },
+    { name: "Landing Pages", href: "#services" },
+    { name: "AI Automation", href: "#services" },
+    { name: "Lead Generation", href: "#services" },
+    { name: "Process Automation", href: "#services" },
   ],
   company: [
-    { name: "About Us", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Case Studies", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "How We Work", href: "#expertise" },
+    { name: "Results", href: "#stats" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Contact", href: "#contact" },
+  ],
+  legal: [
+    { name: "Privacy Policy", href: "#" },
+    { name: "Terms of Service", href: "#" },
   ],
 }
 
 const socialLinks = [
   { name: "LinkedIn", icon: Linkedin, href: "#" },
   { name: "Twitter", icon: Twitter, href: "#" },
-  { name: "Facebook", icon: Facebook, href: "#" },
-  { name: "YouTube", icon: Youtube, href: "#" },
-  { name: "Instagram", icon: Instagram, href: "#" },
+  { name: "Telegram", icon: MessageSquare, href: "#" },
 ]
 
 export function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-1">
+          <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 bg-accent rounded-md flex items-center justify-center">
                 <span className="text-accent-foreground font-bold text-lg">V</span>
@@ -58,8 +40,8 @@ export function Footer() {
               <span className="text-2xl font-bold">Volska</span>
             </Link>
             <p className="mt-4 text-sm text-background/70 max-w-xs">
-              AI-enabled software development company delivering end-to-end solutions 
-              for businesses across the USA and Europe.
+              Landing pages in 48 hours and AI automation that saves you hours every week. 
+              Helping businesses grow faster.
             </p>
             <div className="flex gap-4 mt-6">
               {socialLinks.map((social) => (
@@ -80,40 +62,6 @@ export function Footer() {
             <h3 className="text-sm font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-sm text-background/70 hover:text-background transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Expertise */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4">Expertise</h3>
-            <ul className="space-y-3">
-              {footerLinks.expertise.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-sm text-background/70 hover:text-background transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Industries */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4">Industries</h3>
-            <ul className="space-y-3">
-              {footerLinks.industries.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}
@@ -151,18 +99,15 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Volska. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <Link href="#" className="text-sm text-background/70 hover:text-background transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-sm text-background/70 hover:text-background transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="#" className="text-sm text-background/70 hover:text-background transition-colors">
-                Cookie Policy
-              </Link>
-              <Link href="#" className="text-sm text-background/70 hover:text-background transition-colors">
-                Sitemap
-              </Link>
+              {footerLinks.legal.map((link) => (
+                <Link 
+                  key={link.name}
+                  href={link.href} 
+                  className="text-sm text-background/70 hover:text-background transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

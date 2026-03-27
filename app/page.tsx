@@ -1,12 +1,8 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { Services } from "@/components/services"
 import { Expertise } from "@/components/expertise"
 import { Stats } from "@/components/stats"
-import { Services } from "@/components/services"
-import { EngagementModels } from "@/components/engagement-models"
-import { CaseStudies } from "@/components/case-studies"
-import { AISection } from "@/components/ai-section"
-import { Testimonials } from "@/components/testimonials"
 import { FAQ } from "@/components/faq"
 import { CTA } from "@/components/cta"
 import { ContactForm } from "@/components/contact-form"
@@ -17,13 +13,9 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
+      <Services />
       <Expertise />
       <Stats />
-      <Services />
-      <EngagementModels />
-      <CaseStudies />
-      <AISection />
-      <Testimonials />
       <FAQ />
       <CTA />
       <ContactForm />

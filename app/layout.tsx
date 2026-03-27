@@ -14,9 +14,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Software Development Company | Volska - Custom Software Solutions USA',
-  description: 'Leading AI-enabled software development company in the USA. End-to-end custom software development services, web development, mobile apps, cloud solutions, and dedicated development teams. Trusted by Fortune 500 companies.',
-  keywords: 'software development company, custom software development, software development services, web development company, mobile app development, AI software development, cloud consulting, dedicated development teams, software outsourcing, enterprise software development, startup software development, fintech development, healthtech development, SaaS development, software engineering services USA',
+  title: 'Landing Pages in 48 Hours & AI Automation | Volska',
+  description: 'High-conversion landing pages built in 48 hours. AI automation to eliminate repetitive work. Start receiving client inquiries immediately. Save 10+ hours weekly with smart automation.',
+  keywords: 'landing page design, landing page development, 48 hour website, fast website development, AI automation, business automation, lead generation website, conversion optimization, Telegram notifications, email automation, Google Sheets automation, small business website, startup landing page, lead capture, business process automation USA',
   authors: [{ name: 'Volska' }],
   creator: 'Volska',
   publisher: 'Volska',
@@ -25,22 +25,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://volska.com',
-    siteName: 'Volska - Software Development Company',
-    title: 'Software Development Company | Volska - AI-Enabled Custom Solutions',
-    description: 'End-to-end software development services with AI-enabled teams. Flexible, expert teams ready to start in under two weeks. On-budget delivery guaranteed.',
+    siteName: 'Volska - Landing Pages & AI Automation',
+    title: 'Landing Pages in 48 Hours & AI Automation | Volska',
+    description: 'High-conversion landing pages delivered in 48 hours. AI automation that saves you 10+ hours weekly. Turn visitors into clients.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Volska Software Development Company',
+        alt: 'Volska - Landing Pages & AI Automation',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Software Development Company | Volska',
-    description: 'AI-enabled software development company. End-to-end services with flexible, expert teams.',
+    title: 'Landing Pages in 48 Hours & AI Automation | Volska',
+    description: 'High-conversion landing pages in 48h. AI automation to save hours weekly.',
     images: ['/og-image.jpg'],
   },
   alternates: {

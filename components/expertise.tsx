@@ -1,55 +1,42 @@
 "use client"
 
-import { useState } from "react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
 import { 
-  Code, 
   Globe, 
-  Smartphone, 
-  TestTube, 
-  Cloud, 
-  Brain, 
-  Blocks, 
-  Server, 
-  Database,
-  Glasses,
-  Landmark,
-  Utensils,
-  HeartPulse,
-  Megaphone,
-  GraduationCap,
-  ShoppingCart,
-  Building,
-  Car
+  Bot, 
+  Zap,
+  Clock,
+  TrendingUp,
+  Shield,
+  MessageSquare,
+  FileText,
+  Mail,
+  TableProperties,
+  Smartphone,
+  Palette
 } from "lucide-react"
 
-const developmentServices = [
-  { icon: Code, name: "Software Development", description: "Custom software solutions tailored to your needs" },
-  { icon: Globe, name: "SaaS Development", description: "Scalable software-as-a-service platforms" },
-  { icon: Globe, name: "Web Development", description: "Modern, responsive web applications" },
-  { icon: TestTube, name: "QA and Testing", description: "Comprehensive quality assurance services" },
-  { icon: Smartphone, name: "Mobile Development", description: "iOS and Android app development" },
+const landingPageProcess = [
+  { icon: MessageSquare, step: "01", title: "Discovery Call", description: "We discuss your business, goals, and what you need from your website" },
+  { icon: Palette, step: "02", title: "Design & Build", description: "We create a modern, conversion-focused design tailored to your brand" },
+  { icon: Smartphone, step: "03", title: "Review & Refine", description: "You review the site and we make adjustments until it&apos;s perfect" },
+  { icon: Zap, step: "04", title: "Launch & Notify", description: "Your site goes live with lead capture and instant notifications set up" },
 ]
 
-const technologyExpertise = [
-  { icon: Brain, name: "Artificial Intelligence", description: "AI/ML solutions and integrations" },
-  { icon: Cloud, name: "Cloud Consulting", description: "AWS, Azure, and GCP expertise" },
-  { icon: Blocks, name: "Blockchain", description: "Decentralized applications and smart contracts" },
-  { icon: Server, name: "DevOps Services", description: "CI/CD pipelines and infrastructure automation" },
-  { icon: Database, name: "Big Data", description: "Data engineering and analytics solutions" },
-  { icon: Glasses, name: "AR/VR", description: "Immersive experiences and applications" },
+const automationProcess = [
+  { icon: TableProperties, step: "01", title: "Workflow Audit", description: "We identify repetitive tasks and manual processes in your business" },
+  { icon: Bot, step: "02", title: "Automation Design", description: "We design custom automation flows that fit your exact needs" },
+  { icon: FileText, step: "03", title: "Build & Test", description: "We build and thoroughly test every automation before deployment" },
+  { icon: TrendingUp, step: "04", title: "Deploy & Monitor", description: "Your automations go live with ongoing support and optimization" },
 ]
 
-const industries = [
-  { icon: Landmark, name: "Fintech", description: "Financial technology solutions" },
-  { icon: Utensils, name: "Foodtech", description: "Food industry digitalization" },
-  { icon: HeartPulse, name: "Healthtech", description: "Healthcare technology platforms" },
-  { icon: Megaphone, name: "Adtech", description: "Advertising technology solutions" },
-  { icon: GraduationCap, name: "Edtech", description: "Educational technology platforms" },
-  { icon: ShoppingCart, name: "Ecommerce", description: "Online retail solutions" },
-  { icon: Building, name: "Proptech", description: "Real estate technology" },
-  { icon: Car, name: "Automotive", description: "Automotive software solutions" },
+const whyChooseUs = [
+  { icon: Clock, title: "48-Hour Delivery", description: "Landing pages delivered in just 2 days, not weeks" },
+  { icon: TrendingUp, title: "Conversion Focused", description: "Every element designed to turn visitors into leads" },
+  { icon: MessageSquare, title: "Instant Notifications", description: "Know the moment someone reaches out via Telegram & email" },
+  { icon: Shield, title: "No Hidden Fees", description: "Clear pricing with everything included upfront" },
+  { icon: Bot, title: "Smart Automation", description: "AI-powered solutions that actually save you time" },
+  { icon: Zap, title: "Fast & Reliable", description: "Quick turnaround with quality you can count on" },
 ]
 
 export function Expertise() {
@@ -58,81 +45,80 @@ export function Expertise() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Our expertise
+            How we work
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            With experience across 30+ industries and 25+ technologies, our team delivers solutions 
-            built for bold ideas, big goals, and everything in between.
+            A simple, transparent process designed to get you results fast without the complexity.
           </p>
         </div>
 
-        <Tabs defaultValue="development" className="w-full">
-          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
-            <TabsTrigger value="development">Development</TabsTrigger>
-            <TabsTrigger value="technology">Technology</TabsTrigger>
-            <TabsTrigger value="industries">Industries</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="development">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {developmentServices.map((service) => (
-                <Card key={service.name} className="group hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                        <service.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">{service.name}</h3>
-                        <p className="text-sm text-muted-foreground mt-1">{service.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+        {/* Landing Page Process */}
+        <div className="mb-20">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2 rounded-lg bg-primary/10">
+              <Globe className="h-5 w-5 text-primary" />
             </div>
-          </TabsContent>
-          
-          <TabsContent value="technology">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {technologyExpertise.map((tech) => (
-                <Card key={tech.name} className="group hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                        <tech.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">{tech.name}</h3>
-                        <p className="text-sm text-muted-foreground mt-1">{tech.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+            <h3 className="text-xl font-semibold text-foreground">Landing Page Process</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {landingPageProcess.map((item) => (
+              <Card key={item.step} className="relative overflow-hidden group hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <span className="text-5xl font-bold text-primary/10 absolute top-4 right-4">{item.step}</span>
+                  <div className="p-3 rounded-lg bg-primary/10 w-fit mb-4 group-hover:bg-primary/20 transition-colors">
+                    <item.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-foreground mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Automation Process */}
+        <div className="mb-20">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2 rounded-lg bg-accent/10">
+              <Bot className="h-5 w-5 text-accent" />
             </div>
-          </TabsContent>
-          
-          <TabsContent value="industries">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {industries.map((industry) => (
-                <Card key={industry.name} className="group hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                        <industry.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">{industry.name}</h3>
-                        <p className="text-sm text-muted-foreground mt-1">{industry.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+            <h3 className="text-xl font-semibold text-foreground">AI Automation Process</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {automationProcess.map((item) => (
+              <Card key={item.step} className="relative overflow-hidden group hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <span className="text-5xl font-bold text-accent/10 absolute top-4 right-4">{item.step}</span>
+                  <div className="p-3 rounded-lg bg-accent/10 w-fit mb-4 group-hover:bg-accent/20 transition-colors">
+                    <item.icon className="h-6 w-6 text-accent" />
+                  </div>
+                  <h4 className="font-semibold text-foreground mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Why Choose Us */}
+        <div className="bg-card rounded-2xl p-8 lg:p-12 border border-border">
+          <h3 className="text-2xl font-bold tracking-tight text-foreground text-center mb-10">
+            Why businesses choose Volska
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChooseUs.map((item) => (
+              <div key={item.title} className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-primary/10 shrink-0">
+                  <item.icon className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

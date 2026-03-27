@@ -1,10 +1,10 @@
 const stats = [
-  { value: "500+", label: "Award-winning clients" },
-  { value: "$15B+", label: "In client acquisitions" },
-  { value: "36", label: "Month average engagement" },
-  { value: "20+", label: "Client IPOs supported" },
-  { value: "20+", label: "Years of experience" },
-  { value: "3K+", label: "World-class engineers" },
+  { value: "48h", label: "Landing page delivery" },
+  { value: "100+", label: "Websites delivered" },
+  { value: "10+", label: "Hours saved weekly per client" },
+  { value: "95%", label: "Client satisfaction rate" },
+  { value: "24/7", label: "Lead notifications" },
+  { value: "0", label: "Hidden fees" },
 ]
 
 export function Stats() {
@@ -13,10 +13,10 @@ export function Stats() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Numbers we&apos;re proud of
+            Results that speak for themselves
           </h2>
           <p className="mt-4 text-lg text-background/70">
-            ...and the story behind them
+            Fast delivery, real results, happy clients
           </p>
         </div>
 

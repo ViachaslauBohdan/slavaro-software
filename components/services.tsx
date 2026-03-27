@@ -2,155 +2,195 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { 
   CheckCircle, 
-  Eye, 
-  RefreshCw, 
-  TrendingUp,
-  Shield,
+  Globe,
+  Bot,
   Clock,
-  FileCheck,
-  Target,
-  Scale,
-  Users,
+  Smartphone,
   Zap,
-  Settings
+  MessageSquare,
+  TrendingUp,
+  FileText,
+  Mail,
+  TableProperties,
+  Settings,
+  ArrowRight
 } from "lucide-react"
 
-const deliveryFeatures = [
+const landingPageFeatures = [
   {
-    icon: CheckCircle,
-    title: "Rest easy knowing it works the first time",
-    description: "From idea to launch, our development and QA process enables high reliability, and every build is engineered for resilience.",
-    features: [
-      "Full-cycle software development",
-      "Strategic discovery and planning workshops",
-      "Automated testing and QA workflows",
-      "Targeted technical audit and optimization",
-      "Scalable software architecture consulting",
-      "ISO 27001-certified delivery with enterprise-grade security"
-    ]
-  },
-  {
-    icon: Eye,
-    title: "Stay informed, stay in control",
-    description: "Agile processes with regular progress reports and technical audits mean no blind spots, ever.",
-    features: [
-      "Transparent agile development practices",
-      "Dedicated project and delivery manager for every client",
-      "Advanced data engineering support"
-    ]
-  },
-  {
-    icon: RefreshCw,
-    title: "Forget the chaos",
-    description: "Robust DevOps practices, secure cloud infrastructure, and future-ready architecture keep everything running smoothly.",
-    features: [
-      "Streamlined DevOps implementation",
-      "Proven cybersecurity and data protection",
-      "Flexible cloud infrastructure and seamless migration",
-      "Disruption-free legacy app modernization"
-    ]
+    icon: Globe,
+    title: "Modern, professional website",
+    description: "A website that builds trust and credibility with your visitors from the first second."
   },
   {
     icon: TrendingUp,
-    title: "Make growth effortless",
-    description: "We pick engagement models that match your pace and goals, ensuring smooth onboarding and seamless integrations.",
-    features: [
-      "Tailored onboarding and team enablement",
-      "Seamless third-party system integration",
-      "Smooth delivery and handover of all project work"
-    ]
+    title: "Clear conversion-focused structure",
+    description: "Designed specifically to turn visitors into inquiries and leads."
+  },
+  {
+    icon: Smartphone,
+    title: "Fully responsive design",
+    description: "Looks perfect on mobile, tablet, and desktop devices."
+  },
+  {
+    icon: Zap,
+    title: "Fast loading & clean UX",
+    description: "Optimized for speed and a seamless user experience."
+  },
+  {
+    icon: MessageSquare,
+    title: "Lead generation included",
+    description: "Simple contact form with name, phone, and request fields."
+  },
+  {
+    icon: Clock,
+    title: "Instant notifications",
+    description: "Get notified via Telegram and email the moment someone reaches out."
   }
 ]
 
-const peaceOfMindPromises = [
+const automationFeatures = [
   {
-    icon: Clock,
-    title: "Kickoff in 14 days",
-    description: "Forget the endless hiring cycle. We promise to begin your project within 14 days of contract signature, lining up CVs from top engineers quickly so you can validate ideas early and build efficiently."
+    icon: TableProperties,
+    title: "Excel & Google Sheets",
+    description: "Automate workflows, reporting, and data processing."
   },
   {
-    icon: Users,
-    title: "Dedicated advocates",
-    description: "Every project comes with a Delivery Manager and a Strategic Partner. One drives execution, the other manages day-to-day coordination. Together, they clear roadblocks and keep momentum high."
+    icon: MessageSquare,
+    title: "Lead handling",
+    description: "Forms to notifications to simple CRM logic, all automated."
   },
   {
-    icon: Shield,
-    title: "Quality-first approach",
-    description: "Before a single line of code is written, we run a Delivery Quality Assessment to surface risks early and build in quality from the ground up."
+    icon: Mail,
+    title: "Email processing",
+    description: "Auto-responses, sorting, and smart email workflows."
   },
   {
-    icon: Scale,
-    title: "Frictionless scaling",
-    description: "Adjust pace and scale on your terms. Our scaling guidance comes from experience, helping startups grow into category leaders and Fortune 500 enterprises expand global teams."
+    icon: FileText,
+    title: "Document generation",
+    description: "PDFs, summaries, offers - generated automatically."
+  },
+  {
+    icon: Settings,
+    title: "System integrations",
+    description: "Connect your tools and systems seamlessly."
+  },
+  {
+    icon: Bot,
+    title: "Custom automation",
+    description: "Any repetitive task can be automated to save time."
   }
+]
+
+const landingPageBenefits = [
+  "Start receiving client inquiries immediately",
+  "Improve your online presence",
+  "Convert visitors into real business opportunities"
+]
+
+const automationBenefits = [
+  "Save hours every week",
+  "Reduce operational costs",
+  "Build scalable processes instead of manual tasks"
 ]
 
 export function Services() {
   return (
     <section id="services" className="py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        {/* Software Delivery Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Software delivery without doubt
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Because at Vention, peace of mind isn&apos;t just a promise. It&apos;s how we work.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          {deliveryFeatures.map((feature) => (
-            <Card key={feature.title} className="h-full">
-              <CardHeader>
-                <div className="p-3 rounded-lg bg-primary/10 w-fit mb-4">
-                  <feature.icon className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
-                <CardDescription>{feature.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {feature.features.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <CheckCircle className="h-4 w-4 text-accent mt-0.5 shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Peace of Mind Promise */}
-        <div className="bg-secondary/50 rounded-2xl p-8 lg:p-12">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              The &quot;Peace of Mind Promise,&quot; fulfilled every time
-            </h3>
-            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              Everyone talks about peace of mind. We deliver it. No vague promises, just a framework built 
-              for speed, predictability, and complete transparency.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {peaceOfMindPromises.map((promise) => (
-              <div key={promise.title} className="text-center">
-                <div className="p-4 rounded-full bg-primary/10 w-fit mx-auto mb-4">
-                  <promise.icon className="h-8 w-8 text-primary" />
-                </div>
-                <h4 className="font-semibold text-foreground mb-2">{promise.title}</h4>
-                <p className="text-sm text-muted-foreground">{promise.description}</p>
+        {/* Landing Pages Section */}
+        <div className="mb-32">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                <Globe className="h-4 w-4" />
+                Landing Pages
               </div>
-            ))}
-          </div>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
+                High-conversion websites built in 48 hours
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Designed to bring you real clients. A modern, professional website that builds trust 
+                and turns visitors into leads.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <h3 className="font-semibold text-foreground">Business impact:</h3>
+                {landingPageBenefits.map((benefit) => (
+                  <div key={benefit} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent shrink-0" />
+                    <span className="text-muted-foreground">{benefit}</span>
+                  </div>
+                ))}
+              </div>
 
-          <div className="text-center mt-10">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Learn more about our &quot;Peace of Mind Promise&quot;
-            </Button>
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                Get your landing page
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              {landingPageFeatures.map((feature) => (
+                <Card key={feature.title} className="h-full">
+                  <CardContent className="p-5">
+                    <div className="p-2 rounded-lg bg-primary/10 w-fit mb-3">
+                      <feature.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* AI Automation Section */}
+        <div>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="order-2 lg:order-1 grid sm:grid-cols-2 gap-4">
+              {automationFeatures.map((feature) => (
+                <Card key={feature.title} className="h-full">
+                  <CardContent className="p-5">
+                    <div className="p-2 rounded-lg bg-accent/10 w-fit mb-3">
+                      <feature.icon className="h-5 w-5 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
+                <Bot className="h-4 w-4" />
+                AI Automation
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
+                Automate repetitive work and run faster
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Make your business run more efficiently. Less manual work, fewer errors, 
+                and more time to focus on what matters - growing your business.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <h3 className="font-semibold text-foreground">What changes for you:</h3>
+                {automationBenefits.map((benefit) => (
+                  <div key={benefit} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent shrink-0" />
+                    <span className="text-muted-foreground">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
+                Explore automation options
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>
