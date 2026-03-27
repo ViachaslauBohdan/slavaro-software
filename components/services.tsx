@@ -1,5 +1,6 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { 
   CheckCircle, 
   Globe,
@@ -100,7 +101,7 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Landing Pages Section */}
         <div className="mb-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
                 <Globe className="h-4 w-4" />
@@ -130,37 +131,88 @@ export function Services() {
               </Button>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              {landingPageFeatures.map((feature) => (
-                <Card key={feature.title} className="h-full">
-                  <CardContent className="p-5">
-                    <div className="p-2 rounded-lg bg-primary/10 w-fit mb-3">
-                      <feature.icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+            {/* Landing page image with feature cards overlay */}
+            <div className="relative">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/landing-mockup.jpg"
+                  alt="Professional landing page on computer screen"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
+              </div>
+              
+              {/* Floating feature cards */}
+              <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-4 shadow-xl max-w-[200px]">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <Smartphone className="h-4 w-4 text-primary" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Responsive</span>
+                </div>
+                <p className="text-xs text-muted-foreground">Perfect on all devices</p>
+              </div>
+
+              <div className="absolute -top-4 -right-4 bg-card border border-border rounded-xl p-4 shadow-xl">
+                <div className="flex items-center gap-2">
+                  <Clock className="h-5 w-5 text-accent" />
+                  <span className="text-xl font-bold text-foreground">48h</span>
+                </div>
+                <p className="text-xs text-muted-foreground">Delivery</p>
+              </div>
             </div>
+          </div>
+
+          {/* Feature grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-16">
+            {landingPageFeatures.map((feature) => (
+              <Card key={feature.title} className="h-full hover:shadow-lg transition-shadow border-border/50">
+                <CardContent className="p-5">
+                  <div className="p-2 rounded-lg bg-primary/10 w-fit mb-3">
+                    <feature.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
+                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
 
         {/* AI Automation Section */}
         <div>
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="order-2 lg:order-1 grid sm:grid-cols-2 gap-4">
-              {automationFeatures.map((feature) => (
-                <Card key={feature.title} className="h-full">
-                  <CardContent className="p-5">
-                    <div className="p-2 rounded-lg bg-accent/10 w-fit mb-3">
-                      <feature.icon className="h-5 w-5 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Automation image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/automation-dashboard.jpg"
+                  alt="AI automation dashboard"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-accent/30 via-transparent to-transparent" />
+              </div>
+              
+              {/* Floating stats */}
+              <div className="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-4 shadow-xl">
+                <div className="flex items-center gap-2 mb-1">
+                  <TrendingUp className="h-5 w-5 text-accent" />
+                  <span className="text-xl font-bold text-foreground">10+ hrs</span>
+                </div>
+                <p className="text-xs text-muted-foreground">Saved weekly</p>
+              </div>
+
+              <div className="absolute -top-4 -left-4 bg-card border border-border rounded-xl p-4 shadow-xl max-w-[200px]">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 rounded-lg bg-accent/10">
+                    <Bot className="h-4 w-4 text-accent" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground">AI-Powered</span>
+                </div>
+                <p className="text-xs text-muted-foreground">Smart automation</p>
+              </div>
             </div>
 
             <div className="order-1 lg:order-2">
@@ -191,6 +243,21 @@ export function Services() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
+          </div>
+
+          {/* Automation feature grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-16">
+            {automationFeatures.map((feature) => (
+              <Card key={feature.title} className="h-full hover:shadow-lg transition-shadow border-border/50">
+                <CardContent className="p-5">
+                  <div className="p-2 rounded-lg bg-accent/10 w-fit mb-3">
+                    <feature.icon className="h-5 w-5 text-accent" />
+                  </div>
+                  <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
+                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
