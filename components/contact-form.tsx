@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { FormEvent, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -18,6 +18,19 @@ import {
 
 export function ContactForm() {
   const [agreed, setAgreed] = useState(false)
+  const [name, setName] = useState("")
+  const [phone, setPhone] = useState("")
+  const [email, setEmail] = useState("")
+  const [service, setService] = useState("")
+  const [message, setMessage] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitState, setSubmitState] = useState<{
+    type: "idle" | "success" | "error"
+    text: string
+  }>({
+    type: "idle",
+    text: "",
+  })
 
   const contactInfo = [
     {
@@ -39,6 +52,54 @@ export function ContactForm() {
     { icon: Zap, text: "Instant lead notifications" },
     { icon: Bot, text: "AI automation that saves hours" },
   ]
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    if (!agreed || isSubmitting) return
+
+    setIsSubmitting(true)
+    setSubmitState({ type: "idle", text: "" })
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          service,
+          message,
+        }),
+      })
+
+      if (!response.ok) {
+        const data = (await response.json().catch(() => null)) as { error?: string } | null
+        throw new Error(data?.error ?? "Could not send your request")
+      }
+
+      setSubmitState({
+        type: "success",
+        text: "Request sent successfully. We will contact you shortly.",
+      })
+      setName("")
+      setPhone("")
+      setEmail("")
+      setService("")
+      setMessage("")
+      setAgreed(false)
+    } catch (error) {
+      setSubmitState({
+        type: "error",
+        text: error instanceof Error ? error.message : "Could not send your request",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <section id="contact" className="py-16 lg:py-24 relative overflow-hidden">
@@ -132,19 +193,31 @@ export function ContactForm() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Name
                     </label>
-                    <Input id="name" placeholder="Your name" />
+                    <Input
+                      id="name"
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
+                      placeholder="Your name"
+                      required
+                    />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                       Phone
                     </label>
-                    <Input id="phone" type="tel" placeholder="+1 (555) 000-0000" />
+                    <Input
+                      id="phone"
+                      type="tel"
+                      value={phone}
+                      onChange={(event) => setPhone(event.target.value)}
+                      placeholder="+1 (555) 000-0000"
+                    />
                   </div>
                 </div>
 
@@ -152,14 +225,21 @@ export function ContactForm() {
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email
                   </label>
-                  <Input id="email" type="email" placeholder="you@example.com" />
+                  <Input
+                    id="email"
+                    type="email"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                    placeholder="you@example.com"
+                    required
+                  />
                 </div>
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
                     Service Needed
                   </label>
-                  <Select>
+                  <Select value={service} onValueChange={setService}>
                     <SelectTrigger>
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
@@ -178,8 +258,11 @@ export function ContactForm() {
                   </label>
                   <Textarea 
                     id="message" 
+                    value={message}
+                    onChange={(event) => setMessage(event.target.value)}
                     placeholder="Describe your business and what you need..."
                     rows={4}
+                    required
                   />
                 </div>
 
@@ -197,14 +280,23 @@ export function ContactForm() {
                 <Button 
                   type="submit" 
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                  disabled={!agreed}
+                  disabled={!agreed || isSubmitting || !service}
                 >
-                  Send Request
+                  {isSubmitting ? "Sending..." : "Send Request"}
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground">
                   We typically respond within 2-4 hours during business hours.
                 </p>
+                {submitState.type !== "idle" && (
+                  <p
+                    className={`text-sm text-center ${
+                      submitState.type === "success" ? "text-green-600" : "text-red-600"
+                    }`}
+                  >
+                    {submitState.text}
+                  </p>
+                )}
               </form>
             </CardContent>
           </Card>
