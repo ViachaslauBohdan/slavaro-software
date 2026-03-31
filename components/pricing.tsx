@@ -8,64 +8,65 @@ export function Pricing() {
   const tiers = [
     {
       name: "Starter",
-      subtitle: "Landing Page",
-      price: "€300 – €500",
+      subtitle: "Landing Page Sprint",
+      price: "€200 – €500",
       priceNote: "one-time",
-      description: "Professional landing page for small businesses and freelancers",
+      description: "Fast, conversion-focused landing page to start collecting qualified leads",
       popular: true,
-      popularText: "Most popular for local businesses",
+      popularText: "Best for first lead generation",
       color: "primary",
       features: [
-        "1-page responsive website",
-        "Contact form with notifications",
-        "Mobile-optimized design",
-        "Basic SEO setup",
+        "1-page responsive landing page",
+        "Offer messaging and conversion-focused structure",
+        "Contact form with Telegram + email notifications",
+        "Mobile and performance optimization",
+        "Basic SEO and analytics setup",
         "48-hour delivery"
       ],
-      result: "Start receiving client inquiries immediately",
+      result: "Launch fast and start receiving qualified inquiries",
     },
     {
       name: "Growth",
-      subtitle: "Lead System",
-      price: "€500 – €800",
+      subtitle: "AI Reporting Autopilot",
+      price: "€500 – €900",
       priceNote: "one-time",
-      description: "Landing page with advanced lead capture and CRM integration",
+      description: "Automate recurring reports from business data to client-ready Google Docs/Sheets",
       popular: false,
       color: "accent",
       features: [
-        "Everything in Starter",
-        "Multi-step contact forms",
-        "CRM integration (Notion, Sheets)",
-        "Telegram + Email notifications",
-        "Lead tracking analytics",
-        "Follow-up automation"
+        "Data source integration and mapping",
+        "LLM-powered drafting and summarization",
+        "Google Docs/Sheets report generation",
+        "Formatting aligned to your reporting template",
+        "Review checkpoints and safe publishing flow",
+        "Handover with clear operating instructions"
       ],
-      result: "Never miss a lead, track every opportunity",
+      result: "Save hours every week and deliver reports consistently",
     },
     {
       name: "Pro",
-      subtitle: "Automation System",
-      price: "€800 – €2000+",
+      subtitle: "AI Workflow Sprint",
+      price: "€900 – €1800+",
       priceNote: "one-time",
-      description: "Custom automation workflows to eliminate manual work",
+      description: "Design and implement one end-to-end AI workflow for operations or sales",
       popular: false,
       color: "foreground",
       features: [
-        "Process analysis & consulting",
-        "Custom automation workflows",
-        "Excel/Sheets automation",
-        "Email processing automation",
-        "Document generation",
-        "Multi-system integration"
+        "Workflow discovery and bottleneck analysis",
+        "Lead intake, qualification, and routing automation",
+        "Multi-tool integrations (Workspace, Slack, Notion, CRM)",
+        "Automated summaries, proposals, or follow-ups",
+        "Monitoring, alerts, and fallback handling",
+        "Deployment support and optimization recommendations"
       ],
-      result: "Save 10+ hours every week on repetitive tasks",
+      result: "Replace manual repetitive work with scalable AI operations",
     },
   ]
 
   const supportFeatures = [
-    "Hosting and maintenance",
-    "Monitoring and updates",
-    "Small improvements when needed"
+    "Lead Capture to CRM automation add-on",
+    "Customer Support Copilot add-on",
+    "Hosting, monitoring, and continuous improvements"
   ]
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -86,7 +87,7 @@ export function Pricing() {
   }
 
   return (
-    <section id="pricing" className="py-24 bg-secondary/30">
+    <section id="pricing" className="py-16 lg:py-20 bg-secondary/30">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -183,7 +184,7 @@ export function Pricing() {
                   <Badge variant="secondary">Optional</Badge>
                 </div>
                 <p className="text-2xl font-bold text-foreground mb-3">
-                  €50 – €100 <span className="text-sm font-normal text-muted-foreground">/month</span>
+                  €50 – €150 <span className="text-sm font-normal text-muted-foreground">/month</span>
                 </p>
                 <ul className="space-y-2">
                   {supportFeatures.map((item) => (
@@ -211,7 +212,7 @@ export function Pricing() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            Get your website or automation system this week
+            Get your first lead system or AI automation live this week
           </h3>
           <Button 
             size="lg" 

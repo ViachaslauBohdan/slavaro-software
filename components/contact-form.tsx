@@ -23,8 +23,8 @@ export function ContactForm() {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@volska.com",
-      href: "mailto:hello@volska.com"
+      value: "volskagroup@gmail.com",
+      href: "mailto:volskagroup@gmail.com"
     },
     {
       icon: MessageSquare,
@@ -41,7 +41,7 @@ export function ContactForm() {
   ]
 
   return (
-    <section id="contact" className="py-20 lg:py-32 relative overflow-hidden">
+    <section id="contact" className="py-16 lg:py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-secondary/30" />
       <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block">
@@ -164,9 +164,8 @@ export function ContactForm() {
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="landing-page">Landing Page (€300-500)</SelectItem>
-                      <SelectItem value="lead-system">Lead System (€500-800)</SelectItem>
-                      <SelectItem value="ai-automation">AI Automation (€800-2000+)</SelectItem>
+                      <SelectItem value="landing-page">Landing Page (€200-500)</SelectItem>
+                      <SelectItem value="ai-automation">AI Automation (€500-1800+)</SelectItem>
                       <SelectItem value="support">Ongoing Support</SelectItem>
                       <SelectItem value="other">Other / Not sure</SelectItem>
                     </SelectContent>

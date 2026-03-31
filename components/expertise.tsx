@@ -41,7 +41,7 @@ const whyChooseUs = [
 
 export function Expertise() {
   return (
-    <section id="expertise" className="py-20 lg:py-32 bg-secondary/30 relative overflow-hidden">
+    <section id="expertise" className="py-16 lg:py-24 bg-secondary/30 relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

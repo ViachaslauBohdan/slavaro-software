@@ -12,7 +12,6 @@ const socialLinks = [
 const footerLinks = {
   services: [
     { name: "Landing Pages", href: "#services" },
-    { name: "Lead Systems", href: "#services" },
     { name: "AI Automation", href: "#services" },
     { name: "Ongoing Support", href: "#pricing" },
   ],
@@ -30,7 +29,7 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="bg-foreground text-background">
-      <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2">

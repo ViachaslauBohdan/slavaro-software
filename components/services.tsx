@@ -45,23 +45,23 @@ export function Services() {
   const automationFeatures = [
     {
       icon: TableProperties,
-      title: "Excel & Sheets Automation",
-      description: "Automate data entry, reports, and spreadsheet workflows"
+      title: "AI Reporting Automation",
+      description: "Turn raw data into weekly board-ready reports in Google Docs and Sheets"
     },
     {
       icon: Mail,
-      title: "Email Processing",
-      description: "Auto-sort, respond, and extract data from emails"
+      title: "Lead Intake & Qualification",
+      description: "Capture, qualify, and route leads with instant CRM, Telegram, and email updates"
     },
     {
       icon: FileText,
-      title: "Document Generation",
-      description: "Auto-create invoices, contracts, and reports"
+      title: "Proposal & Summary Assistant",
+      description: "Convert call notes and briefs into polished proposals, summaries, and action lists"
     },
     {
       icon: Settings,
-      title: "System Integration",
-      description: "Connect your tools and eliminate manual data transfer"
+      title: "Workflow Integrations",
+      description: "Connect Google Workspace, Slack, Notion, and internal tools into one reliable flow"
     },
   ]
 
@@ -72,9 +72,9 @@ export function Services() {
   ]
 
   const automationBenefits = [
-    "Save hours every week",
-    "Reduce operational costs",
-    "Build scalable processes instead of manual tasks"
+    "Save 10+ hours every week on repetitive tasks",
+    "Reduce manual errors and speed up team response times",
+    "Scale operations without adding headcount for admin work"
   ]
 
   const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
@@ -95,7 +95,7 @@ export function Services() {
   }
 
   return (
-    <section id="services" className="py-20 lg:py-32">
+    <section id="services" className="py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
@@ -103,12 +103,12 @@ export function Services() {
             Two Services. Real Results.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            We focus on what works: converting landing pages and time-saving automation
+            Fast landing pages and practical AI automations built to generate leads and remove busywork
           </p>
         </div>
 
         {/* Landing Pages Section */}
-        <div className="mb-32">
+        <div className="mb-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
@@ -241,10 +241,10 @@ export function Services() {
                 AI Automation
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
-                AI Automation for Your Business
+                AI Services You Can Deploy First
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Eliminate repetitive tasks with smart automation. Save 10+ hours weekly and focus on what matters most.
+                Production-focused automation for reporting, lead handling, and daily operations, designed for small and growing teams.
               </p>
               
               <div className="space-y-4 mb-8">

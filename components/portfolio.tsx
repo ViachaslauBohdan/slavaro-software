@@ -14,6 +14,10 @@ const portfolioItems = [
     image: "/images/portfolio-medical.jpg",
     features: ["Online Booking", "Treatment Catalog", "Before/After Gallery", "Patient Reviews"],
     industry: "Healthcare",
+    metric: "+34% booking requests in 30 days",
+    challenge: "High ad spend but low appointment conversion from mobile traffic.",
+    delivered: "A trust-first landing page with proof sections, treatment clarity, and instant booking flow.",
+    result: "More qualified appointment requests and better campaign ROI.",
   },
   {
     id: 2,
@@ -22,6 +26,10 @@ const portfolioItems = [
     image: "/images/portfolio-home-services.jpg",
     features: ["Service Request Form", "Price Calculator", "Service Areas Map", "Emergency Contact"],
     industry: "Services",
+    metric: "-41% response time to new leads",
+    challenge: "Leads arrived from multiple channels and follow-up was too slow.",
+    delivered: "Lead capture pages with instant Telegram and email notifications plus structured service request forms.",
+    result: "Faster first reply and fewer missed opportunities.",
   },
   {
     id: 3,
@@ -30,6 +38,10 @@ const portfolioItems = [
     image: "/images/portfolio-logistics.jpg",
     features: ["Quote Calculator", "Fleet Showcase", "Tracking Integration", "Route Coverage"],
     industry: "Logistics",
+    metric: "+27% quote requests",
+    challenge: "Visitors had unclear service scope and low trust before submitting quote requests.",
+    delivered: "Industry-specific pages with route coverage, proof points, and fast quote intake forms.",
+    result: "Higher quote intent and improved sales pipeline quality.",
   },
   {
     id: 4,
@@ -38,6 +50,10 @@ const portfolioItems = [
     image: "/images/portfolio-real-estate.jpg",
     features: ["Property Listings", "Virtual Tours", "Mortgage Calculator", "Agent Profiles"],
     industry: "Real Estate",
+    metric: "+22% qualified inquiries",
+    challenge: "Too many low-intent inquiries and not enough context in forms.",
+    delivered: "Listing-focused pages with virtual tours and qualification fields tailored to buyer intent.",
+    result: "More actionable leads for the sales team.",
   },
   {
     id: 5,
@@ -46,14 +62,27 @@ const portfolioItems = [
     image: "/images/portfolio-automotive.jpg",
     features: ["Service Booking", "Vehicle Inventory", "Price Lists", "Customer Reviews"],
     industry: "Automotive",
+    metric: "+31% service bookings",
+    challenge: "Users dropped before booking because services and pricing were hard to compare.",
+    delivered: "Clear offer structure, pricing visibility, and mobile-first booking flow.",
+    result: "Higher booking completion and better local lead conversion.",
   },
 ]
 
 export function Portfolio() {
   const [selectedItem, setSelectedItem] = useState<typeof portfolioItems[0] | null>(null)
+  const introCallUrl = "https://calendly.com/slawandr1/15min"
+
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  const openIntroCall = () => {
+    window.open(introCallUrl, "_blank", "noopener,noreferrer")
+  }
 
   return (
-    <section id="portfolio" className="py-24 bg-secondary">
+    <section id="portfolio" className="py-16 lg:py-20 bg-secondary">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -92,6 +121,10 @@ export function Portfolio() {
                   {item.industry}
                 </Badge>
 
+                <Badge className="absolute top-4 right-4 bg-background/90 text-foreground">
+                  {item.metric}
+                </Badge>
+
                 {/* Content Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
@@ -124,19 +157,24 @@ export function Portfolio() {
           <p className="text-muted-foreground mb-4">
             Don&apos;t see your industry? We create landing pages for any service business.
           </p>
-          <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-            Discuss Your Project <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Button size="lg" onClick={scrollToContact}>
+              Discuss Your Project <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" onClick={openIntroCall}>
+              Book 15-min Intro Call
+            </Button>
+          </div>
         </div>
       </div>
 
       {/* Modal */}
       {selectedItem && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80"
           onClick={() => setSelectedItem(null)}
         >
-          <div 
+          <div
             className="bg-card rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-auto shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
@@ -157,13 +195,31 @@ export function Portfolio() {
               <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                 {selectedItem.industry}
               </Badge>
+              <Badge className="absolute bottom-4 left-4 bg-background/90 text-foreground">
+                {selectedItem.metric}
+              </Badge>
             </div>
 
             {/* Modal Content */}
             <div className="p-6 md:p-8">
               <h3 className="text-2xl font-bold text-foreground mb-3">{selectedItem.title}</h3>
               <p className="text-muted-foreground mb-6">{selectedItem.description}</p>
-              
+
+              <div className="grid gap-4 md:grid-cols-3 mb-6">
+                <div className="rounded-lg border border-border p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">Challenge</p>
+                  <p className="text-sm text-foreground">{selectedItem.challenge}</p>
+                </div>
+                <div className="rounded-lg border border-border p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">Delivered</p>
+                  <p className="text-sm text-foreground">{selectedItem.delivered}</p>
+                </div>
+                <div className="rounded-lg border border-border p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">Result</p>
+                  <p className="text-sm text-primary font-medium">{selectedItem.result}</p>
+                </div>
+              </div>
+
               <h4 className="font-semibold text-foreground mb-3">Key Features Included:</h4>
               <div className="grid grid-cols-2 gap-3 mb-6">
                 {selectedItem.features.map((feature, idx) => (
@@ -175,17 +231,23 @@ export function Portfolio() {
               </div>
 
               <div className="flex gap-3">
-                <Button 
+                <Button
                   className="flex-1"
                   onClick={() => {
                     setSelectedItem(null)
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                    scrollToContact()
                   }}
                 >
                   Get Similar Landing Page
                 </Button>
-                <Button variant="outline" onClick={() => setSelectedItem(null)}>
-                  Close
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setSelectedItem(null)
+                    openIntroCall()
+                  }}
+                >
+                  Book 15-min Intro Call
                 </Button>
               </div>
             </div>

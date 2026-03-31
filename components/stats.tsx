@@ -13,8 +13,8 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
-      {/* Background image */}
+    <section className="py-16 lg:py-24 relative overflow-hidden">
+      {/* Background image with a softer branded overlay for readability */}
       <div className="absolute inset-0">
         <Image
           src="/images/hero-bg.jpg"
@@ -22,7 +22,7 @@ export function Stats() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-foreground/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/88 via-primary/82 to-foreground/78" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
@@ -30,7 +30,7 @@ export function Stats() {
           <h2 className="text-3xl font-bold tracking-tight text-background sm:text-4xl">
             Results that speak for themselves
           </h2>
-          <p className="mt-4 text-lg text-background/70">
+          <p className="mt-4 text-lg text-background/85">
             Fast delivery, real results, happy clients
           </p>
         </div>
@@ -38,9 +38,11 @@ export function Stats() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center group">
-              <div className="inline-block p-4 rounded-xl bg-background/5 group-hover:bg-background/10 transition-colors">
-                <p className="text-3xl lg:text-4xl font-bold text-primary">{stat.value}</p>
-                <p className="mt-2 text-sm text-background/70">{stat.label}</p>
+              <div className="inline-block min-w-[140px] p-4 rounded-xl border border-background/25 bg-background/12 backdrop-blur-sm group-hover:bg-background/18 group-hover:border-background/35 transition-colors">
+                <p className="text-3xl lg:text-4xl font-extrabold tracking-tight text-background drop-shadow-sm">
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-sm font-medium text-background/85">{stat.label}</p>
               </div>
             </div>
           ))}
