@@ -29,7 +29,7 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="bg-foreground text-background">
-      <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8 lg:py-14">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2">
@@ -89,7 +89,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-background/10">
+        <div className="mt-12 pt-6 border-t border-background/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/70">
               &copy; {new Date().getFullYear()} Volska Group. All rights reserved.

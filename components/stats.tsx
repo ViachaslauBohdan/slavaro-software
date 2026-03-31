@@ -13,7 +13,7 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="py-16 lg:py-24 relative overflow-hidden">
+    <section className="py-14 lg:py-20 relative overflow-hidden">
       {/* Background image with a softer branded overlay for readability */}
       <div className="absolute inset-0">
         <Image
@@ -26,7 +26,7 @@ export function Stats() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-background sm:text-4xl">
             Results that speak for themselves
           </h2>

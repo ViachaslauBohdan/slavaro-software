@@ -87,9 +87,9 @@ export function Pricing() {
   }
 
   return (
-    <section id="pricing" className="py-16 lg:py-20 bg-secondary/30">
+    <section id="pricing" className="py-14 lg:py-20 bg-secondary/30">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-16">
+        <div className="mx-auto max-w-2xl text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Simple, Transparent Pricing
           </h2>
@@ -172,7 +172,7 @@ export function Pricing() {
         </div>
 
         {/* Ongoing Support */}
-        <div className="mt-16 mx-auto max-w-3xl">
+        <div className="mt-12 mx-auto max-w-3xl">
           <div className="rounded-2xl bg-card p-8 shadow-sm ring-1 ring-border hover:shadow-md transition-shadow">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div>
@@ -210,7 +210,7 @@ export function Pricing() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
           <h3 className="text-2xl font-bold text-foreground mb-4">
             Get your first lead system or AI automation live this week
           </h3>

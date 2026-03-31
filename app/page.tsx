@@ -1,6 +1,7 @@
 // Volska Group - English only website
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { About } from "@/components/about"
 import { Services } from "@/components/services"
 import { Expertise } from "@/components/expertise"
 import { Stats } from "@/components/stats"
@@ -69,6 +70,7 @@ export default function Home() {
       />
       <Header />
       <Hero />
+      <About />
       <Services />
       <Expertise />
       <Stats />

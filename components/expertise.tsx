@@ -41,7 +41,7 @@ const whyChooseUs = [
 
 export function Expertise() {
   return (
-    <section id="expertise" className="py-16 lg:py-24 bg-secondary/30 relative overflow-hidden">
+    <section id="expertise" className="py-14 lg:py-20 bg-secondary/30 relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -51,7 +51,7 @@ export function Expertise() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             How We Work
           </h2>
@@ -61,7 +61,7 @@ export function Expertise() {
         </div>
 
         {/* Landing Page Process */}
-        <div className="mb-20">
+        <div className="mb-14">
           <div className="flex items-center gap-3 mb-8">
             <div className="p-2 rounded-lg bg-primary/10">
               <Globe className="h-5 w-5 text-primary" />
@@ -85,7 +85,7 @@ export function Expertise() {
         </div>
 
         {/* Automation Process */}
-        <div className="mb-20">
+        <div className="mb-14">
           <div className="flex items-center gap-3 mb-8">
             <div className="p-2 rounded-lg bg-accent/10">
               <Bot className="h-5 w-5 text-accent" />

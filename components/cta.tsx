@@ -22,7 +22,7 @@ export function CTA() {
   }
 
   return (
-    <section className="py-16 lg:py-24">
+    <section className="py-14 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="relative rounded-2xl overflow-hidden">
           {/* Background image */}

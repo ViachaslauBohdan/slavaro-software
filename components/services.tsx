@@ -95,10 +95,10 @@ export function Services() {
   }
 
   return (
-    <section id="services" className="py-16 lg:py-24">
+    <section id="services" className="py-14 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Two Services. Real Results.
           </h2>
@@ -108,7 +108,7 @@ export function Services() {
         </div>
 
         {/* Landing Pages Section */}
-        <div className="mb-24">
+        <div className="mb-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">

@@ -32,7 +32,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+    <section className="relative pt-28 pb-14 lg:pt-32 lg:pb-20 overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <Image
@@ -148,7 +148,7 @@ export function Hero() {
         </div>
 
         {/* Trust indicators */}
-        <div className="mt-20 pt-12 border-t border-border/50">
+        <div className="mt-14 pt-8 border-t border-border/50">
           <p className="text-center text-sm font-medium text-muted-foreground mb-8">
             Trusted by businesses ready to grow
           </p>

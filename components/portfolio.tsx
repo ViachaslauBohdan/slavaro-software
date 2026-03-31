@@ -82,10 +82,10 @@ export function Portfolio() {
   }
 
   return (
-    <section id="portfolio" className="py-16 lg:py-20 bg-secondary">
+    <section id="portfolio" className="py-14 lg:py-20 bg-secondary">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <Badge variant="secondary" className="mb-4">Portfolio</Badge>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
             Landing Pages That Convert
