@@ -16,34 +16,49 @@ const spaceGrotesk = Space_Grotesk({
 // main trigger
 
 export const metadata: Metadata = {
-  title: 'Landing Pages from €300 in 48 Hours | AI Automation | Volska',
-  description: 'Professional landing pages starting at €300, delivered in 48 hours. Lead generation systems with Telegram/email notifications. AI automation for Excel, documents, and workflows. Save 10+ hours weekly. Based in Poland, serving USA & Europe.',
-  keywords: 'landing page design, landing page €300, 48 hour website, fast landing page development, AI automation, business automation, lead generation website, Telegram notifications, email automation, Google Sheets automation, Excel automation, document automation, small business website, startup landing page, lead capture system, CRM integration, workflow automation, affordable web design, professional landing page, conversion optimization, local business website, service business website USA',
+  metadataBase: new URL('https://volska.com'),
+  title: {
+    default: 'Landing Pages in 48 Hours + AI Automation | Volska Group',
+    template: '%s | Volska Group',
+  },
+  description: 'Landing pages from €200-500 delivered in 48 hours, plus practical AI automation for reports and workflows. Based in Warsaw, Poland, serving EU and US clients.',
+  keywords: 'landing page development, landing pages in 48 hours, AI automation services, business process automation, google sheets automation, google docs automation, workflow automation, react developer, nodejs developer, warsaw web developer, poland software engineer, lead generation website, service business landing page',
   authors: [{ name: 'Volska' }],
   creator: 'Volska',
   publisher: 'Volska',
-  robots: 'index, follow',
+  category: 'technology',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'en_GB',
     url: 'https://volska.com',
-    siteName: 'Volska - Landing Pages & AI Automation',
-    title: 'Landing Pages from €300 in 48h | AI Automation | Volska',
-    description: 'Professional landing pages from €300, delivered in 48 hours. Lead systems with instant notifications. AI automation that saves 10+ hours weekly.',
+    siteName: 'Volska Group',
+    title: 'Landing Pages in 48 Hours + AI Automation | Volska Group',
+    description: 'Get a conversion-focused landing page fast, or automate reporting and repetitive workflows with AI.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://volska.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Volska - Landing Pages from €300 & AI Automation',
+        alt: 'Volska Group - Landing Pages and AI Automation',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Landing Pages from €300 in 48h | Volska',
-    description: 'Professional landing pages from €300 in 48 hours. AI automation to save 10+ hours weekly.',
-    images: ['/og-image.jpg'],
+    title: 'Landing Pages in 48 Hours + AI Automation',
+    description: 'Landing pages from €200-500 and practical AI automation for service businesses.',
+    images: ['https://volska.com/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://volska.com',
