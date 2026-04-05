@@ -1,4 +1,4 @@
-// Volska Landing — main-landing: landing pages in 48 hours
+// Volska Landing — main-landing: same-day design, 48h landing delivery
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -33,9 +33,9 @@ export default function Home() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Landing pages in 48 hours",
+    name: "Fast landing delivery (48 hours)",
     description:
-      "Conversion-focused landing pages: kickoff call, same-day design, fully working page next day.",
+      "Conversion-focused landing pages: kickoff call, page design same day, full landing page delivered within 48 hours.",
     provider: {
       "@type": "Organization",
       name: "Volska Landing",

@@ -7,15 +7,15 @@ import { Badge } from "@/components/ui/badge"
 export function Pricing() {
   const tier = {
     name: "Landing Page",
-    subtitle: "48-hour delivery",
+    subtitle: "Same-day design · 48h delivery",
     price: "€200 – €500",
     priceNote: "one-time",
     description:
-      "Fast, conversion-focused landing page: call → same-day design → fully working page next day.",
+      "Fast, conversion-focused landing page: kickoff call → page design same day → full landing page delivered within 48 hours.",
     popularText: "Most popular",
     features: [
       "1-page responsive landing page",
-      "Kickoff call, then design same day & live page next day (within 48h window)",
+      "Kickoff call, then page design same day & full landing page delivered within the 48-hour window",
       "Offer messaging and conversion-focused structure",
       "Contact form with Telegram + email notifications",
       "Mobile and performance optimization",
@@ -55,7 +55,7 @@ export function Pricing() {
             Simple, transparent pricing
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            One core offer: landing pages in 48 hours. No hidden fees.
+            One core offer: same-day page design and full landing delivery in 48 hours. No hidden fees.
           </p>
         </div>
 
@@ -145,7 +145,7 @@ export function Pricing() {
 
         <div className="mt-12 text-center">
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            Ready for your landing page this week?
+            Ready for same-day design and delivery in 48 hours?
           </h3>
           <Button
             size="lg"

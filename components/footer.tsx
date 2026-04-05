@@ -11,7 +11,7 @@ const socialLinks = [
 
 const footerLinks = {
   services: [
-    { name: "Landing pages (48h)", href: "#services" },
+    { name: "Fast delivery (48h)", href: "#services" },
     { name: "How it works", href: "#expertise" },
     { name: "Ongoing support", href: "#pricing" },
   ],
@@ -36,7 +36,7 @@ export function Footer() {
               <span className="text-2xl font-bold">Volska Landing</span>
             </Link>
             <p className="mt-4 text-sm text-background/70 max-w-xs">
-              Landing pages in 48 hours — call, same-day design, live page next day. Based in Poland,
+              Fast delivery: same-day page design, full landing page within 48 hours. Based in Poland,
               serving clients worldwide.
             </p>
             <div className="flex gap-4 mt-6">

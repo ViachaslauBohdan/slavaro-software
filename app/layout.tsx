@@ -16,11 +16,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://volska.com'),
   title: {
-    default: 'Landing Pages in 48 Hours | Volska Landing',
+    default: 'Same-Day Design · 48h Landing Delivery | Volska Landing',
     template: '%s | Volska Landing',
   },
   description:
-    'Landing pages from €200–500 delivered in 48 hours: call, same-day design, fully working page next day. Mobile-ready, SEO, instant lead alerts. Warsaw, Poland — EU & US clients.',
+    'Fast landing pages from €200–500: page design the same day after your call, full landing page delivered within 48 hours. Mobile-ready, SEO, instant lead alerts. Warsaw, Poland — EU & US clients.',
   keywords:
     'landing page development, landing pages in 48 hours, lead generation website, conversion landing page, service business landing page, warsaw web developer, poland software engineer',
   authors: [{ name: 'Volska Landing' }],
@@ -43,22 +43,22 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: 'https://volska.com',
     siteName: 'Volska Landing',
-    title: 'Landing Pages in 48 Hours | Volska Landing',
+    title: 'Same-Day Design · 48h Landing Delivery | Volska Landing',
     description:
-      'Call → same-day landing page design → fully working page next day. From €200. Instant Telegram & email lead notifications.',
+      'Page design same day · full landing page in 48 hours. From €200. Instant Telegram & email lead notifications.',
     images: [
       {
         url: 'https://volska.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Volska Landing — Landing pages in 48 hours',
+        alt: 'Volska Landing — same-day design, landing in 48 hours',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Landing Pages in 48 Hours | Volska Landing',
-    description: 'Landing pages from €200–500. Same-day design, next-day live page.',
+    title: 'Same-Day Design · 48h Landing Delivery | Volska Landing',
+    description: 'Landing pages from €200–500. Same-day page design, full landing delivered in 48 hours.',
     images: ['https://volska.com/og-image.jpg'],
   },
   alternates: {

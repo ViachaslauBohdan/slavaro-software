@@ -9,7 +9,7 @@ Witam, [Firma],
 
 Czy potrzebują Państwo **jednej skupionej strony**, która zamienia odwiedzających w zapytania — bez czekania tygodniami na duży serwis?
 
-Budujemy **strony landing w przewidywalnym czasie**: rozmowa startowa → kierunek wizualny tego samego dnia → **działająca strona następnego dnia** (w ramach okna 48 godzin). Od **200–500 €** jednorazowo.
+Budujemy **strony landing z szybką realizacją**: **projekt strony tego samego dnia** po rozmowie → **pełna strona landing w ciągu 48 godzin**. Od **200–500 €** jednorazowo.
 
 **Co Państwo dostają:** responsywny układ, strukturę pod konwersję, formularz z powiadomieniami na **Telegram i e-mail**, podstawowe SEO i wydajność.
 

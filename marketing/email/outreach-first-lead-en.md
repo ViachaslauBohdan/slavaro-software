@@ -9,7 +9,7 @@ Hello [Company],
 
 Do you need a **single focused page** that turns visitors into leads — without waiting weeks for a full website?
 
-We build **landing pages on a fixed timeline**: kickoff call → design direction the same day → **fully working page the next day** (within a 48-hour window). From **€200–€500** one-time.
+We build **landing pages with fast delivery**: **page design the same day** after your call → **full landing page delivered within 48 hours**. From **€200–€500** one-time.
 
 **What you get:** responsive layout, conversion-focused structure, contact form with **Telegram and email** notifications, basic SEO and performance.
 

@@ -65,11 +65,13 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Landing pages in 48 hours
+            Fast delivery: same-day design, landing in 48 hours
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            One focused page built to convert: fast delivery, mobile-ready, with instant lead notifications.
-            After our kickoff call you get your design the same day and a fully working page the next day.
+            One focused page built to convert. After your kickoff call you get your{" "}
+            <span className="text-foreground font-medium">page design the same day</span> and your{" "}
+            <span className="text-foreground font-medium">full landing page within 48 hours</span>
+            — mobile-ready, with instant lead notifications.
           </p>
         </div>
 
@@ -83,8 +85,8 @@ export function Services() {
               Built for leads, not fluff
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Professional, high-converting landing pages delivered on a clear timeline. Mobile-friendly,
-              SEO-aware, with instant lead notifications so you never miss an inquiry.
+              We prioritize speed: same-day page design, then a complete landing page shipped inside 48 hours.
+              Mobile-friendly, SEO-aware, with instant lead notifications so you never miss an inquiry.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -132,7 +134,7 @@ export function Services() {
                 <Clock className="h-5 w-5 text-accent" />
                 <span className="text-xl font-bold text-foreground">48h</span>
               </div>
-              <p className="text-xs text-muted-foreground">Delivery window</p>
+              <p className="text-xs text-muted-foreground">Full page in 48h</p>
             </div>
           </div>
         </div>

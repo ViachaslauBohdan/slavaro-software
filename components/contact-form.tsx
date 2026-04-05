@@ -48,7 +48,7 @@ export function ContactForm() {
   ]
 
   const benefits = [
-    { icon: Clock, text: "Call → same-day design → live page next day" },
+    { icon: Clock, text: "Same-day page design · full landing delivered in 48h" },
     { icon: Palette, text: "Conversion-focused landing layout" },
     { icon: Zap, text: "Instant Telegram & email lead alerts" },
   ]

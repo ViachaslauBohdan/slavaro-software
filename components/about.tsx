@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { CheckCircle2 } from "lucide-react"
 
 const highlights = [
-  "Landing pages delivered on a clear timeline: call → same-day design → next-day live page",
+  "Fast delivery: page design the same day after your call, full landing page within 48 hours",
   "Conversion-focused structure, mobile-ready, instant lead notifications",
   "End-to-end ownership from kickoff to launch",
   "Clear communication, transparent pricing, no hidden fees",
@@ -22,8 +22,10 @@ export function About() {
               Volska Landing builds landing pages that turn visitors into leads
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              We help service businesses launch high-converting landing pages quickly — so you start
-              receiving qualified inquiries without waiting weeks for a full website project.
+              We help service businesses ship landing pages fast:{" "}
+              <span className="text-foreground font-medium">design the same day</span>,{" "}
+              <span className="text-foreground font-medium">full page in 48 hours</span> — so you start
+              receiving qualified inquiries without waiting weeks.
             </p>
             <p className="mt-4 text-muted-foreground">
               Our focus is one thing done well: a fast, clear page that matches your offer and gets

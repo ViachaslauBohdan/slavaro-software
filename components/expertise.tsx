@@ -31,17 +31,18 @@ const landingFlow = [
   {
     icon: Rocket,
     step: "03",
-    title: "Fully working page — next day",
+    title: "Landing page delivered — within 48 hours",
     description:
-      "A live, mobile-ready landing page for your business: forms, lead alerts, and performance basics.",
+      "Your full page goes live on schedule: forms, lead alerts, and performance basics — inside the 48-hour delivery window.",
   },
 ]
 
 const whyChooseUs = [
   {
     icon: Clock,
-    title: "Fast timeline",
-    description: "Call → same-day design → next-day live page — no endless back-and-forth.",
+    title: "Fast delivery",
+    description:
+      "Page design the same day after your call; your full landing page delivered within 48 hours — no endless back-and-forth.",
   },
   {
     icon: TrendingUp,
@@ -76,16 +77,14 @@ export function Expertise() {
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            From call to live page
+            Fast delivery: call → same-day design → landing in 48h
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
-            <span className="text-foreground font-medium">Call</span>
+            <span className="text-foreground font-medium">Kickoff call</span>
             {" → "}
-            <span className="text-foreground font-medium">your landing page design same day</span>
+            <span className="text-foreground font-medium">landing page design same day</span>
             {" → "}
-            <span className="text-foreground font-medium">
-              fully working page for your business next day
-            </span>
+            <span className="text-foreground font-medium">full landing page delivered within 48 hours</span>
             .
           </p>
         </div>

@@ -7,9 +7,9 @@ import Image from "next/image"
 
 export function Hero() {
   const highlights = [
-    { icon: Phone, text: "Call — we align on your offer and goals" },
+    { icon: Phone, text: "Kickoff call — we align on your offer and goals" },
     { icon: Palette, text: "Same day — your landing page design" },
-    { icon: Rocket, text: "Next day — fully working page for your business" },
+    { icon: Rocket, text: "Within 48 hours — full landing page live" },
   ]
 
   const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
@@ -50,17 +50,20 @@ export function Hero() {
               variant="secondary"
               className="mb-6 px-4 py-2 text-sm font-medium border-primary/20 bg-background/80 backdrop-blur-sm"
             >
-              Landing pages in 48 hours
+              Fast delivery · design same day · landing in 48h
             </Badge>
 
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
-              Professional landing pages that{" "}
-              <span className="text-primary">convert in 48 hours</span>
+              Landing pages with{" "}
+              <span className="text-primary">same-day design · 48-hour delivery</span>
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-xl text-pretty">
-              Call → your landing page design same day → fully working page for your business next day.
-              High-converting, mobile-ready, with instant lead notifications.
+              After your kickoff call you get your{" "}
+              <span className="font-semibold text-foreground">page design the same day</span>. Your{" "}
+              <span className="font-semibold text-foreground">full landing page is delivered within 48 hours</span>
+              {" "}
+              — mobile-ready, conversion-focused, with instant lead notifications.
             </p>
 
             <div className="mt-10 flex items-center gap-4 flex-wrap">
@@ -144,7 +147,8 @@ export function Hero() {
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-foreground">48h</p>
-                  <p className="text-xs text-muted-foreground">Call to live page</p>
+                  <p className="text-xs text-muted-foreground">Landing page delivery</p>
+                  <p className="text-[10px] text-muted-foreground/80 mt-0.5">Design same day</p>
                 </div>
               </div>
             </div>

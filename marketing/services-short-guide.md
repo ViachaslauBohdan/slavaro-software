@@ -12,7 +12,7 @@
 
 **What you get:** Looks good on phone and computer, loads quickly, basic SEO, and a contact form that **pings you on Telegram and email** when someone writes in.
 
-**Who it’s for:** You need to start collecting qualified inquiries on a clear timeline: call → same-day design direction → fully working page the next day (within a 48-hour window).
+**Who it’s for:** You need to start collecting qualified inquiries fast: **page design the same day** after kickoff, **full landing page delivered within 48 hours**.
 
 ---
 

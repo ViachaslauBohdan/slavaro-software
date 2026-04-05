@@ -40,8 +40,8 @@ export function CTA() {
               Ready for your landing page?
             </h2>
             <p className="mt-6 text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-              Call → same-day design → fully working page next day. Start collecting leads in days, not
-              months.
+              Same-day page design after your call — full landing page delivered within 48 hours. Start
+              collecting leads fast, not after months of waiting.
             </p>
             <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
               <Button
