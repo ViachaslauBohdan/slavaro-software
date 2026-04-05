@@ -1,7 +1,7 @@
 # E-mail — pierwszy kontakt (PL)
 
 **Placeholder:** `[Firma]` — nazwa firmy odbiorcy (np. Hunt Estates).  
-**Temat (propozycja):** Powtarzalne procesy w firmie? / Volska Landing — landing page + automatyzacja
+**Temat (propozycja):** Powtarzalne procesy w firmie? / Volska Automation — landing page + automatyzacja
 
 ---
 
@@ -36,14 +36,14 @@ https://calendly.com/slawandr1/30min
 lub zadzwonić: +48 537 437 454
 
 Pozdrawiamy,  
-Volska Landing  
+Volska Automation  
 https://v0-vention-design-clone.vercel.app/
 
 ---
 
 ## Mail 2 — follow-up (krótki, bez odpowiedzi)
 
-**Temat:** RE: Powtarzalne procesy / Volska Landing
+**Temat:** RE: Powtarzalne procesy / Volska Automation
 
 Witam, [Firma],
 
@@ -53,7 +53,7 @@ Jeśli temat aktualny, proszę o krótką odpowiedź lub termin:
 https://calendly.com/slawandr1/30min · +48 537 437 454 · https://v0-vention-design-clone.vercel.app/
 
 Pozdrawiamy,  
-Volska Landing
+Volska Automation
 
 ---
 
@@ -66,5 +66,5 @@ Witam, [Firma],
 bez odpowiedzi zamykam ten wątek po swojej stronie. Gdy pojawi się potrzeba — zapraszamy do kontaktu tymi samymi kanałami.
 
 Pozdrawiamy,  
-Volska Landing  
+Volska Automation  
 https://v0-vention-design-clone.vercel.app/

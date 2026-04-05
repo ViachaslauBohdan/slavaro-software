@@ -19,7 +19,7 @@ export function About() {
               About
             </Badge>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Volska Landing builds landing pages that turn visitors into leads
+              Volska Automation builds landing pages that turn visitors into leads
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
               We help service businesses launch high-converting landing pages quickly — so you start

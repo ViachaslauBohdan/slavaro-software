@@ -1,7 +1,7 @@
 # Email — first outreach (EN)
 
 **Placeholder:** `[Company]` — recipient’s business name (e.g. Hunt Estates).  
-**Subject (suggestion):** Repetitive processes in your business? / Volska Landing — landing pages + automation
+**Subject (suggestion):** Repetitive processes in your business? / Volska Automation — landing pages + automation
 
 ---
 
@@ -36,14 +36,14 @@ https://calendly.com/slawandr1/30min
 or call: +48 537 437 454
 
 Kind regards,  
-Volska Landing  
+Volska Automation  
 https://v0-vention-design-clone.vercel.app/
 
 ---
 
 ## Email 2 — follow-up (short, no reply)
 
-**Subject:** Re: Repetitive processes / Volska Landing
+**Subject:** Re: Repetitive processes / Volska Automation
 
 Hello [Company],
 
@@ -53,7 +53,7 @@ If it’s still relevant, please send a short reply or book a slot:
 https://calendly.com/slawandr1/30min · +48 537 437 454 · https://v0-vention-design-clone.vercel.app/
 
 Kind regards,  
-Volska Landing
+Volska Automation
 
 ---
 
@@ -66,5 +66,5 @@ Hello [Company],
 With no reply I’ll stop following up on this thread. If you need us later, use the same links and number as above.
 
 Kind regards,  
-Volska Landing  
+Volska Automation  
 https://v0-vention-design-clone.vercel.app/

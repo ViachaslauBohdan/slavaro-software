@@ -1,4 +1,4 @@
-// Volska Landing — main-landing: landing pages in 48 hours
+// Volska Automation — main-landing: landing pages in 48 hours
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -16,7 +16,7 @@ export default function Home() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Volska Landing",
+    name: "Volska Automation",
     url: "https://volska.com",
     image: "https://volska.com/og-image.jpg",
     email: "volskagroup@gmail.com",
@@ -38,7 +38,7 @@ export default function Home() {
       "Conversion-focused landing pages: kickoff call, same-day design, fully working page next day.",
     provider: {
       "@type": "Organization",
-      name: "Volska Landing",
+      name: "Volska Automation",
       url: "https://volska.com",
     },
     areaServed: ["Poland", "European Union", "United States"],
