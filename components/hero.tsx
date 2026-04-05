@@ -127,8 +127,8 @@ export function Hero() {
 
               <div className="relative h-48 rounded-xl overflow-hidden shadow-xl ring-1 ring-border">
                 <Image
-                  src="/images/landing-mockup.jpg"
-                  alt="Integrated tools"
+                  src="/images/mobile-responsive.jpg"
+                  alt="Workflows on every device"
                   fill
                   className="object-cover"
                 />
