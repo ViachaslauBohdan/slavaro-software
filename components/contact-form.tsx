@@ -48,9 +48,9 @@ export function ContactForm() {
   ]
 
   const benefits = [
-    { icon: Clock, text: "48-hour landing page delivery" },
-    { icon: Zap, text: "Instant lead notifications" },
-    { icon: Bot, text: "AI automation that saves hours" },
+    { icon: Bot, text: "AI workflows that save 10+ hours weekly" },
+    { icon: Zap, text: "Reporting, routing, and tool integrations" },
+    { icon: Clock, text: "Clear handover and optional ongoing care" },
   ]
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -169,7 +169,7 @@ export function ContactForm() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-primary/80" />
               </div>
               <div className="relative p-6">
-                <h3 className="font-semibold text-primary-foreground mb-4">What you get with Volska Group</h3>
+                <h3 className="font-semibold text-primary-foreground mb-4">What you get with Volska Landing</h3>
                 <div className="space-y-4">
                   {benefits.map((benefit) => (
                     <div key={benefit.text} className="flex items-center gap-3">
@@ -244,10 +244,10 @@ export function ContactForm() {
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="landing-page">Landing Page (€200-500)</SelectItem>
-                      <SelectItem value="ai-automation">AI Automation (€500-1800+)</SelectItem>
-                      <SelectItem value="support">Ongoing Support</SelectItem>
-                      <SelectItem value="other">Other / Not sure</SelectItem>
+                      <SelectItem value="ai-reporting">AI reporting autopilot (€500–900)</SelectItem>
+                      <SelectItem value="ai-workflow">AI workflow sprint (€900–1800+)</SelectItem>
+                      <SelectItem value="support">Ongoing automation care</SelectItem>
+                      <SelectItem value="other">Other / not sure</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

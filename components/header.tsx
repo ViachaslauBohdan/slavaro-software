@@ -8,7 +8,6 @@ import { Menu, X } from "lucide-react"
 const navItems = [
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
   { name: "How it works", href: "#expertise" },
   { name: "Pricing", href: "#pricing" },
   { name: "FAQ", href: "#faq" },
@@ -23,8 +22,8 @@ export function Header() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
-      
-      const sections = navItems.map(item => item.href.replace("#", ""))
+
+      const sections = navItems.map((item) => item.href.replace("#", ""))
       for (const section of sections.reverse()) {
         const element = document.getElementById(section)
         if (element) {
@@ -45,7 +44,7 @@ export function Header() {
     e.preventDefault()
     const targetId = href.replace("#", "")
     const element = document.getElementById(targetId)
-    
+
     if (element) {
       const headerOffset = 80
       const elementPosition = element.getBoundingClientRect().top
@@ -53,26 +52,30 @@ export function Header() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       })
     }
-    
+
     setMobileMenuOpen(false)
   }
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? "bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-sm" 
-        : "bg-transparent"
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-sm"
+          : "bg-transparent"
+      }`}
+    >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 group">
-            <span className="text-2xl font-bold text-foreground transition-colors group-hover:text-primary">Volska Group</span>
+            <span className="text-2xl font-bold text-foreground transition-colors group-hover:text-primary">
+              Volska Landing
+            </span>
           </Link>
         </div>
-        
+
         <div className="flex items-center gap-3 lg:hidden">
           <button
             type="button"
@@ -90,7 +93,7 @@ export function Header() {
 
         <div className="hidden lg:flex lg:gap-x-1 lg:items-center">
           {navItems.map((item) => (
-            <a 
+            <a
               key={item.name}
               href={item.href}
               onClick={(e) => scrollToSection(e, item.href)}
@@ -109,13 +112,13 @@ export function Header() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-4">
-          <Button 
-            size="sm" 
+          <Button
+            size="sm"
             className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105"
             asChild
           >
             <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>
-              Get Started
+              Get started
             </a>
           </Button>
         </div>
@@ -139,12 +142,9 @@ export function Header() {
               </a>
             ))}
             <div className="pt-4 border-t border-border">
-              <Button 
-                className="w-full bg-primary text-primary-foreground"
-                asChild
-              >
+              <Button className="w-full bg-primary text-primary-foreground" asChild>
                 <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>
-                  Get Started
+                  Get started
                 </a>
               </Button>
             </div>

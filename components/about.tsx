@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button"
 import { CheckCircle2 } from "lucide-react"
 
 const highlights = [
-  "Fast landing page delivery focused on lead generation",
-  "Practical AI automations for reporting and repetitive workflows",
-  "End-to-end ownership from discovery to production deployment",
-  "Clear communication, transparent pricing, and fast turnaround",
+  "AI-powered reporting into Google Docs and Sheets",
+  "Lead intake, qualification, and routing between CRM, email, and Telegram",
+  "Integrations across Workspace, Slack, Notion, and APIs",
+  "Clear scopes, transparent pricing, and support after go-live",
 ]
 
 export function About() {
@@ -19,23 +19,19 @@ export function About() {
               About
             </Badge>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Volska Group builds websites and automations that drive growth
+              Volska Landing builds AI automations that save time every week
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              We help service businesses launch high-converting landing pages
-              quickly and automate repetitive operations with AI, so teams save
-              time and capture more qualified leads.
+              We help teams replace repetitive manual work with reliable workflows — from recurring
+              reports to lead handoffs and multi-system sync.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Our focus is simple: deliver business outcomes fast with practical
-              solutions that are easy to run, scale, and maintain.
+              No hype: production-ready automations you can run, measure, and extend.
             </p>
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-6 lg:p-8 shadow-sm">
-            <h3 className="text-lg font-semibold text-foreground">
-              What we focus on
-            </h3>
+            <h3 className="text-lg font-semibold text-foreground">What we focus on</h3>
             <div className="mt-5 space-y-3">
               {highlights.map((item) => (
                 <div key={item} className="flex items-start gap-3">
@@ -46,10 +42,10 @@ export function About() {
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button asChild>
-                <a href="#contact">Discuss your project</a>
+                <a href="#contact">Discuss your workflow</a>
               </Button>
               <Button variant="outline" asChild>
-                <a href="#portfolio">See portfolio</a>
+                <a href="#pricing">See pricing</a>
               </Button>
             </div>
           </div>

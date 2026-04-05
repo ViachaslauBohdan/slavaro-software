@@ -9,28 +9,34 @@ import {
 
 const faqs = [
   {
-    question: "How much does a landing page cost?",
-    answer: "Our landing pages start at €300-500 for a professional, mobile-friendly website. For more advanced features like CRM integration and lead tracking, prices range from €500-800. We provide exact quotes after understanding your needs."
-  },
-  {
-    question: "Can you really deliver in 48 hours?",
-    answer: "Yes! For standard landing pages, we deliver within 48 hours of receiving your content and requirements. More complex projects with custom integrations may take 3-5 days. We always provide a clear timeline before starting."
-  },
-  {
     question: "What kind of automation can you build?",
-    answer: "We automate repetitive business tasks: data entry from emails to spreadsheets, automatic document generation, lead notifications, CRM updates, report generation, and multi-system integrations. If you do it manually more than once, we can probably automate it."
+    answer:
+      "We automate repetitive business work: recurring reports into Google Docs/Sheets, lead capture and routing to CRM or Telegram, syncing data between tools, summarizing notes into proposals, and multi-step workflows across Workspace, Slack, Notion, and APIs. If your team does it manually more than once, we can usually structure it as a workflow.",
+  },
+  {
+    question: "How much does AI automation cost?",
+    answer:
+      "Reporting autopilot projects typically fall in €500–900; full workflow sprints often €900–1800+ depending on integrations and complexity. We give a fixed quote after a short discovery call.",
   },
   {
     question: "Do I need technical knowledge to use the automation?",
-    answer: "Not at all. We build systems that run automatically in the background. You'll receive notifications when needed, and we provide simple documentation. We also offer ongoing support to handle any adjustments."
+    answer:
+      "No. We build systems that run in the background with clear notifications when something needs your attention. You get simple documentation and optional ongoing care to adjust as your process changes.",
+  },
+  {
+    question: "How long does implementation take?",
+    answer:
+      "Reporting-focused projects are often delivered in days to a couple of weeks. Full workflow sprints depend on scope; we agree on milestones and checkpoints before we start.",
   },
   {
     question: "What if I need changes after delivery?",
-    answer: "Minor adjustments within the first week are included. For ongoing changes, we offer a monthly support plan (€50-100/month) that covers maintenance, updates, and small improvements. You can also request one-time changes at hourly rates."
+    answer:
+      "Minor fixes shortly after launch are usually included in scope. For ongoing tuning, we offer optional monthly care (€50–150/month) or agreed one-off changes.",
   },
   {
     question: "How do I get started?",
-    answer: "Simply fill out the contact form or message us on Telegram. We'll schedule a quick call to understand your needs, provide a quote, and can usually start the same week. No lengthy contracts or complicated processes."
+    answer:
+      "Use the contact form or Telegram. We’ll schedule a short call to understand your process, then propose scope, price, and timeline.",
   },
 ]
 
@@ -40,11 +46,9 @@ export function FAQ() {
       <div className="mx-auto max-w-3xl px-4 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Frequently Asked Questions
+            Frequently asked questions
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Everything you need to know about our services
-          </p>
+          <p className="mt-4 text-lg text-muted-foreground">AI workflow automation</p>
         </div>
 
         <Accordion type="single" collapsible className="w-full">
@@ -53,9 +57,7 @@ export function FAQ() {
               <AccordionTrigger className="text-left text-foreground hover:text-primary">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                {faq.answer}
-              </AccordionContent>
+              <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

@@ -3,18 +3,17 @@
 import Image from "next/image"
 
 const stats = [
-  { value: "48h", label: "Delivery time" },
+  { value: "10+", label: "Hours saved weekly" },
   { value: "50+", label: "Projects delivered" },
-  { value: "10+ hrs", label: "Saved weekly" },
+  { value: "24/7", label: "Alert-ready flows" },
   { value: "95%", label: "Client satisfaction" },
-  { value: "24/7", label: "Lead notifications" },
+  { value: "EU & US", label: "Remote delivery" },
   { value: "0", label: "Hidden fees" },
 ]
 
 export function Stats() {
   return (
     <section className="py-14 lg:py-20 relative overflow-hidden">
-      {/* Background image with a softer branded overlay for readability */}
       <div className="absolute inset-0">
         <Image
           src="/images/hero-bg.jpg"
@@ -28,10 +27,10 @@ export function Stats() {
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-background sm:text-4xl">
-            Results that speak for themselves
+            Automation that shows up in the numbers
           </h2>
           <p className="mt-4 text-lg text-background/85">
-            Fast delivery, real results, happy clients
+            Less copy-paste, fewer errors, faster responses
           </p>
         </div>
 

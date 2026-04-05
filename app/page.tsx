@@ -1,11 +1,10 @@
-// Volska Group - English only website
+// Volska Landing — main-automation: AI workflow automation only
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Services } from "@/components/services"
 import { Expertise } from "@/components/expertise"
 import { Stats } from "@/components/stats"
-import { Portfolio } from "@/components/portfolio"
 import { Pricing } from "@/components/pricing"
 import { FAQ } from "@/components/faq"
 import { CTA } from "@/components/cta"
@@ -16,7 +15,7 @@ export default function Home() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Volska Group",
+    name: "Volska Landing",
     url: "https://volska.com",
     image: "https://volska.com/og-image.jpg",
     email: "volskagroup@gmail.com",
@@ -27,32 +26,32 @@ export default function Home() {
       addressCountry: "PL",
     },
     sameAs: ["https://www.linkedin.com/in/viachaslau-bohdan-969436156/"],
-    serviceType: ["Landing Page Development", "AI Workflow Automation"],
+    serviceType: ["AI Workflow Automation", "Business Process Automation"],
   }
 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Landing Pages and AI Automation",
+    name: "AI automation for reporting and workflows",
     provider: {
       "@type": "Organization",
-      name: "Volska Group",
+      name: "Volska Landing",
       url: "https://volska.com",
     },
     areaServed: ["Poland", "European Union", "United States"],
     offers: [
       {
         "@type": "Offer",
-        name: "Landing Page Sprint",
+        name: "AI Reporting Autopilot",
         priceCurrency: "EUR",
-        lowPrice: "200",
-        highPrice: "500",
+        lowPrice: "500",
+        highPrice: "900",
       },
       {
         "@type": "Offer",
-        name: "AI Automation",
+        name: "AI Workflow Sprint",
         priceCurrency: "EUR",
-        lowPrice: "500",
+        lowPrice: "900",
         highPrice: "1800",
       },
     ],
@@ -74,7 +73,6 @@ export default function Home() {
       <Services />
       <Expertise />
       <Stats />
-      <Portfolio />
       <Pricing />
       <FAQ />
       <CTA />
