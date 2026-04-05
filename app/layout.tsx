@@ -16,16 +16,16 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://volska.com'),
   title: {
-    default: 'Landing Pages in 48 Hours | Volska Automation',
-    template: '%s | Volska Automation',
+    default: 'Landing Pages in 48 Hours | Volska Landing',
+    template: '%s | Volska Landing',
   },
   description:
     'Landing pages from €200–500 delivered in 48 hours: call, same-day design, fully working page next day. Mobile-ready, SEO, instant lead alerts. Warsaw, Poland — EU & US clients.',
   keywords:
     'landing page development, landing pages in 48 hours, lead generation website, conversion landing page, service business landing page, warsaw web developer, poland software engineer',
-  authors: [{ name: 'Volska Automation' }],
-  creator: 'Volska Automation',
-  publisher: 'Volska Automation',
+  authors: [{ name: 'Volska Landing' }],
+  creator: 'Volska Landing',
+  publisher: 'Volska Landing',
   category: 'technology',
   robots: {
     index: true,
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     url: 'https://volska.com',
-    siteName: 'Volska Automation',
-    title: 'Landing Pages in 48 Hours | Volska Automation',
+    siteName: 'Volska Landing',
+    title: 'Landing Pages in 48 Hours | Volska Landing',
     description:
       'Call → same-day landing page design → fully working page next day. From €200. Instant Telegram & email lead notifications.',
     images: [
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
         url: 'https://volska.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Volska Automation — Landing pages in 48 hours',
+        alt: 'Volska Landing — Landing pages in 48 hours',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Landing Pages in 48 Hours | Volska Automation',
+    title: 'Landing Pages in 48 Hours | Volska Landing',
     description: 'Landing pages from €200–500. Same-day design, next-day live page.',
     images: ['https://volska.com/og-image.jpg'],
   },

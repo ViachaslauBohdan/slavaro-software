@@ -31,7 +31,7 @@ const caseStudies = [
       { value: "90%", label: "of the workload automated" },
       { value: "125%", label: "boost in conversions" }
     ],
-    tags: ["AI/ML", "PropTech", "Automation"]
+    tags: ["AI/ML", "PropTech", "Operations"]
   },
   {
     icon: Building2,
