@@ -3,10 +3,10 @@
 import Image from "next/image"
 
 const stats = [
-  { value: "48h", label: "Delivery time" },
-  { value: "50+", label: "Projects delivered" },
-  { value: "10+ hrs", label: "Saved weekly" },
-  { value: "95%", label: "Client satisfaction" },
+  { value: "Call", label: "Kickoff" },
+  { value: "Same day", label: "Your design" },
+  { value: "Next day", label: "Live page" },
+  { value: "48h", label: "Total window" },
   { value: "24/7", label: "Lead notifications" },
   { value: "0", label: "Hidden fees" },
 ]
@@ -14,7 +14,6 @@ const stats = [
 export function Stats() {
   return (
     <section className="py-14 lg:py-20 relative overflow-hidden">
-      {/* Background image with a softer branded overlay for readability */}
       <div className="absolute inset-0">
         <Image
           src="/images/hero-bg.jpg"
@@ -28,10 +27,10 @@ export function Stats() {
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-background sm:text-4xl">
-            Results that speak for themselves
+            A timeline you can plan around
           </h2>
           <p className="mt-4 text-lg text-background/85">
-            Fast delivery, real results, happy clients
+            From first call to a page that collects leads
           </p>
         </div>
 
