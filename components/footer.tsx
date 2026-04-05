@@ -33,7 +33,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           <div className="col-span-2">
             <Link href="/">
-              <span className="text-2xl font-bold">Volska Landing</span>
+              <span className="text-2xl font-bold">Volska Automation</span>
             </Link>
             <p className="mt-4 text-sm text-background/70 max-w-xs">
               AI workflow automation for reporting, lead routing, and operations. Based in Poland,
@@ -89,7 +89,7 @@ export function Footer() {
         <div className="mt-12 pt-6 border-t border-background/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/70">
-              &copy; {new Date().getFullYear()} Volska Landing. All rights reserved.
+              &copy; {new Date().getFullYear()} Volska Automation. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               {footerLinks.legal.map((link) => (

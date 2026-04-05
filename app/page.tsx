@@ -1,4 +1,4 @@
-// Volska Landing — main-automation: AI workflow automation only
+// Volska Automation — main-automation: AI workflow automation only
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -15,7 +15,7 @@ export default function Home() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Volska Landing",
+    name: "Volska Automation",
     url: "https://volska.com",
     image: "https://volska.com/og-image.jpg",
     email: "volskagroup@gmail.com",
@@ -35,7 +35,7 @@ export default function Home() {
     name: "AI automation for reporting and workflows",
     provider: {
       "@type": "Organization",
-      name: "Volska Landing",
+      name: "Volska Automation",
       url: "https://volska.com",
     },
     areaServed: ["Poland", "European Union", "United States"],

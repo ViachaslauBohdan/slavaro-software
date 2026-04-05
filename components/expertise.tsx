@@ -125,7 +125,7 @@ export function Expertise() {
 
           <div className="relative p-8 lg:p-12">
             <h3 className="text-2xl font-bold tracking-tight text-primary-foreground text-center mb-10">
-              Why Volska Landing?
+              Why Volska Automation?
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {whyChooseUs.map((item) => (

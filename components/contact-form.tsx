@@ -169,7 +169,7 @@ export function ContactForm() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-primary/80" />
               </div>
               <div className="relative p-6">
-                <h3 className="font-semibold text-primary-foreground mb-4">What you get with Volska Landing</h3>
+                <h3 className="font-semibold text-primary-foreground mb-4">What you get with Volska Automation</h3>
                 <div className="space-y-4">
                   {benefits.map((benefit) => (
                     <div key={benefit.text} className="flex items-center gap-3">

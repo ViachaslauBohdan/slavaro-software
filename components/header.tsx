@@ -71,7 +71,7 @@ export function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 group">
             <span className="text-2xl font-bold text-foreground transition-colors group-hover:text-primary">
-              Volska Landing
+              Volska Automation
             </span>
           </Link>
         </div>

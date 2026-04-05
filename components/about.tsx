@@ -19,7 +19,7 @@ export function About() {
               About
             </Badge>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Volska Landing builds AI automations that save time every week
+              Volska Automation builds AI automations that save time every week
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
               We help teams replace repetitive manual work with reliable workflows — from recurring

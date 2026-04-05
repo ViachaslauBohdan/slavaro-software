@@ -16,16 +16,16 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://volska.com'),
   title: {
-    default: 'AI Workflow Automation | Volska Landing',
-    template: '%s | Volska Landing',
+    default: 'AI Workflow Automation | Volska Automation',
+    template: '%s | Volska Automation',
   },
   description:
     'AI automation for reporting, lead routing, and operations: Google Docs/Sheets reports, CRM and Slack integrations, workflows from €500. Warsaw, Poland — EU & US.',
   keywords:
     'AI automation, workflow automation, business process automation, google sheets automation, google docs automation, CRM automation, lead routing, warsaw developer, poland software engineer',
-  authors: [{ name: 'Volska Landing' }],
-  creator: 'Volska Landing',
-  publisher: 'Volska Landing',
+  authors: [{ name: 'Volska Automation' }],
+  creator: 'Volska Automation',
+  publisher: 'Volska Automation',
   category: 'technology',
   robots: {
     index: true,
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     url: 'https://volska.com',
-    siteName: 'Volska Landing',
-    title: 'AI Workflow Automation | Volska Landing',
+    siteName: 'Volska Automation',
+    title: 'AI Workflow Automation | Volska Automation',
     description:
       'Automate reporting, lead intake, and handoffs between your tools. Practical AI workflows for growing teams.',
     images: [
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
         url: 'https://volska.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Volska Landing — AI workflow automation',
+        alt: 'Volska Automation — AI workflow automation',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Workflow Automation | Volska Landing',
+    title: 'AI Workflow Automation | Volska Automation',
     description: 'Reporting autopilot and AI workflow sprints from €500.',
     images: ['https://volska.com/og-image.jpg'],
   },
