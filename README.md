@@ -2,6 +2,16 @@
 
 Marketing landing page for **Volska Landing** — same-day design and 48-hour landing delivery. Built with [Next.js](https://nextjs.org) and bootstrapped with [v0](https://v0.app).
 
+## Live site
+
+**Production:** [v0-vention-design-clone.vercel.app](https://v0-vention-design-clone.vercel.app)
+
+Click the preview to open the deployed site in your browser.
+
+[![Website preview — hero and above-the-fold](docs/readme-preview.png)](https://v0-vention-design-clone.vercel.app)
+
+*Preview is a static snapshot; the [live site](https://v0-vention-design-clone.vercel.app) is always current.*
+
 ## Tech stack
 
 - **Framework:** Next.js 16 (App Router), React 19
@@ -61,6 +71,7 @@ The contact API (`app/api/contact/route.ts`) sends email via Resend and optional
 
 - `app/` — App Router pages, layout, `sitemap.ts`, `robots.ts`, and API routes
 - `components/` — UI sections and shared components
+- `docs/` — Repository assets (for example the README preview image)
 - `marketing/` — Outreach copy and guides (not served by the app by default)
 
 ## Built with v0
