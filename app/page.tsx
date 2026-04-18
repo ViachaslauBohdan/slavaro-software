@@ -1,4 +1,5 @@
 // Volska Landing — main-landing: same-day design, 48h landing delivery
+import { getSiteUrl } from "@/lib/site-url"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -13,12 +14,13 @@ import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
+  const siteUrl = getSiteUrl()
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Volska Landing",
-    url: "https://volska.com",
-    image: "https://volska.com/og-image.jpg",
+    url: siteUrl,
+    image: `${siteUrl}/og-image.jpg`,
     email: "volskagroup@gmail.com",
     areaServed: ["Poland", "European Union", "United States"],
     address: {
@@ -39,7 +41,7 @@ export default function Home() {
     provider: {
       "@type": "Organization",
       name: "Volska Landing",
-      url: "https://volska.com",
+      url: siteUrl,
     },
     areaServed: ["Poland", "European Union", "United States"],
     offers: {

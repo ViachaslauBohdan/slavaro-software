@@ -2,33 +2,41 @@
 
 ## In one sentence
 
-**We build fast, conversion-focused landing pages so you start receiving real inquiries without waiting weeks for a full website project.**
+**We build landing pages only: same-day design after kickoff, full landing page delivered within 48 hours.**
 
 ---
 
-## Landing pages (48 hours)
+## Landing page sprint (48h)
 
-**What it is:** A single focused web page for your offer — not a full corporate site. People land there from ads, LinkedIn, or your link in bio.
+**What it is:** One focused page for one offer. No bloated multi-page site.
 
-**What you get:** Looks good on phone and computer, loads quickly, basic SEO, and a contact form that **pings you on Telegram and email** when someone writes in.
+**Delivery flow:**
+1. Kickoff call
+2. Page design the same day
+3. Fully working landing page within 48 hours
 
-**Who it’s for:** You need to start collecting qualified inquiries fast: **page design the same day** after kickoff, **full landing page delivered within 48 hours**.
-
----
-
-## Price ballpark (so expectations are clear)
-
-| Tier | Roughly | Plain meaning |
-|------|---------|----------------|
-| Landing sprint | €200–€500 one-time | One responsive landing page + form + notifications, ~48h delivery |
-
-Ongoing tweaks, hosting guidance, and small updates can be discussed as **monthly care** after launch.
+**Included:**
+- responsive layout (desktop + mobile),
+- conversion-focused section structure,
+- contact form with Telegram + email lead alerts,
+- basic SEO + performance setup.
 
 ---
 
-## What we are not
+## Price (clear expectations)
 
-- We’re not “a huge agency” for massive rebrands or 50-page sites.
-- We’re not selling unrelated products here — **this line is landing pages only.**
+| Offer | Price range | Delivery |
+|------|-------------|----------|
+| Landing page sprint | €200–€500 one-time | Design same day + full page in 48h |
 
-If someone only remembers three words: **fast page, real leads, clear offer.**
+Optional after launch: monthly care for small updates and upkeep.
+
+---
+
+## What this line is not
+
+- Not a large agency rebrand package.
+- Not multi-service consulting.
+- Not automation products.
+
+**Landing pages only. Fast delivery. Lead-focused.**

@@ -2,15 +2,33 @@
 
 Marketing landing page for **Volska Landing** — same-day design and 48-hour landing delivery. Built with [Next.js](https://nextjs.org) and bootstrapped with [v0](https://v0.app).
 
-## Live site
+## Deploy (preview / test only)
 
-**Production:** [v0-vention-design-clone.vercel.app](https://v0-vention-design-clone.vercel.app)
+This project is meant for **preview (test) deployments**, not production. Use the Vercel CLI without `--prod`:
 
-Click the preview to open the deployed site in your browser.
+```bash
+npm run deploy:preview
+```
 
-[![Website preview — hero and above-the-fold](docs/readme-preview.png)](https://v0-vention-design-clone.vercel.app)
+The command prints a unique **preview URL** (and `VERCEL_ENV=preview`). Metadata, sitemap, and robots use that deployment’s hostname automatically (`VERCEL_URL`). Search engines are **not** indexed on preview (`noindex`).
 
-*Preview is a static snapshot; the [live site](https://v0-vention-design-clone.vercel.app) is always current.*
+Do **not** run `vercel deploy --prod` unless you intentionally want a production deployment. In the Vercel dashboard, you can also disable or avoid wiring a production branch for this project.
+
+Optional: set `NEXT_PUBLIC_SITE_URL` in `.env.local` or Vercel env if you need a fixed canonical URL for a specific preview.
+
+### Readme screenshot
+
+The image below is a static snapshot; run `npm run deploy:preview` and use the printed URL for the latest build, or open the current public deployment: [volska-landing.vercel.app](https://volska-landing.vercel.app).
+
+[![Website preview — hero and above-the-fold](docs/readme-preview.png)](https://volska-landing.vercel.app)
+
+## Repository name on GitHub
+
+To rename the repository from `v0-vention-design-clone` to **`volska-landing`**: GitHub → **Settings** → **General** → Repository name → save. Then update your local remote:
+
+```bash
+git remote set-url origin git@github.com:ViachaslauBohdan/volska-landing.git
+```
 
 ## Tech stack
 
@@ -50,6 +68,7 @@ Click the preview to open the deployed site in your browser.
 
 | Variable | Purpose |
 | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Optional. Fixed public URL for metadata/sitemap; if unset, uses `VERCEL_URL` on Vercel. |
 | `RESEND_API_KEY` | API key for [Resend](https://resend.com) (contact form email) |
 | `CONTACT_FROM_EMAIL` | Sender address for outbound emails (e.g. `Name <noreply@domain.com>`) |
 | `CONTACT_TO_EMAIL` | Inbox that receives contact submissions |
@@ -66,6 +85,7 @@ The contact API (`app/api/contact/route.ts`) sends email via Resend and optional
 | `npm run build` | Production build |
 | `npm run start` | Run production server (after `build`) |
 | `npm run lint` | Run ESLint |
+| `npm run deploy:preview` | Deploy to Vercel **preview** (no `--prod`) |
 
 ## Project layout
 
@@ -86,4 +106,4 @@ This repository is linked to a [v0](https://v0.app) project. You can keep iterat
 - [Learn Next.js](https://nextjs.org/learn)
 - [v0 Documentation](https://v0.app/docs)
 
-<a href="https://v0.app/chat/api/kiro/clone/ViachaslauBohdan/v0-vention-design-clone" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+<a href="https://v0.app/chat/api/kiro/clone/ViachaslauBohdan/volska-landing" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
