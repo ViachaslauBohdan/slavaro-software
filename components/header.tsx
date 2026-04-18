@@ -69,7 +69,7 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 group">
-            <span className="text-2xl font-bold text-foreground transition-colors group-hover:text-primary">Volska Group</span>
+            <span className="text-2xl font-bold text-foreground transition-colors group-hover:text-primary">Volska Landing</span>
           </Link>
         </div>
         

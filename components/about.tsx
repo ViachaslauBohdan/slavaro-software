@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button"
 import { CheckCircle2 } from "lucide-react"
 
 const highlights = [
-  "Fast landing page delivery focused on lead generation",
-  "Practical AI automations for reporting and repetitive workflows",
-  "End-to-end ownership from discovery to production deployment",
-  "Clear communication, transparent pricing, and fast turnaround",
+  "Fast delivery: page design the same day after your call, full landing page within 48 hours",
+  "Conversion-focused structure, mobile-ready, instant lead notifications",
+  "End-to-end ownership from kickoff to launch",
+  "Clear communication, transparent pricing, no hidden fees",
 ]
 
 export function About() {
@@ -19,23 +19,22 @@ export function About() {
               About
             </Badge>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Volska Group builds websites and automations that drive growth
+              Volska Landing builds landing pages that turn visitors into leads
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              We help service businesses launch high-converting landing pages
-              quickly and automate repetitive operations with AI, so teams save
-              time and capture more qualified leads.
+              We help service businesses ship landing pages fast:{" "}
+              <span className="text-foreground font-medium">design the same day</span>,{" "}
+              <span className="text-foreground font-medium">full page in 48 hours</span> — so you start
+              receiving qualified inquiries without waiting weeks.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Our focus is simple: deliver business outcomes fast with practical
-              solutions that are easy to run, scale, and maintain.
+              Our focus is one thing done well: a fast, clear page that matches your offer and gets
+              contact forms and notifications right.
             </p>
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-6 lg:p-8 shadow-sm">
-            <h3 className="text-lg font-semibold text-foreground">
-              What we focus on
-            </h3>
+            <h3 className="text-lg font-semibold text-foreground">What we focus on</h3>
             <div className="mt-5 space-y-3">
               {highlights.map((item) => (
                 <div key={item} className="flex items-start gap-3">
@@ -46,7 +45,7 @@ export function About() {
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button asChild>
-                <a href="#contact">Discuss your project</a>
+                <a href="#contact">Discuss your landing page</a>
               </Button>
               <Button variant="outline" asChild>
                 <a href="#portfolio">See portfolio</a>

@@ -13,19 +13,19 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk'
 });
 
-// main trigger
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://volska.com'),
   title: {
-    default: 'Landing Pages in 48 Hours + AI Automation | Volska Group',
-    template: '%s | Volska Group',
+    default: 'Same-Day Design · 48h Landing Delivery | Volska Landing',
+    template: '%s | Volska Landing',
   },
-  description: 'Landing pages from €200-500 delivered in 48 hours, plus practical AI automation for reports and workflows. Based in Warsaw, Poland, serving EU and US clients.',
-  keywords: 'landing page development, landing pages in 48 hours, AI automation services, business process automation, google sheets automation, google docs automation, workflow automation, react developer, nodejs developer, warsaw web developer, poland software engineer, lead generation website, service business landing page',
-  authors: [{ name: 'Volska' }],
-  creator: 'Volska',
-  publisher: 'Volska',
+  description:
+    'Fast landing pages from €200–500: page design the same day after your call, full landing page delivered within 48 hours. Mobile-ready, SEO, instant lead alerts. Warsaw, Poland — EU & US clients.',
+  keywords:
+    'landing page development, landing pages in 48 hours, lead generation website, conversion landing page, service business landing page, warsaw web developer, poland software engineer',
+  authors: [{ name: 'Volska Landing' }],
+  creator: 'Volska Landing',
+  publisher: 'Volska Landing',
   category: 'technology',
   robots: {
     index: true,
@@ -42,22 +42,23 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     url: 'https://volska.com',
-    siteName: 'Volska Group',
-    title: 'Landing Pages in 48 Hours + AI Automation | Volska Group',
-    description: 'Get a conversion-focused landing page fast, or automate reporting and repetitive workflows with AI.',
+    siteName: 'Volska Landing',
+    title: 'Same-Day Design · 48h Landing Delivery | Volska Landing',
+    description:
+      'Page design same day · full landing page in 48 hours. From €200. Instant Telegram & email lead notifications.',
     images: [
       {
         url: 'https://volska.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Volska Group - Landing Pages and AI Automation',
+        alt: 'Volska Landing — same-day design, landing in 48 hours',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Landing Pages in 48 Hours + AI Automation',
-    description: 'Landing pages from €200-500 and practical AI automation for service businesses.',
+    title: 'Same-Day Design · 48h Landing Delivery | Volska Landing',
+    description: 'Landing pages from €200–500. Same-day page design, full landing delivered in 48 hours.',
     images: ['https://volska.com/og-image.jpg'],
   },
   alternates: {

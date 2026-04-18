@@ -1,4 +1,4 @@
-// Volska Group - English only website
+// Volska Landing — main-landing: same-day design, 48h landing delivery
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -16,7 +16,7 @@ export default function Home() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Volska Group",
+    name: "Volska Landing",
     url: "https://volska.com",
     image: "https://volska.com/og-image.jpg",
     email: "volskagroup@gmail.com",
@@ -27,35 +27,28 @@ export default function Home() {
       addressCountry: "PL",
     },
     sameAs: ["https://www.linkedin.com/in/viachaslau-bohdan-969436156/"],
-    serviceType: ["Landing Page Development", "AI Workflow Automation"],
+    serviceType: ["Landing Page Development"],
   }
 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Landing Pages and AI Automation",
+    name: "Fast landing delivery (48 hours)",
+    description:
+      "Conversion-focused landing pages: kickoff call, page design same day, full landing page delivered within 48 hours.",
     provider: {
       "@type": "Organization",
-      name: "Volska Group",
+      name: "Volska Landing",
       url: "https://volska.com",
     },
     areaServed: ["Poland", "European Union", "United States"],
-    offers: [
-      {
-        "@type": "Offer",
-        name: "Landing Page Sprint",
-        priceCurrency: "EUR",
-        lowPrice: "200",
-        highPrice: "500",
-      },
-      {
-        "@type": "Offer",
-        name: "AI Automation",
-        priceCurrency: "EUR",
-        lowPrice: "500",
-        highPrice: "1800",
-      },
-    ],
+    offers: {
+      "@type": "Offer",
+      name: "Landing Page Sprint",
+      priceCurrency: "EUR",
+      lowPrice: "200",
+      highPrice: "500",
+    },
   }
 
   return (
