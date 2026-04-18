@@ -66,7 +66,7 @@ async function sendEmailNotification(text: string, replyTo: string) {
       from,
       to: [to],
       reply_to: replyTo,
-      subject: "New request from volska.com",
+      subject: "New request from Volska Landing",
       text,
       html: `<pre style="font-family:Arial,Helvetica,sans-serif;white-space:pre-wrap">${text}</pre>`,
     }),

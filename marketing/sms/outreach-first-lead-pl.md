@@ -1,44 +1,39 @@
 # SMS — skrypt (PL)
 
-Każda wiadomość ma **trzy części**, w tej kolejności:
+Każda wiadomość ma 3 części:
+1. **Kto pisze** — Volska Landing + imię
+2. **Oferta** — tylko strony landing
+3. **CTA** — odpowiedź/telefon/TAK
 
-1. **Firma** — kto pisze (Volska Landing + imię).
-2. **Usługi** — co oferujecie, w jednym–dwóch zdaniach (wyłącznie strony landing).
-3. **Kontakt zwrotny** — wyraźna prośba: odpowiedź SMS, telefon lub TAK.
-
-**Placeholdery:** `[Pan/Pani]`, `[Nazwisko]`, `[Twoje imię]`, `[Telefon]`, `[Firma]`.  
-**Oferta:** strony landing od **200 €** (~48h); kontakt **volskagroup@gmail.com** | **t.me/volskagroup**
-
----
-
-## Skrypt bazowy (do skrócenia jeśli SMS się dzieli)
-
-**1. Firma:** Dzień dobry [Pan/Pani] [Nazwisko]. [Twoje imię], **Volska Landing** — zajmujemy się stronami landing dla firm (Warszawa, klienci w PL i UE).
-
-**2. Usługi:** **Strony landing w 48 godzin** (od 200 €) — responsywne, szybkie, formularz z natychmiastowymi powiadomieniami na Telegram i e-mail.
-
-**3. Kontakt zwrotny:** Proszę o krótką odpowiedź na ten SMS albo kontakt: [Telefon]. Wystarczy „tak, dzwonię” lub termin, który Państwu pasuje.
+**Placeholdery:** `[Pan/Pani]`, `[Nazwisko]`, `[Twoje imię]`, `[Telefon]`, `[Firma]`  
+**Oferta główna:** projekt tego samego dnia + pełna strona landing w 48h (od 200 €)
 
 ---
 
-## Wariant A — zimny kontakt (skrót)
+## Skrypt bazowy
 
-Dzień dobry [Pan/Pani] [Nazwisko]. **Volska Landing** — strony landing w 48h od 200 € (powiadomienia o leadach na Telegram i e-mail). Krótka rozmowa 15 min? volskagroup@gmail.com | t.me/volskagroup lub proszę odpisać TAK
-
----
-
-## Wariant B — po poleceniu / znajomości
-
-Dzień dobry [Pan/Pani] [Nazwisko]. [Twoje imię], **Volska Landing**. Krótko: pomagamy pozyskiwać zapytania z internetu dzięki szybkiej, skupionej stronie landing. Jeśli to dla [Firma] aktualne — proszę o odpowiedź na SMS lub [Telefon].
+Dzień dobry [Pan/Pani] [Nazwisko], [Twoje imię] z **Volska Landing**. Robimy **wyłącznie strony landing**: projekt tego samego dnia po rozmowie startowej i pełna realizacja w 48h (od 200 €), z powiadomieniami o leadach na Telegram i e-mail. Jeśli to aktualne dla [Firma], proszę o odpowiedź lub telefon: [Telefon].
 
 ---
 
-## Wariant C — przypomnienie po mailu
+## Wariant A — krótki zimny kontakt
 
-Dzień dobry [Pan/Pani] [Nazwisko]. [Twoje imię], **Volska Landing** — przypominam o mailu w sprawie strony landing dla [Firma]. Proszę o jedną informację zwrotną: czy mogę zadzwonić, czy wolą Państwo termin z linku z maila? [Telefon]
+Dzień dobry [Pan/Pani] [Nazwisko], Volska Landing — tylko strony landing: projekt tego samego dnia + gotowa strona w 48h (od 200 €). Czy możemy umówić krótką rozmowę? Proszę odpisać TAK lub zadzwonić: [Telefon].
+
+---
+
+## Wariant B — ciepły/referral
+
+Dzień dobry [Pan/Pani] [Nazwisko], [Twoje imię] z Volska Landing. Pomagamy firmom szybko uruchamiać strony landing (projekt tego samego dnia, wdrożenie w 48h). Jeśli to ma sens dla [Firma], mogę zadzwonić: [Telefon].
+
+---
+
+## Wariant C — follow-up po mailu
+
+Dzień dobry [Pan/Pani] [Nazwisko], [Twoje imię] z Volska Landing. Nawiązuję do maila ws. strony landing dla [Firma]. Proszę dać znać: mam zadzwonić, czy wygodniej wybrać termin z linku? [Telefon]
 
 ---
 
 ## Wariant D — ostatnia wiadomość
 
-Dzień dobry [Pan/Pani] [Nazwisko]. [Twoje imię], **Volska Landing**. Jeśli kiedykolwiek będzie potrzeba strony pod leady — proszę o kontakt: [Telefon]. Bez odpowiedzi nie piszę już w tym wątku.
+Dzień dobry [Pan/Pani] [Nazwisko], [Twoje imię], Volska Landing. Zamykam ten wątek. Gdy będzie potrzeba szybkiej strony landing, proszę o kontakt: [Telefon].

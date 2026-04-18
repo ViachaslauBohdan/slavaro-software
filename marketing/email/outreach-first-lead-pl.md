@@ -1,40 +1,49 @@
 # E-mail — pierwszy kontakt (PL)
 
-**Placeholder:** `[Firma]` — nazwa firmy odbiorcy (np. Hunt Estates).  
-**Temat (propozycja):** Więcej zapytań z internetu? / Volska Landing — strony landing w 48 godzin
+**Placeholder:** `[Firma]` — nazwa firmy odbiorcy.  
+**Temat (propozycja):** Strona landing w 48h dla [Firma]?
 
 ---
 
-Witam, [Firma],
+Dzień dobry, [Firma],
 
-Czy potrzebują Państwo **jednej skupionej strony**, która zamienia odwiedzających w zapytania — bez czekania tygodniami na duży serwis?
+Krótkie pytanie: czy potrzebują Państwo strony landing, która szybko zacznie generować zapytania, bez czekania tygodniami na duży serwis?
 
-Budujemy **strony landing z szybką realizacją**: **projekt strony tego samego dnia** po rozmowie → **pełna strona landing w ciągu 48 godzin**. Od **200–500 €** jednorazowo.
+Tworzymy **wyłącznie strony landing** w jasnym procesie:
+- rozmowa startowa,
+- **projekt strony tego samego dnia**,
+- **pełna strona landing w ciągu 48 godzin**.
 
-**Co Państwo dostają:** responsywny układ, strukturę pod konwersję, formularz z powiadomieniami na **Telegram i e-mail**, podstawowe SEO i wydajność.
+Typowy budżet jednorazowy: **200–500 €**.
 
-Jeśli to brzmi sensownie — można od razu wybrać termin:
+W cenie:
+- responsywna strona (mobile + desktop),
+- struktura i kierunek treści pod konwersję,
+- formularz z powiadomieniami o leadach na **Telegram + e-mail**,
+- podstawowe SEO i wydajność.
 
+Jeśli temat jest aktualny, zapraszam na krótką rozmowę:
 https://calendly.com/slawandr1/30min
 
-lub zadzwonić: +48 537 437 454
+lub telefonicznie: +48 537 437 454
 
 Pozdrawiamy,  
 Volska Landing  
-https://v0-vention-design-clone.vercel.app/
+https://volska-landing.vercel.app/
 
 ---
 
-## Mail 2 — follow-up (krótki, bez odpowiedzi)
+## Mail 2 — follow-up (krótki)
 
-**Temat:** RE: Strona landing dla [Firma] / Volska Landing
+**Temat:** RE: Strona landing w 48h dla [Firma]
 
-Witam, [Firma],
+Dzień dobry, [Firma],
 
-uprzejmie przypominam o wcześniejszej wiadomości — **strony landing w 48 godzin** pod usługi i oferty.
+uprzejmie wracam do wiadomości o ofercie **tylko strony landing**:
+**projekt tego samego dnia + realizacja w 48 godzin**.
 
-Jeśli temat aktualny, proszę o krótką odpowiedź lub termin:  
-https://calendly.com/slawandr1/30min · +48 537 437 454 · https://v0-vention-design-clone.vercel.app/
+Jeśli temat aktualny, proszę o odpowiedź lub wybór terminu:  
+https://calendly.com/slawandr1/30min · +48 537 437 454 · https://volska-landing.vercel.app/
 
 Pozdrawiamy,  
 Volska Landing
@@ -45,10 +54,10 @@ Volska Landing
 
 **Temat:** [Firma] — ostatnia wiadomość
 
-Witam, [Firma],
+Dzień dobry, [Firma],
 
-bez odpowiedzi zamykam ten wątek po swojej stronie. Gdy pojawi się potrzeba — zapraszamy do kontaktu tymi samymi kanałami.
+na ten moment zamykam wątek. Gdy pojawi się potrzeba szybkiej strony landing, zapraszam do kontaktu tymi samymi kanałami.
 
 Pozdrawiamy,  
 Volska Landing  
-https://v0-vention-design-clone.vercel.app/
+https://volska-landing.vercel.app/

@@ -1,12 +1,13 @@
 {
-  "name": "my-project",
+  "name": "volska-landing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy:preview": "vercel --yes"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
