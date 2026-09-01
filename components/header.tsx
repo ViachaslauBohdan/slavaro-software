@@ -2,153 +2,159 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
-
-const navItems = [
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "How it works", href: "#expertise" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "FAQ", href: "#faq" },
-  { name: "Contact", href: "#contact" },
-]
+import { Menu, X, ChevronDown } from "lucide-react"
+import { site } from "@/lib/site-content"
+import { primaryNavLinks, serviceNavLinks } from "@/lib/seo/navigation"
+import { scrollToId } from "@/lib/scroll"
+import { cn } from "@/lib/utils"
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState("")
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-      
-      const sections = navItems.map(item => item.href.replace("#", ""))
-      for (const section of sections.reverse()) {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          if (rect.top <= 150) {
-            setActiveSection(section)
-            break
-          }
-        }
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    const onScroll = () => setScrolled(window.scrollY > 16)
+    window.addEventListener("scroll", onScroll)
+    return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault()
-    const targetId = href.replace("#", "")
-    const element = document.getElementById(targetId)
-    
-    if (element) {
-      const headerOffset = 80
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.scrollY - headerOffset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      })
+  const handleHashLink = (href: string) => {
+    const id = href.replace("#", "")
+    if (pathname === "/") {
+      scrollToId(id)
+    } else {
+      window.location.href = `/${href}`
     }
-    
-    setMobileMenuOpen(false)
+    setMobileOpen(false)
+    setServicesOpen(false)
   }
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? "bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-sm" 
-        : "bg-transparent"
-    }`}>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 group">
-            <span className="text-2xl font-bold text-foreground transition-colors group-hover:text-primary">Volska Landing</span>
-          </Link>
-        </div>
-        
-        <div className="flex items-center gap-3 lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <span className="sr-only">Open main menu</span>
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" aria-hidden="true" />
-            ) : (
-              <Menu className="h-6 w-6" aria-hidden="true" />
-            )}
-          </button>
-        </div>
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        scrolled
+          ? "border-b border-border bg-background/95 backdrop-blur-md"
+          : "bg-transparent"
+      )}
+    >
+      <nav
+        className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8"
+        aria-label="Main navigation"
+      >
+        <Link href="/" className="group">
+          <span className="text-lg font-semibold tracking-tight text-foreground">{site.name}</span>
+        </Link>
 
-        <div className="hidden lg:flex lg:gap-x-1 lg:items-center">
-          {navItems.map((item) => (
-            <a 
-              key={item.name}
-              href={item.href}
-              onClick={(e) => scrollToSection(e, item.href)}
-              className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full ${
-                activeSection === item.href.replace("#", "")
-                  ? "text-primary bg-primary/10"
-                  : "text-foreground hover:text-primary hover:bg-muted"
-              }`}
+        <div className="hidden lg:flex items-center gap-1">
+          <div
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <button
+              type="button"
+              className="flex items-center gap-1 px-3.5 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              aria-expanded={servicesOpen}
+              aria-haspopup="true"
             >
-              {item.name}
-              {activeSection === item.href.replace("#", "") && (
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full" />
-              )}
-            </a>
-          ))}
-        </div>
+              Services
+              <ChevronDown className="h-4 w-4" />
+            </button>
+            {servicesOpen && (
+              <div className="absolute top-full left-0 pt-2 w-64">
+                <div className="surface-elevated p-2">
+                  {serviceNavLinks.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary rounded-md transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-4">
-          <Button 
-            size="sm" 
-            className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105"
-            asChild
-          >
-            <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>
-              Get Started
-            </a>
-          </Button>
-        </div>
-      </nav>
-
-      {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border">
-          <div className="space-y-1 px-4 py-4 bg-background/95 backdrop-blur-md">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
+          {primaryNavLinks
+            .filter((item) => item.name !== "Services")
+            .map((item) => (
+              <Link
+                key={item.href}
                 href={item.href}
-                onClick={(e) => scrollToSection(e, item.href)}
-                className={`block py-3 text-sm font-medium transition-colors ${
-                  activeSection === item.href.replace("#", "")
-                    ? "text-primary pl-4 border-l-2 border-primary"
-                    : "text-foreground hover:text-primary"
-                }`}
+                className="px-3.5 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <div className="pt-4 border-t border-border">
-              <Button 
-                className="w-full bg-primary text-primary-foreground"
-                asChild
-              >
-                <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>
-                  Get Started
-                </a>
-              </Button>
-            </div>
+        </div>
+
+        <div className="hidden lg:block">
+          <Button size="sm" className="rounded-md px-5" asChild>
+            <Link href="/contact">Discuss Your Project</Link>
+          </Button>
+        </div>
+
+        <button
+          type="button"
+          className="lg:hidden p-2 text-foreground"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+        >
+          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </nav>
+
+      {mobileOpen && (
+        <div className="lg:hidden border-t border-border bg-background px-5 py-4 space-y-1">
+          <p className="py-2 text-xs font-semibold uppercase tracking-wide text-subtle-foreground">
+            Services
+          </p>
+          {serviceNavLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="block py-2.5 text-sm text-muted-foreground hover:text-foreground"
+              onClick={() => setMobileOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <div className="border-t border-border my-2 pt-2">
+            <Link
+              href="/about"
+              className="block py-3 text-sm text-muted-foreground hover:text-foreground"
+              onClick={() => setMobileOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className="block py-3 text-sm text-muted-foreground hover:text-foreground"
+              onClick={() => setMobileOpen(false)}
+            >
+              Contact
+            </Link>
+            <button
+              type="button"
+              className="block w-full text-left py-3 text-sm text-muted-foreground hover:text-foreground"
+              onClick={() => handleHashLink("#process")}
+            >
+              How it works
+            </button>
           </div>
+          <Button className="w-full mt-3 rounded-md" asChild>
+            <Link href="/contact" onClick={() => setMobileOpen(false)}>
+              Discuss Your Project
+            </Link>
+          </Button>
         </div>
       )}
     </header>

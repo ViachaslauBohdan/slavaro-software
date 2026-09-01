@@ -1,80 +1,57 @@
-// Volska Landing — main-landing: same-day design, 48h landing delivery
-import { getSiteUrl } from "@/lib/site-url"
+import type { Metadata } from "next"
+import { buildPageMetadata, PAGE_SEO } from "@/lib/seo/metadata"
+import { JsonLd } from "@/components/seo/json-ld"
+import { HomeFaq } from "@/components/seo/home-faq"
+import { HomeServicesNav } from "@/components/seo/home-services-nav"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { Problem } from "@/components/problem"
+import { HowItWorks } from "@/components/how-it-works"
+import { MvpSection } from "@/components/mvp-section"
+import { RescueSection } from "@/components/rescue-section"
+import { AiAutomation } from "@/components/ai-automation"
+import { BusinessValue } from "@/components/business-value"
 import { About } from "@/components/about"
-import { Services } from "@/components/services"
-import { Expertise } from "@/components/expertise"
-import { Stats } from "@/components/stats"
-import { Portfolio } from "@/components/portfolio"
-import { Pricing } from "@/components/pricing"
-import { FAQ } from "@/components/faq"
-import { CTA } from "@/components/cta"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
+import {
+  faqPageSchema,
+  organizationSchema,
+  webPageSchema,
+  webSiteSchema,
+} from "@/lib/seo/structured-data"
+import { HOME_FAQS } from "@/lib/seo/home-faqs"
+
+export const metadata: Metadata = buildPageMetadata(PAGE_SEO.home)
 
 export default function Home() {
-  const siteUrl = getSiteUrl()
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Volska Landing",
-    url: siteUrl,
-    image: `${siteUrl}/og-image.jpg`,
-    email: "volskagroup@gmail.com",
-    areaServed: ["Poland", "European Union", "United States"],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Warsaw",
-      addressCountry: "PL",
-    },
-    sameAs: ["https://www.linkedin.com/in/viachaslau-bohdan-969436156/"],
-    serviceType: ["Landing Page Development"],
-  }
+  const seo = PAGE_SEO.home
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Fast landing delivery (48 hours)",
-    description:
-      "Conversion-focused landing pages: kickoff call, page design same day, full landing page delivered within 48 hours.",
-    provider: {
-      "@type": "Organization",
-      name: "Volska Landing",
-      url: siteUrl,
-    },
-    areaServed: ["Poland", "European Union", "United States"],
-    offers: {
-      "@type": "Offer",
-      name: "Landing Page Sprint",
-      priceCurrency: "EUR",
-      lowPrice: "200",
-      highPrice: "500",
-    },
-  }
+  const schema = [
+    webSiteSchema(),
+    organizationSchema(),
+    webPageSchema({ path: "/", title: seo.title, description: seo.description }),
+    faqPageSchema(HOME_FAQS),
+  ]
 
   return (
-    <main className="min-h-screen bg-background">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
+    <>
+      <JsonLd data={schema} />
       <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Expertise />
-      <Stats />
-      <Portfolio />
-      <Pricing />
-      <FAQ />
-      <CTA />
-      <ContactForm />
+      <main id="main-content">
+        <Hero />
+        <Problem />
+        <HowItWorks />
+        <MvpSection />
+        <RescueSection />
+        <HomeServicesNav />
+        <AiAutomation />
+        <BusinessValue />
+        <About />
+        <HomeFaq />
+        <ContactForm />
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }

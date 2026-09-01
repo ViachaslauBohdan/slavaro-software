@@ -5,18 +5,20 @@ const contactSchema = z.object({
   name: z.string().trim().min(2).max(100),
   phone: z.string().trim().max(50).optional().default(""),
   email: z.string().trim().email(),
+  company: z.string().trim().max(150).optional().default(""),
   service: z.string().trim().min(1).max(100),
   message: z.string().trim().min(10).max(2000),
 })
 
 function formatPlainTextMessage(input: z.infer<typeof contactSchema>) {
   return [
-    "New request from website:",
+    "New project inquiry from Volska:",
     "",
     `Name: ${input.name}`,
     `Email: ${input.email}`,
+    `Company: ${input.company || "-"}`,
     `Phone: ${input.phone || "-"}`,
-    `Service: ${input.service}`,
+    `Need: ${input.service}`,
     "",
     "Message:",
     input.message,
@@ -66,7 +68,7 @@ async function sendEmailNotification(text: string, replyTo: string) {
       from,
       to: [to],
       reply_to: replyTo,
-      subject: "New request from Volska Landing",
+      subject: "New project inquiry — Volska",
       text,
       html: `<pre style="font-family:Arial,Helvetica,sans-serif;white-space:pre-wrap">${text}</pre>`,
     }),

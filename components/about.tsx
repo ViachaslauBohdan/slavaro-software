@@ -1,59 +1,82 @@
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { CheckCircle2 } from "lucide-react"
-
-const highlights = [
-  "Fast delivery: page design the same day after your call, full landing page within 48 hours",
-  "Conversion-focused structure, mobile-ready, instant lead notifications",
-  "End-to-end ownership from kickoff to launch",
-  "Clear communication, transparent pricing, no hidden fees",
-]
+import Link from "next/link"
+import { Section } from "@/components/section"
+import { FadeIn } from "@/components/fade-in"
+import {
+  credibilityDomains,
+  experienceHighlights,
+  site,
+  techStack,
+} from "@/lib/site-content"
+import { ROUTES } from "@/lib/seo/routes"
 
 export function About() {
   return (
-    <section id="about" className="py-14 lg:py-20 bg-secondary/30">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
-          <div>
-            <Badge variant="secondary" className="mb-4">
-              About
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Volska Landing builds landing pages that turn visitors into leads
-            </h2>
-            <p className="mt-5 text-lg text-muted-foreground">
-              We help service businesses ship landing pages fast:{" "}
-              <span className="text-foreground font-medium">design the same day</span>,{" "}
-              <span className="text-foreground font-medium">full page in 48 hours</span> — so you start
-              receiving qualified inquiries without waiting weeks.
-            </p>
-            <p className="mt-4 text-muted-foreground">
-              Our focus is one thing done well: a fast, clear page that matches your offer and gets
-              contact forms and notifications right.
-            </p>
-          </div>
+    <Section id="about">
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <FadeIn>
+          <p className="eyebrow mb-3">About</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-balance">
+            Senior engineer. One accountable delivery partner.
+          </h2>
+          <p className="mt-5 text-muted-foreground leading-relaxed">
+            I&apos;m {site.person} — a senior technical delivery partner with 8+ years building
+            production software for startups and established companies. I take projects from idea
+            through launch: scope, architecture, development, and deployment.
+          </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            You work directly with me. No account managers, no junior developers passed off as
+            seniors, no black-box agency process.
+          </p>
+          <p className="mt-4 text-sm text-muted-foreground">
+            {site.market}.{" "}
+            <Link href={ROUTES.about} className="text-link hover:underline underline-offset-4">
+              Read more about the delivery partner
+            </Link>
+            .
+          </p>
+        </FadeIn>
 
-          <div className="rounded-2xl border border-border bg-card p-6 lg:p-8 shadow-sm">
-            <h3 className="text-lg font-semibold text-foreground">What we focus on</h3>
-            <div className="mt-5 space-y-3">
-              {highlights.map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <p className="text-sm text-muted-foreground">{item}</p>
-                </div>
-              ))}
+        <FadeIn delay={100}>
+          <div className="space-y-6">
+            <div className="surface-elevated p-6">
+              <p className="text-sm font-medium mb-4">Experience across</p>
+              <div className="flex flex-wrap gap-2">
+                {credibilityDomains.map((domain) => (
+                  <span
+                    key={domain}
+                    className="text-xs px-3 py-1.5 rounded-md border border-border text-muted-foreground bg-secondary"
+                  >
+                    {domain}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button asChild>
-                <a href="#contact">Discuss your landing page</a>
-              </Button>
-              <Button variant="outline" asChild>
-                <a href="#portfolio">See portfolio</a>
-              </Button>
+
+            <div className="surface-elevated p-6">
+              <p className="text-sm font-medium mb-4">Selected delivery experience</p>
+              <ul className="space-y-3">
+                {experienceHighlights.map((item) => (
+                  <li key={item.company} className="border-b border-border/80 pb-3 last:border-0 last:pb-0">
+                    <p className="text-sm font-medium text-foreground">{item.company}</p>
+                    <p className="text-sm text-muted-foreground mt-0.5">{item.detail}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="surface p-6">
+              <p className="text-xs text-muted-foreground mb-3">Technical background</p>
+              <div className="flex flex-wrap gap-x-3 gap-y-2">
+                {techStack.map((tech) => (
+                  <span key={tech} className="text-xs text-muted-foreground">
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
-    </section>
+    </Section>
   )
 }
