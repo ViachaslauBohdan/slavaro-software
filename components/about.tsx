@@ -16,15 +16,15 @@ export function About() {
         <FadeIn>
           <p className="eyebrow mb-3">About</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-balance">
-            Senior engineer. One accountable delivery partner.
+            Senior team. One accountable delivery partner.
           </h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">
-            I&apos;m {site.person} — a senior technical delivery partner with 8+ years building
-            production software for startups and established companies. I take projects from idea
+            Senior technical delivery partner with 8+ years building
+            production software for startups and established companies. We take projects from idea
             through launch: scope, architecture, development, and deployment.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            You work directly with me. No account managers, no junior developers passed off as
+            You work directly with us. No account managers, no junior developers passed off as
             seniors, no black-box agency process.
           </p>
           <p className="mt-4 text-sm text-muted-foreground">

@@ -1,29 +1,6 @@
 import { NextResponse } from "next/server"
-import { z } from "zod"
-
-const contactSchema = z.object({
-  name: z.string().trim().min(2).max(100),
-  phone: z.string().trim().max(50).optional().default(""),
-  email: z.string().trim().email(),
-  company: z.string().trim().max(150).optional().default(""),
-  service: z.string().trim().min(1).max(100),
-  message: z.string().trim().min(10).max(2000),
-})
-
-function formatPlainTextMessage(input: z.infer<typeof contactSchema>) {
-  return [
-    "New project inquiry from Volska:",
-    "",
-    `Name: ${input.name}`,
-    `Email: ${input.email}`,
-    `Company: ${input.company || "-"}`,
-    `Phone: ${input.phone || "-"}`,
-    `Need: ${input.service}`,
-    "",
-    "Message:",
-    input.message,
-  ].join("\n")
-}
+import { formatPlainTextMessage, parseContactPayload } from "@/lib/contact"
+import { site } from "@/lib/site-content"
 
 async function sendTelegramNotification(text: string) {
   const token = process.env.TELEGRAM_BOT_TOKEN
@@ -68,7 +45,7 @@ async function sendEmailNotification(text: string, replyTo: string) {
       from,
       to: [to],
       reply_to: replyTo,
-      subject: "New project inquiry — Volska",
+      subject: `New project inquiry — ${site.name}`,
       text,
       html: `<pre style="font-family:Arial,Helvetica,sans-serif;white-space:pre-wrap">${text}</pre>`,
     }),
@@ -83,7 +60,7 @@ async function sendEmailNotification(text: string, replyTo: string) {
 export async function POST(request: Request) {
   try {
     const payload = await request.json()
-    const parsed = contactSchema.safeParse(payload)
+    const parsed = parseContactPayload(payload)
 
     if (!parsed.success) {
       return NextResponse.json(

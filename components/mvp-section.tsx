@@ -16,7 +16,7 @@ export function MvpSection() {
             Have an idea? Get to MVP faster.
           </h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">
-            I work directly with founders to cut unnecessary scope, identify the core user journey,
+            We work directly with founders to cut unnecessary scope, identify the core user journey,
             and build the first version that gets in front of real customers — fast.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
@@ -27,7 +27,7 @@ export function MvpSection() {
             href={ROUTES.mvpDevelopment}
             className="inline-flex mt-8 items-center justify-center rounded-md px-7 py-3 text-sm font-medium btn-primary"
           >
-            Tell Me Your Idea
+            Tell Us Your Idea
           </Link>
           <p className="mt-4 text-sm text-subtle-foreground">
             <Link href={ROUTES.mvpDevelopment} className="text-link hover:underline underline-offset-4">
@@ -38,7 +38,7 @@ export function MvpSection() {
 
         <FadeIn delay={100}>
           <div className="surface-elevated p-6 lg:p-8">
-            <p className="text-sm font-medium text-foreground mb-5">What I build</p>
+            <p className="text-sm font-medium text-foreground mb-5">What we build</p>
             <ul className="space-y-3">
               {mvpTypes.map((type) => (
                 <li

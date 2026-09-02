@@ -1,13 +1,12 @@
 export const site = {
-  name: "Volska",
+  name: "SLAVARO SOFTWARE",
   tagline: "Technical Delivery Partner",
   person: "Viachaslau Bohdan",
   role: "Senior Technical Delivery Partner",
   location: "Warsaw, Poland",
   market: "Serving founders and businesses across the United States",
-  email: "slawandr1@gmail.com",
+  email: "contact@slavaro.com",
   phone: "+48 537 437 454",
-  linkedin: "https://www.linkedin.com/in/viachaslau-bohdan-969436156/",
   calendly: "https://calendly.com/slawandr1/30min",
 } as const
 
@@ -33,17 +32,17 @@ export const clientSituations = [
 export const processSteps = [
   {
     step: "01",
-    title: "Tell me what you're trying to build or fix",
+    title: "Tell us what you're trying to build or fix",
     description: "A short call or message. No technical jargon required — just the business goal.",
   },
   {
     step: "02",
-    title: "I define the technical approach and scope",
+    title: "We define the technical approach and scope",
     description: "You get a clear plan: what gets built, in what order, and what it costs.",
   },
   {
     step: "03",
-    title: "I build and iterate quickly",
+    title: "We build and iterate quickly",
     description: "Regular demos and updates. You see progress every week, not after months of silence.",
   },
   {
@@ -117,7 +116,7 @@ export const businessOutcomes = [
   },
   {
     title: "One accountable partner",
-    description: "From idea to launch — you work directly with a senior engineer who owns the delivery.",
+    description: "From idea to launch — you work directly with our senior team, who owns the delivery.",
   },
 ] as const
 

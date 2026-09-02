@@ -11,7 +11,7 @@ export function Footer() {
             <p className="text-lg font-semibold">{site.name}</p>
             <p className="mt-1 text-sm text-muted-foreground">{site.tagline}</p>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs leading-relaxed">
-              {site.person} — senior technical delivery partner for US founders and businesses.
+              Senior technical delivery partner for US founders and businesses.
             </p>
           </div>
 
@@ -53,14 +53,6 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a
-              href={site.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground transition-colors"
-            >
-              LinkedIn
-            </a>
             <a href={`mailto:${site.email}`} className="hover:text-foreground transition-colors">
               {site.email}
             </a>

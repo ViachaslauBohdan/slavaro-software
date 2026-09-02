@@ -32,7 +32,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Turn your product idea into a working MVP — scoped tightly, built quickly, and ready for real users.",
     intro: [
       "Most founders don't need a full product on day one. They need a credible first version that validates demand, supports sales conversations, or gets in front of early customers.",
-      "I help US startup and SaaS founders go from idea to production MVP — handling scope, architecture, frontend, backend, authentication, payments, database design, and deployment without requiring you to hire and manage a full development team.",
+      "We help US startup and SaaS founders go from idea to production MVP — handling scope, architecture, frontend, backend, authentication, payments, database design, and deployment without requiring you to hire and manage a full development team.",
     ],
     whoFor: {
       heading: "Who this is for",
@@ -84,7 +84,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       {
         question: "How long does it take to build an MVP?",
         answer:
-          "Timeline depends on scope. A focused MVP with a single core workflow can often be delivered in a few weeks. More complex products with multiple user roles, integrations, or compliance needs take longer. I provide a realistic timeline after the discovery call.",
+          "Timeline depends on scope. A focused MVP with a single core workflow can often be delivered in a few weeks. More complex products with multiple user roles, integrations, or compliance needs take longer. We provide a realistic timeline after the discovery call.",
       },
       {
         question: "What should be included in a SaaS MVP?",
@@ -94,7 +94,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       {
         question: "Do you work with US startups remotely?",
         answer:
-          "Yes. I work with US founders and businesses remotely. Communication is async-friendly with regular demos and clear written scope.",
+          "Yes. We work with US founders and businesses remotely. Communication is async-friendly with regular demos and clear written scope.",
       },
       {
         question: "Can you help after the MVP launches?",
@@ -107,7 +107,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       { href: ROUTES.startupSoftwareDevelopment, label: "software development for startups" },
       { href: ROUTES.productRescue, label: "finish an existing MVP" },
     ],
-    cta: "Tell Me Your Idea",
+    cta: "Tell Us Your Idea",
   },
 
   webApplicationDevelopment: {
@@ -118,7 +118,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Build web platforms that match how your business actually operates — not generic software you have to work around.",
     intro: [
       "Custom web application development is the right fit when off-the-shelf tools create friction, spreadsheets stop scaling, or your team needs a dedicated customer portal, internal tool, or operational platform.",
-      "I design and build production-ready web applications for US businesses — from customer-facing portals to admin panels, booking systems, marketplaces, and analytics dashboards.",
+      "We design and build production-ready web applications for US businesses — from customer-facing portals to admin panels, booking systems, marketplaces, and analytics dashboards.",
     ],
     whoFor: {
       heading: "Common use cases",
@@ -145,7 +145,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     },
     process: {
       heading: "How projects are delivered",
-      paragraphs: ["You work directly with a senior engineer who owns delivery end to end."],
+      paragraphs: ["You work directly with our senior team, who owns delivery end to end."],
       list: [
         "Define the business problem and success criteria",
         "Agree on scope, architecture, and milestones",
@@ -157,7 +157,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       {
         question: "How much does custom web application development cost?",
         answer:
-          "Cost depends on complexity, integrations, user roles, and timeline. Smaller focused applications start in the low five figures. Larger platforms require a scoped estimate after discovery. I provide fixed-scope pricing where possible.",
+          "Cost depends on complexity, integrations, user roles, and timeline. Smaller focused applications start in the low five figures. Larger platforms require a scoped estimate after discovery. We provide fixed-scope pricing where possible.",
       },
       {
         question: "Can you integrate with our existing systems?",
@@ -186,7 +186,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Build subscription software with the architecture, onboarding, and scalability your product needs from the start.",
     intro: [
       "SaaS products have specific technical demands: multi-tenant data models, billing, onboarding, permissions, and the ability to grow without rebuilding the foundation.",
-      "I help US SaaS founders and product teams build and launch SaaS applications — from early MVP through production features that support paying customers.",
+      "We help US SaaS founders and product teams build and launch SaaS applications — from early MVP through production features that support paying customers.",
     ],
     whoFor: {
       heading: "Who this service fits",
@@ -224,7 +224,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       {
         question: "Can you build a SaaS MVP quickly?",
         answer:
-          "Yes. A SaaS MVP should focus on one valuable workflow plus the minimum account and billing infrastructure required to charge customers. I help founders avoid overbuilding before validation.",
+          "Yes. A SaaS MVP should focus on one valuable workflow plus the minimum account and billing infrastructure required to charge customers. We help founders avoid overbuilding before validation.",
       },
       {
         question: "Do you handle subscriptions and payments?",
@@ -253,7 +253,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Ship your startup product with one senior technical partner — not a rotating cast of freelancers.",
     intro: [
       "Early-stage startups rarely need a large in-house engineering team on day one. They need someone who can translate a business idea into working software, make sound technical decisions, and deliver fast without creating future debt.",
-      "I work with US startup founders as a technical delivery partner — owning architecture, development, and launch while you stay focused on customers, sales, and fundraising.",
+      "We work with US startup founders as a technical delivery partner — owning architecture, development, and launch while you stay focused on customers, sales, and fundraising.",
     ],
     whoFor: {
       heading: "Built for startup founders who need",
@@ -266,8 +266,8 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       ],
     },
     includes: {
-      heading: "What I take off your plate",
-      paragraphs: ["You get end-to-end delivery from someone who has shipped products in production environments."],
+      heading: "What we take off your plate",
+      paragraphs: ["You get end-to-end delivery from a team that has shipped products in production environments."],
       list: [
         "Technical scoping and architecture decisions",
         "Frontend and backend implementation",
@@ -290,17 +290,17 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       {
         question: "Are you a freelancer or an agency?",
         answer:
-          "Neither label fits well. I am a senior technical delivery partner — you work directly with me, not through account managers or junior developers.",
+          "Neither label fits well. We are a senior technical delivery partner — you work directly with us, not through account managers or junior developers.",
       },
       {
         question: "Can you act as a technical co-founder substitute?",
         answer:
-          "For many early-stage founders, I provide the technical leadership needed before a full-time CTO or engineering hire makes sense.",
+          "For many early-stage founders, we provide the technical leadership needed before a full-time CTO or engineering hire makes sense.",
       },
       {
         question: "Do you work with US companies only?",
         answer:
-          "My primary market is the United States, and I work remotely with US founders and businesses. I also serve international clients when the fit is right.",
+          "Our primary market is the United States, and we work remotely with US founders and businesses. We also serve international clients when the fit is right.",
       },
     ],
     related: [
@@ -319,7 +319,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Finish what you started — assess what you have, fix what blocks launch, and ship without an unnecessary rebuild.",
     intro: [
       "Many US businesses are stuck with half-finished MVPs, abandoned codebases, or AI-generated prototypes that look promising but are not production-ready.",
-      "I help teams rescue unfinished software projects: take over existing code, fix critical bugs, add missing backend functionality, and get the product over the line.",
+      "We help teams rescue unfinished software projects: take over existing code, fix critical bugs, add missing backend functionality, and get the product over the line.",
     ],
     whoFor: {
       heading: "When product rescue makes sense",
@@ -358,17 +358,17 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       {
         question: "Should I rebuild or rescue my existing MVP?",
         answer:
-          "Not always. Some prototypes should be rebuilt; many can be salvaged with targeted fixes. I assess the codebase first and recommend the fastest responsible path — not the most billable one.",
+          "Not always. Some prototypes should be rebuilt; many can be salvaged with targeted fixes. We assess the codebase first and recommend the fastest responsible path — not the most billable one.",
       },
       {
         question: "Can you take over a project from another developer?",
         answer:
-          "Yes. I regularly take over existing codebases, document what exists, and continue development without restarting from scratch unless that is genuinely the better option.",
+          "Yes. We regularly take over existing codebases, document what exists, and continue development without restarting from scratch unless that is genuinely the better option.",
       },
       {
         question: "What if the product was built with AI coding tools?",
         answer:
-          "AI-generated prototypes often need proper backend architecture, security, error handling, and deployment work. I productionize these projects so they can support real users.",
+          "AI-generated prototypes often need proper backend architecture, security, error handling, and deployment work. We productionize these projects so they can support real users.",
       },
     ],
     related: [
@@ -387,7 +387,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Modern, maintainable frontends and full-stack applications built with React and Next.js for US product teams.",
     intro: [
       "React and Next.js are strong choices for SaaS products, customer portals, and data-heavy web applications — when implemented with clear architecture and performance in mind.",
-      "I provide React development and Next.js development for US businesses that need production-grade interfaces, server-side rendering, design system consistency, and long-term maintainability.",
+      "We provide React development and Next.js development for US businesses that need production-grade interfaces, server-side rendering, design system consistency, and long-term maintainability.",
     ],
     whoFor: {
       heading: "When teams hire for React or Next.js",
@@ -426,7 +426,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       {
         question: "React vs Next.js — which should I use?",
         answer:
-          "Next.js is often the right choice for SaaS marketing sites, SEO-sensitive products, and full-stack applications. Plain React fits some internal tools and embedded apps. I recommend based on your product goals, not preference.",
+          "Next.js is often the right choice for SaaS marketing sites, SEO-sensitive products, and full-stack applications. Plain React fits some internal tools and embedded apps. We recommend based on your product goals, not preference.",
       },
       {
         question: "Can you modernize an older React codebase?",
@@ -455,7 +455,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Practical AI features that save time — custom assistants, document search, and workflow automation built into your product or operations.",
     intro: [
       "Most businesses do not need generic AI demos. They need AI integrated into real workflows: answering questions across internal documents, generating reports, or automating repetitive operational tasks.",
-      "I build AI integration for US companies — including custom AI assistants, RAG-based document search, LLM API integrations, and production-ready AI features inside web applications.",
+      "We build AI integration for US companies — including custom AI assistants, RAG-based document search, LLM API integrations, and production-ready AI features inside web applications.",
     ],
     whoFor: {
       heading: "Practical AI use cases",
@@ -482,7 +482,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     },
     process: {
       heading: "How AI projects are scoped",
-      paragraphs: ["I start with the workflow you want to improve, then choose the simplest architecture that works."],
+      paragraphs: ["We start with the workflow you want to improve, then choose the simplest architecture that works."],
       list: [
         "Define the job the AI needs to do",
         "Identify data sources and access requirements",
@@ -523,7 +523,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Replace manual processes with reliable software — API integrations, workflow automation, and connected systems.",
     intro: [
       "Many US small and mid-sized businesses lose hours every week copying data between spreadsheets, CRMs, and internal tools. Custom automation turns those manual steps into software that runs consistently.",
-      "I build business automation for teams that need API integrations, CRM connections, automated reporting, data synchronization, and workflow automation tailored to how they actually operate.",
+      "We build business automation for teams that need API integrations, CRM connections, automated reporting, data synchronization, and workflow automation tailored to how they actually operate.",
     ],
     whoFor: {
       heading: "Who benefits from automation",

@@ -108,7 +108,7 @@ export function ServicePageTemplate({ pageKey }: { pageKey: string }) {
             <div className="mt-16 surface-elevated p-8 lg:p-10 max-w-3xl">
               <h2 className="text-2xl font-bold">Ready to start?</h2>
               <p className="mt-3 text-muted-foreground">
-                Send a short description of your project and I&apos;ll explain how I&apos;d approach it.
+                Send a short description of your project and we&apos;ll explain how we&apos;d approach it.
               </p>
               <Link href="/contact" className="inline-flex mt-6 items-center justify-center rounded-md px-7 py-3 text-sm font-medium btn-primary">
                 {page.cta}

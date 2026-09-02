@@ -54,7 +54,6 @@ export function organizationSchema() {
     },
     availableLanguage: "en",
     founder: personSchema(),
-    sameAs: [site.linkedin],
     knowsAbout: [
       "MVP Development",
       "Custom Web Application Development",
@@ -75,7 +74,6 @@ export function personSchema() {
     jobTitle: site.role,
     email: site.email,
     url: absoluteUrl("/about"),
-    sameAs: [site.linkedin],
     worksFor: {
       "@type": "Organization",
       name: site.name,

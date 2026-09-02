@@ -26,12 +26,12 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "Volska — Technical Delivery Partner",
+    default: `${site.name} — Technical Delivery Partner`,
     template: "%s",
   },
   description:
     "Senior technical delivery partner for US startups and businesses. MVP development, web applications, SaaS, product rescue, and AI integration.",
-  authors: [{ name: site.person, url: site.linkedin }],
+  authors: [{ name: site.person }],
   creator: site.person,
   publisher: site.name,
   robots: isProductionDeployment()

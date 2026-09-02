@@ -1,6 +1,6 @@
-# Volska Landing
+# SLAVARO SOFTWARE
 
-**Volska Landing** is the public marketing site for Volska: same-day design and 48-hour landing delivery. Visitors can learn about the offer, see work, and get in touch.
+**SLAVARO SOFTWARE** is the public marketing site for a senior technical delivery partner serving US startups and businesses. MVP development, custom web applications, SaaS, product rescue, and AI integration.
 
 **Live site:** [volska-landing.vercel.app](https://volska-landing.vercel.app)
 

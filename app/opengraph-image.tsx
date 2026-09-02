@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 import { site } from "@/lib/site-content"
 
-export const alt = "Volska — technical delivery partner for MVPs and web applications"
+export const alt = `${site.name} — technical delivery partner for MVPs and web applications`
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -33,7 +33,7 @@ export default function OpenGraphImage() {
             maxWidth: 900,
           }}
         >
-          MVP and Web Application Development for US Startups
+          MVP and Web Application Development
         </div>
         <div style={{ display: "flex", fontSize: 26, marginTop: 32, color: "#3B82F6" }}>
           {site.tagline} · Serving the United States

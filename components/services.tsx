@@ -23,7 +23,7 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            What I build
+            What we build
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Full-stack engineering and AI integration — scoped clearly, delivered incrementally,

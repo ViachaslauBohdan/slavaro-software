@@ -29,10 +29,10 @@ export function Problem() {
 
       <FadeIn delay={200}>
         <p className="mt-12 text-xl sm:text-2xl font-semibold text-foreground">
-          That&apos;s where I come in.
+          That&apos;s where we come in.
         </p>
         <p className="mt-3 text-muted-foreground max-w-2xl leading-relaxed">
-          I take business ideas and software problems from scope through architecture, development,
+          We take business ideas and software problems from scope through architecture, development,
           and launch — so you don&apos;t have to hire and coordinate an entire team.
         </p>
       </FadeIn>

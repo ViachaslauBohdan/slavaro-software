@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import { Phone, FileText, Rocket } from "lucide-react"
-import { deliverySteps, whyVolska } from "@/lib/site-content"
+import { deliverySteps, whyVolska, site } from "@/lib/site-content"
 
 const stepIcons = [Phone, FileText, Rocket]
 
@@ -67,7 +67,7 @@ export function Expertise() {
 
           <div className="relative p-8 lg:p-12">
             <h3 className="text-2xl font-bold tracking-tight text-primary-foreground text-center mb-10">
-              Why work with Volska?
+              Why work with {site.name}?
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {whyVolska.map((item) => (

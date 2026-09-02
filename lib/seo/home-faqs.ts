@@ -4,12 +4,12 @@ export const HOME_FAQS: FaqItem[] = [
   {
     question: "What types of software projects do you take on?",
     answer:
-      "I work on MVP development, custom web applications, SaaS products, product rescue, business automation, and practical AI integration. Projects are scoped around a clear business outcome — not open-ended staff augmentation unless that is explicitly what you need.",
+      "We work on MVP development, custom web applications, SaaS products, product rescue, business automation, and practical AI integration. Projects are scoped around a clear business outcome — not open-ended staff augmentation unless that is explicitly what you need.",
   },
   {
     question: "Do you work with US startups and small businesses?",
     answer:
-      "Yes. My primary market is the United States. I work remotely with founders, SaaS teams, and SMBs that need a senior technical partner from scope through production launch.",
+      "Yes. Our primary market is the United States. We work remotely with founders, SaaS teams, and SMBs that need a senior technical partner from scope through production launch.",
   },
   {
     question: "How does a project start?",
@@ -19,7 +19,7 @@ export const HOME_FAQS: FaqItem[] = [
   {
     question: "Can you take over an unfinished MVP or existing codebase?",
     answer:
-      "Yes. I assess what already exists, identify blockers, and recommend the fastest path to production — which may include rescue work rather than a full rebuild.",
+      "Yes. We assess what already exists, identify blockers, and recommend the fastest path to production — which may include rescue work rather than a full rebuild.",
   },
   {
     question: "How long does MVP development usually take?",

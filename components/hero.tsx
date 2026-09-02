@@ -68,17 +68,17 @@ export function Hero() {
           <FadeIn>
             <p className="eyebrow mb-6">{site.tagline}</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold leading-[1.08] text-balance text-foreground">
-              MVP &amp; Web Application Development for US Startups
+              MVP &amp; Web Application Development
             </h1>
             <p className="mt-4 text-xl sm:text-2xl font-semibold text-[#3B82F6]">
               From idea to working product — fast.
             </p>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
-              I help founders and businesses design, build, and launch web platforms, MVPs, and
+              We help founders and businesses design, build, and launch web platforms, MVPs, and
               automation — without hiring an entire development team.
             </p>
             <p className="mt-4 text-sm text-subtle-foreground">
-              You bring the idea or business problem. I handle the technical delivery.
+              You bring the idea or business problem. We handle the technical delivery.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">
@@ -86,12 +86,12 @@ export function Hero() {
                 <Link href={ROUTES.contact}>Discuss Your Project</Link>
               </Button>
               <Button size="lg" variant="outline" className="rounded-md px-7" asChild>
-                <Link href={ROUTES.about}>See What I Build</Link>
+                <Link href={ROUTES.about}>See What We Build</Link>
               </Button>
             </div>
 
             <p className="mt-8 text-sm text-subtle-foreground">
-              Senior engineer · 8+ years experience · End-to-end delivery
+              Senior engineering team · 8+ years experience · End-to-end delivery
             </p>
           </FadeIn>
 

@@ -50,7 +50,7 @@ export function ContactForm({ variant = "home" }: { variant?: "home" | "page" })
 
       setSubmitState({
         type: "success",
-        text: "Message sent. I'll review your project and respond within 24 hours.",
+        text: "Message sent. We'll review your project and respond within 24 hours.",
       })
       setName("")
       setEmail("")
@@ -82,8 +82,8 @@ export function ContactForm({ variant = "home" }: { variant?: "home" | "page" })
             </h2>
           )}
           <p className="mt-5 text-muted-foreground leading-relaxed max-w-md">
-            Send me a short description of what you&apos;re trying to build, fix, or automate.
-            I&apos;ll tell you how I&apos;d approach it.
+            Send us a short description of what you&apos;re trying to build, fix, or automate.
+            We&apos;ll tell you how we&apos;d approach it.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button size="lg" className="rounded-md px-7" asChild>
@@ -101,7 +101,7 @@ export function ContactForm({ variant = "home" }: { variant?: "home" | "page" })
           <div className="surface-form p-6 lg:p-8">
             <h3 className="text-lg font-semibold mb-1">Discuss Your Project</h3>
             <p className="text-sm text-muted-foreground mb-6">
-              Tell me briefly what you&apos;re trying to achieve.
+              Tell us briefly what you&apos;re trying to achieve.
             </p>
 
             <form className="space-y-5" onSubmit={handleSubmit}>
@@ -164,7 +164,7 @@ export function ContactForm({ variant = "home" }: { variant?: "home" | "page" })
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Tell me briefly what you&apos;re trying to achieve
+                  Tell us briefly what you&apos;re trying to achieve
                 </label>
                 <Textarea
                   id="message"

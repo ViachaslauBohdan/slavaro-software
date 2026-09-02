@@ -95,7 +95,7 @@ export function Pricing() {
               Not sure which model fits?
             </p>
             <p className="text-muted-foreground mb-6">
-              Book a free 30-minute discovery call. I&apos;ll recommend the right approach based on
+              Book a free 30-minute discovery call. We&apos;ll recommend the right approach based on
               your goals and timeline — no obligation.
             </p>
             <Button size="lg" asChild>

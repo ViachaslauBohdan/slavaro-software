@@ -43,7 +43,7 @@ export default function AboutPage() {
         <Section className="pt-28 lg:pt-32">
           <Breadcrumbs items={breadcrumbs} />
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-3xl text-balance">
-            About {site.person}
+            About {site.name}
           </h1>
           <p className="mt-5 text-lg text-muted-foreground max-w-3xl leading-relaxed">
             Senior technical delivery partner with 8+ years of commercial software engineering
@@ -53,19 +53,19 @@ export default function AboutPage() {
 
           <div className="mt-12 max-w-3xl space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              I help US startups and small businesses turn ideas and operational problems into
+              We help US startups and small businesses turn ideas and operational problems into
               production software. That includes MVP development, custom web applications, SaaS
               products, software project rescue, AI integration, and business automation.
             </p>
             <p>
-              You work directly with me from scope through launch: architecture, frontend, backend,
-              deployment, and handover. I have delivered production systems across SaaS, fintech,
+              You work directly with us from scope through launch: architecture, frontend, backend,
+              deployment, and handover. Our team has delivered production systems across SaaS, fintech,
               IoT, travel, enterprise software, and AI-enabled platforms — including compliance
               tooling and AI reporting automation at Klarna, digital twin web applications at SEKAI,
               and an MVP built end-to-end for Tenerifly.
             </p>
             <p>
-              I am based in Warsaw, Poland, and work remotely with US companies on B2B engagements.
+              We are based in Warsaw, Poland, and work remotely with US companies on B2B engagements.
               {site.market}
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-12 max-w-3xl">
-            <h2 className="text-2xl font-bold mb-4">How I work with clients</h2>
+            <h2 className="text-2xl font-bold mb-4">How we work with clients</h2>
             <ol className="space-y-4">
               {processSteps.map((step) => (
                 <li key={step.step} className="flex gap-4">
@@ -118,15 +118,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-4 text-sm">
-            <a
-              href={site.linkedin}
-              target="_blank"
-              rel="noopener noreferrer me"
-              className="text-foreground hover:underline underline-offset-4"
-            >
-              LinkedIn profile
-            </a>
+          <div className="mt-12 text-sm">
             <a href={`mailto:${site.email}`} className="text-foreground hover:underline underline-offset-4">
               {site.email}
             </a>
@@ -135,7 +127,7 @@ export default function AboutPage() {
           <div className="mt-16 surface-elevated p-8 max-w-3xl">
             <h2 className="text-xl font-bold">Discuss a project</h2>
             <p className="mt-2 text-muted-foreground">
-              Tell me what you are building, fixing, or automating.
+              Tell us what you are building, fixing, or automating.
             </p>
             <Link
               href={ROUTES.contact}
