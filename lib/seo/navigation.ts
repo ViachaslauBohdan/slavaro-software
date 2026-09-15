@@ -6,7 +6,7 @@ export const serviceNavLinks = [
   { name: "SaaS Development", href: ROUTES.saasDevelopment },
   { name: "Startup Software", href: ROUTES.startupSoftwareDevelopment },
   { name: "Product Rescue", href: ROUTES.productRescue },
-  { name: "React & Next.js", href: ROUTES.reactDevelopment },
+  { name: "React, Vue & Angular", href: ROUTES.reactDevelopment },
   { name: "AI Integration", href: ROUTES.aiIntegration },
   { name: "Automation", href: ROUTES.businessAutomation },
 ] as const
@@ -38,7 +38,7 @@ export const homeInternalLinks = [
     title: "Platforms",
     links: [
       { href: ROUTES.webApplicationDevelopment, label: "custom web application development" },
-      { href: ROUTES.reactDevelopment, label: "React & Next.js development" },
+      { href: ROUTES.reactDevelopment, label: "React, Vue & Angular development" },
     ],
   },
   {

@@ -6,6 +6,12 @@ export default defineConfig({
     environment: "node",
     include: ["**/*.{test,spec}.{ts,tsx}"],
     clearMocks: true,
+    css: false,
+  },
+  css: {
+    postcss: {
+      plugins: [],
+    },
   },
   resolve: {
     alias: {

@@ -7,9 +7,9 @@ export const HOME_FAQS: FaqItem[] = [
       "We work on MVP development, custom web applications, SaaS products, product rescue, business automation, and practical AI integration. Projects are scoped around a clear business outcome — not open-ended staff augmentation unless that is explicitly what you need.",
   },
   {
-    question: "Do you work with US startups and small businesses?",
+    question: "Do you work with startups and small businesses remotely?",
     answer:
-      "Yes. Our primary market is the United States. We work remotely with founders, SaaS teams, and SMBs that need a senior technical partner from scope through production launch.",
+      "Yes. We work remotely with founders, SaaS teams, and SMBs worldwide that need a senior technical partner from scope through production launch.",
   },
   {
     question: "How does a project start?",
@@ -29,6 +29,6 @@ export const HOME_FAQS: FaqItem[] = [
   {
     question: "What technologies do you use?",
     answer:
-      "Common stacks include React, Next.js, TypeScript, Node.js, NestJS, PostgreSQL, AWS, and Docker. AI work may include RAG pipelines, vector databases, and LLM APIs. The stack is chosen for maintainability and product fit.",
+      "Common stacks include React, Vue, Angular, TypeScript, Node.js, NestJS, PostgreSQL, AWS, and Docker. AI work may include RAG pipelines, vector databases, and LLM APIs. The stack is chosen for maintainability and product fit.",
   },
 ]

@@ -11,7 +11,7 @@ export function Footer() {
             <p className="text-lg font-semibold">{site.name}</p>
             <p className="mt-1 text-sm text-muted-foreground">{site.tagline}</p>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs leading-relaxed">
-              Senior technical delivery partner for US founders and businesses.
+              Senior technical delivery partner for founders and businesses worldwide.
             </p>
           </div>
 

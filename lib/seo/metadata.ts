@@ -58,7 +58,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     path: "/",
     title: "MVP & Custom Web Application Development | SLAVARO SOFTWARE",
     description:
-      "Senior technical delivery partner for US founders and SMBs. MVP development, custom web applications, SaaS builds, product rescue, AI integration, and business automation — from scope to production launch.",
+      "Senior technical delivery partner for founders and SMBs. MVP development, custom web applications, SaaS builds, product rescue, AI integration, and business automation — from scope to production launch.",
     keywords: [
       "MVP development",
       "custom web application development",
@@ -72,7 +72,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     path: "/mvp-development",
     title: "MVP Development Services for Startups | SLAVARO SOFTWARE",
     description:
-      "Rapid MVP development for US startups and SaaS founders. Scope, build, and launch a production-ready MVP — proof of concept, authentication, payments, and deployment included.",
+      "Rapid MVP development for startups and SaaS founders. Scope, build, and launch a production-ready MVP — proof of concept, authentication, payments, and deployment included.",
     keywords: [
       "MVP development services",
       "startup MVP development",
@@ -85,7 +85,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     path: "/web-application-development",
     title: "Custom Web Application Development Services | SLAVARO SOFTWARE",
     description:
-      "Custom web application development for US businesses. Customer portals, internal tools, marketplaces, booking systems, and admin panels — built for production from day one.",
+      "Custom web application development for businesses. Customer portals, internal tools, marketplaces, booking systems, and admin panels — built for production from day one.",
     keywords: [
       "custom web application development",
       "web application development services",
@@ -97,7 +97,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     path: "/saas-development",
     title: "SaaS Development Services for Startups | SLAVARO SOFTWARE",
     description:
-      "SaaS application development for US founders. Multi-tenant architecture, subscriptions, onboarding, and scalable backends — one senior delivery team from MVP through launch.",
+      "SaaS application development for founders. Multi-tenant architecture, subscriptions, onboarding, and scalable backends — one senior delivery team from MVP through launch.",
     keywords: [
       "SaaS development services",
       "SaaS application development",
@@ -109,7 +109,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     path: "/startup-software-development",
     title: "Software Development for Startups | SLAVARO SOFTWARE",
     description:
-      "Software development partner for US startups. Ship your product without hiring a full team — architecture, frontend, backend, and launch handled by our senior team.",
+      "Software development partner for startups. Ship your product without hiring a full team — architecture, frontend, backend, and launch handled by our senior team.",
     keywords: [
       "software development for startups",
       "startup software development",
@@ -132,21 +132,23 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   reactDevelopment: {
     path: "/react-development",
-    title: "React & Next.js Development Services | SLAVARO SOFTWARE",
+    title: "React, Vue & Angular Development | SLAVARO SOFTWARE",
     description:
-      "React and Next.js development for US SaaS and product teams. Modern frontends, server-side rendering, design systems, and performance — built for maintainability and scale.",
+      "React, Vue, and Angular development for SaaS and product teams. Modern frontends, server-side rendering, design systems, and performance — built for maintainability and scale.",
     keywords: [
       "React development services",
-      "Next.js development services",
+      "Vue development services",
+      "Angular development services",
       "React developer",
-      "Next.js developer",
+      "Vue developer",
+      "Angular developer",
     ],
   },
   aiIntegration: {
     path: "/ai-integration",
     title: "AI Integration & Custom AI Assistant Development | SLAVARO SOFTWARE",
     description:
-      "Practical AI integration for US businesses. Custom AI assistants, RAG document search, LLM workflows, and knowledge-base tools that reduce manual work — not demo projects.",
+      "Practical AI integration for businesses. Custom AI assistants, RAG document search, LLM workflows, and knowledge-base tools that reduce manual work — not demo projects.",
     keywords: [
       "AI integration services",
       "custom AI assistant development",
@@ -158,7 +160,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     path: "/business-automation",
     title: "Business Automation & API Integration Services | SLAVARO SOFTWARE",
     description:
-      "Business automation development for US companies. API integrations, CRM connections, workflow automation, and reporting — replace spreadsheet processes with reliable software.",
+      "Business automation development for companies. API integrations, CRM connections, workflow automation, and reporting — replace spreadsheet processes with reliable software.",
     keywords: [
       "business automation development",
       "workflow automation development",
@@ -170,12 +172,12 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     path: "/about",
     title: "About SLAVARO SOFTWARE — Senior Technical Delivery Partner | SLAVARO SOFTWARE",
     description:
-      "8+ years building production software for SaaS, fintech, IoT, and enterprise teams. Senior technical delivery partner serving US founders and businesses — direct, accountable, end-to-end.",
+      "8+ years building production software for SaaS, fintech, IoT, and enterprise teams. Senior technical delivery partner serving founders and businesses worldwide — direct, accountable, end-to-end.",
   },
   contact: {
     path: "/contact",
     title: "Discuss Your Software Project | SLAVARO SOFTWARE",
     description:
-      "Tell us what you're building, fixing, or automating. MVP development, web platforms, product rescue, and AI integration for US startups and businesses. Response within 24 hours.",
+      "Tell us what you're building, fixing, or automating. MVP development, web platforms, product rescue, and AI integration for startups and businesses. Response within 24 hours.",
   },
 }

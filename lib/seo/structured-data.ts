@@ -27,8 +27,8 @@ export function webSiteSchema() {
     name: site.name,
     url: getSiteUrl(),
     description:
-      "Senior technical delivery partner for US startups and businesses. MVP development, custom web applications, SaaS, product rescue, and AI integration.",
-    inLanguage: "en-US",
+      "Senior technical delivery partner for startups and businesses. MVP development, custom web applications, SaaS, product rescue, and AI integration.",
+    inLanguage: "en",
     publisher: {
       "@type": "Organization",
       name: site.name,
@@ -47,10 +47,10 @@ export function organizationSchema() {
     email: site.email,
     telephone: site.phone,
     description:
-      "Senior technical delivery partner providing MVP development, custom web application development, SaaS development, software project rescue, AI integration, and business automation for US companies.",
+      "Senior technical delivery partner providing MVP development, custom web application development, SaaS development, software project rescue, AI integration, and business automation for companies worldwide.",
     areaServed: {
-      "@type": "Country",
-      name: "United States",
+      "@type": "Place",
+      name: "Worldwide",
     },
     availableLanguage: "en",
     founder: personSchema(),
@@ -60,7 +60,8 @@ export function organizationSchema() {
       "SaaS Development",
       "Software Project Rescue",
       "React Development",
-      "Next.js Development",
+      "Vue Development",
+      "Angular Development",
       "AI Integration",
       "Business Process Automation",
     ],
@@ -99,7 +100,7 @@ export function webPageSchema({
     description,
     isPartOf: { "@id": `${getSiteUrl()}/#website` },
     about: { "@id": `${getSiteUrl()}/#organization` },
-    inLanguage: "en-US",
+    inLanguage: "en",
   }
 }
 
@@ -120,8 +121,8 @@ export function serviceSchema({
     url: absoluteUrl(path),
     provider: { "@id": `${getSiteUrl()}/#organization` },
     areaServed: {
-      "@type": "Country",
-      name: "United States",
+      "@type": "Place",
+      name: "Worldwide",
     },
     serviceType: name,
   }

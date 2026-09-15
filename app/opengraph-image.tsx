@@ -36,7 +36,7 @@ export default function OpenGraphImage() {
           MVP and Web Application Development
         </div>
         <div style={{ display: "flex", fontSize: 26, marginTop: 32, color: "#3B82F6" }}>
-          {site.tagline} · Serving the United States
+          {site.tagline} · Serving clients worldwide
         </div>
       </div>
     ),

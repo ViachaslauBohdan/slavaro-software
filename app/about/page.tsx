@@ -47,13 +47,13 @@ export default function AboutPage() {
           </h1>
           <p className="mt-5 text-lg text-muted-foreground max-w-3xl leading-relaxed">
             Senior technical delivery partner with 8+ years of commercial software engineering
-            experience — serving US founders and businesses that need a product shipped, not another
+            experience — serving founders and businesses that need a product shipped, not another
             layer of agency overhead.
           </p>
 
           <div className="mt-12 max-w-3xl space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              We help US startups and small businesses turn ideas and operational problems into
+              We help startups and small businesses turn ideas and operational problems into
               production software. That includes MVP development, custom web applications, SaaS
               products, software project rescue, AI integration, and business automation.
             </p>
@@ -65,8 +65,8 @@ export default function AboutPage() {
               and an MVP built end-to-end for Tenerifly.
             </p>
             <p>
-              We are based in Warsaw, Poland, and work remotely with US companies on B2B engagements.
-              {site.market}
+              We are based in Warsaw, Poland, and work remotely with companies worldwide on B2B
+              engagements. {site.market}.
             </p>
           </div>
 

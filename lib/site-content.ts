@@ -4,7 +4,7 @@ export const site = {
   person: "Viachaslau Bohdan",
   role: "Senior Technical Delivery Partner",
   location: "Warsaw, Poland",
-  market: "Serving founders and businesses across the United States",
+  market: "Serving founders and businesses worldwide",
   email: "contact@slavaro.com",
   phone: "+48 537 437 454",
   calendly: "https://calendly.com/slawandr1/30min",
@@ -138,10 +138,9 @@ export const experienceHighlights = [
 
 export const techStack = [
   "React",
-  "Next.js",
-  "TypeScript",
-  "Angular",
   "Vue",
+  "Angular",
+  "TypeScript",
   "Node.js",
   "NestJS",
   "PostgreSQL",

@@ -16,8 +16,8 @@ describe("getSiteUrl", () => {
 
   it("falls back to VERCEL_URL", () => {
     delete process.env.NEXT_PUBLIC_SITE_URL
-    process.env.VERCEL_URL = "volska-landing.vercel.app"
-    expect(getSiteUrl()).toBe("https://volska-landing.vercel.app")
+    process.env.VERCEL_URL = "slavaro-landing.vercel.app"
+    expect(getSiteUrl()).toBe("https://slavaro-landing.vercel.app")
   })
 
   it("defaults to localhost in development", () => {

@@ -29,7 +29,7 @@ or call: +48 537 437 454
 
 Kind regards,  
 Volska Landing  
-https://volska-landing.vercel.app/
+https://slavaro-landing.vercel.app/
 
 ---
 
@@ -43,7 +43,7 @@ Following up on my message about a **landing-page-only** offer:
 **same-day design + delivery within 48 hours**.
 
 If useful, please reply with a time, or book directly:  
-https://calendly.com/slawandr1/30min · +48 537 437 454 · https://volska-landing.vercel.app/
+https://calendly.com/slawandr1/30min · +48 537 437 454 · https://slavaro-landing.vercel.app/
 
 Kind regards,  
 Volska Landing
@@ -60,4 +60,4 @@ I’ll close this thread for now. If you need a fast landing page later, feel fr
 
 Kind regards,  
 Volska Landing  
-https://volska-landing.vercel.app/
+https://slavaro-landing.vercel.app/

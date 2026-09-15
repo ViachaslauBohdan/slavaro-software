@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Senior technical delivery partner for US startups and businesses. MVP development, web applications, SaaS, product rescue, and AI integration.",
+    "Senior technical delivery partner for startups and businesses. MVP development, web applications, SaaS, product rescue, and AI integration.",
   authors: [{ name: site.person }],
   creator: site.person,
   publisher: site.name,
@@ -58,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en-US">
+    <html lang="en">
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         {children}
         <Analytics />

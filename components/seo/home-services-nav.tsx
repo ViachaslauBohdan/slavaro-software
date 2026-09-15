@@ -7,7 +7,7 @@ export function HomeServicesNav() {
     <Section id="services" className="section-alt border-t border-border">
       <div className="max-w-3xl">
         <h2 className="text-3xl sm:text-4xl font-bold text-balance">
-          Software development services for US businesses
+          Software development services for startups and businesses
         </h2>
         <p className="mt-4 text-muted-foreground leading-relaxed">
           Explore dedicated pages for each type of engagement — MVP development, custom web

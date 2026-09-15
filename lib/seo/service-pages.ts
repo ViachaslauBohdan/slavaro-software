@@ -32,7 +32,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Turn your product idea into a working MVP — scoped tightly, built quickly, and ready for real users.",
     intro: [
       "Most founders don't need a full product on day one. They need a credible first version that validates demand, supports sales conversations, or gets in front of early customers.",
-      "We help US startup and SaaS founders go from idea to production MVP — handling scope, architecture, frontend, backend, authentication, payments, database design, and deployment without requiring you to hire and manage a full development team.",
+      "We help startup and SaaS founders go from idea to production MVP — handling scope, architecture, frontend, backend, authentication, payments, database design, and deployment without requiring you to hire and manage a full development team.",
     ],
     whoFor: {
       heading: "Who this is for",
@@ -77,7 +77,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     technologies: {
       heading: "Technologies commonly used",
       paragraphs: [
-        "Technology choices depend on your product, timeline, and existing stack. Common tools include React, Next.js, TypeScript, Node.js, NestJS, PostgreSQL, AWS, and Docker.",
+        "Technology choices depend on your product, timeline, and existing stack. Common tools include React, Vue, Angular, TypeScript, Node.js, NestJS, PostgreSQL, AWS, and Docker.",
       ],
     },
     faqs: [
@@ -92,9 +92,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
           "A SaaS MVP should include the one workflow that proves value to your target user, plus the minimum infrastructure to support it: authentication, core data model, the primary interface, and deployment. Nice-to-have features can wait until after validation.",
       },
       {
-        question: "Do you work with US startups remotely?",
+        question: "Do you work with startups remotely?",
         answer:
-          "Yes. We work with US founders and businesses remotely. Communication is async-friendly with regular demos and clear written scope.",
+          "Yes. We work with founders and businesses remotely worldwide. Communication is async-friendly with regular demos and clear written scope.",
       },
       {
         question: "Can you help after the MVP launches?",
@@ -118,7 +118,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Build web platforms that match how your business actually operates — not generic software you have to work around.",
     intro: [
       "Custom web application development is the right fit when off-the-shelf tools create friction, spreadsheets stop scaling, or your team needs a dedicated customer portal, internal tool, or operational platform.",
-      "We design and build production-ready web applications for US businesses — from customer-facing portals to admin panels, booking systems, marketplaces, and analytics dashboards.",
+      "We design and build production-ready web applications for businesses — from customer-facing portals to admin panels, booking systems, marketplaces, and analytics dashboards.",
     ],
     whoFor: {
       heading: "Common use cases",
@@ -172,7 +172,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     ],
     related: [
       { href: ROUTES.saasDevelopment, label: "SaaS development" },
-      { href: ROUTES.reactDevelopment, label: "React development services" },
+      { href: ROUTES.reactDevelopment, label: "React, Vue & Angular development" },
       { href: ROUTES.businessAutomation, label: "business automation development" },
     ],
     cta: "Discuss Your Platform",
@@ -186,7 +186,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Build subscription software with the architecture, onboarding, and scalability your product needs from the start.",
     intro: [
       "SaaS products have specific technical demands: multi-tenant data models, billing, onboarding, permissions, and the ability to grow without rebuilding the foundation.",
-      "We help US SaaS founders and product teams build and launch SaaS applications — from early MVP through production features that support paying customers.",
+      "We help SaaS founders and product teams build and launch SaaS applications — from early MVP through production features that support paying customers.",
     ],
     whoFor: {
       heading: "Who this service fits",
@@ -240,7 +240,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     related: [
       { href: ROUTES.mvpDevelopment, label: "MVP development services" },
       { href: ROUTES.startupSoftwareDevelopment, label: "startup software development" },
-      { href: ROUTES.reactDevelopment, label: "Next.js development services" },
+      { href: ROUTES.reactDevelopment, label: "React, Vue & Angular development" },
     ],
     cta: "Discuss Your SaaS Product",
   },
@@ -253,7 +253,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Ship your startup product with one senior technical partner — not a rotating cast of freelancers.",
     intro: [
       "Early-stage startups rarely need a large in-house engineering team on day one. They need someone who can translate a business idea into working software, make sound technical decisions, and deliver fast without creating future debt.",
-      "We work with US startup founders as a technical delivery partner — owning architecture, development, and launch while you stay focused on customers, sales, and fundraising.",
+      "We work with startup founders as a technical delivery partner — owning architecture, development, and launch while you stay focused on customers, sales, and fundraising.",
     ],
     whoFor: {
       heading: "Built for startup founders who need",
@@ -298,9 +298,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
           "For many early-stage founders, we provide the technical leadership needed before a full-time CTO or engineering hire makes sense.",
       },
       {
-        question: "Do you work with US companies only?",
+        question: "Do you work remotely?",
         answer:
-          "Our primary market is the United States, and we work remotely with US founders and businesses. We also serve international clients when the fit is right.",
+          "Yes. We work remotely with founders and businesses worldwide. Communication is async-friendly with regular demos and clear written scope.",
       },
     ],
     related: [
@@ -318,7 +318,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     h1: "MVP & Software Project Rescue",
     lead: "Finish what you started — assess what you have, fix what blocks launch, and ship without an unnecessary rebuild.",
     intro: [
-      "Many US businesses are stuck with half-finished MVPs, abandoned codebases, or AI-generated prototypes that look promising but are not production-ready.",
+      "Many businesses are stuck with half-finished MVPs, abandoned codebases, or AI-generated prototypes that look promising but are not production-ready.",
       "We help teams rescue unfinished software projects: take over existing code, fix critical bugs, add missing backend functionality, and get the product over the line.",
     ],
     whoFor: {
@@ -373,7 +373,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     ],
     related: [
       { href: ROUTES.mvpDevelopment, label: "MVP development" },
-      { href: ROUTES.reactDevelopment, label: "modernize frontend with React" },
+      { href: ROUTES.reactDevelopment, label: "modernize frontend with React, Vue or Angular" },
       { href: ROUTES.webApplicationDevelopment, label: "custom web application development" },
     ],
     cta: "Get Help Finishing Your Product",
@@ -382,26 +382,26 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
   reactDevelopment: {
     slug: "reactDevelopment",
     path: ROUTES.reactDevelopment,
-    eyebrow: "React & Next.js",
-    h1: "React & Next.js Development Services",
-    lead: "Modern, maintainable frontends and full-stack applications built with React and Next.js for US product teams.",
+    eyebrow: "React, Vue & Angular",
+    h1: "React, Vue & Angular Development Services",
+    lead: "Modern, maintainable frontends and full-stack applications built with React, Vue, or Angular for product teams.",
     intro: [
-      "React and Next.js are strong choices for SaaS products, customer portals, and data-heavy web applications — when implemented with clear architecture and performance in mind.",
-      "We provide React development and Next.js development for US businesses that need production-grade interfaces, server-side rendering, design system consistency, and long-term maintainability.",
+      "React, Vue, and Angular are strong choices for SaaS products, customer portals, and data-heavy web applications — when implemented with clear architecture and performance in mind.",
+      "We provide frontend development across these stacks for businesses that need production-grade interfaces, design system consistency, and long-term maintainability.",
     ],
     whoFor: {
-      heading: "When teams hire for React or Next.js",
+      heading: "When teams hire for React, Vue, or Angular",
       paragraphs: ["This service supports both greenfield builds and improvements to existing applications."],
       list: [
         "SaaS products needing a modern frontend",
         "Teams migrating from legacy frontends",
-        "Founders building on Next.js from the start",
-        "Products requiring SEO-friendly server rendering",
+        "Founders building on React, Vue, or Angular from the start",
+        "Products requiring SEO-friendly rendering",
         "Applications that need better performance or structure",
       ],
     },
     includes: {
-      heading: "What React / Next.js work can include",
+      heading: "What frontend framework work can include",
       paragraphs: ["Engagements focus on product outcomes, not just component delivery."],
       list: [
         "Application architecture and folder structure",
@@ -424,12 +424,12 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     },
     faqs: [
       {
-        question: "React vs Next.js — which should I use?",
+        question: "React, Vue, or Angular — which should I use?",
         answer:
-          "Next.js is often the right choice for SaaS marketing sites, SEO-sensitive products, and full-stack applications. Plain React fits some internal tools and embedded apps. We recommend based on your product goals, not preference.",
+          "React fits many SaaS products, customer portals, and data-heavy UIs. Angular suits large enterprise apps with strong structure needs. Vue works well for progressive adoption and focused product interfaces. We recommend based on your product goals and existing stack, not preference.",
       },
       {
-        question: "Can you modernize an older React codebase?",
+        question: "Can you modernize an older React, Vue, or Angular codebase?",
         answer:
           "Yes. Modernization work includes dependency upgrades, architecture cleanup, performance fixes, and incremental refactors that reduce risk.",
       },
@@ -444,7 +444,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       { href: ROUTES.saasDevelopment, label: "SaaS development services" },
       { href: ROUTES.productRescue, label: "fix unfinished web app" },
     ],
-    cta: "Discuss Your React Project",
+    cta: "Discuss Your Frontend Project",
   },
 
   aiIntegration: {
@@ -455,7 +455,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     lead: "Practical AI features that save time — custom assistants, document search, and workflow automation built into your product or operations.",
     intro: [
       "Most businesses do not need generic AI demos. They need AI integrated into real workflows: answering questions across internal documents, generating reports, or automating repetitive operational tasks.",
-      "We build AI integration for US companies — including custom AI assistants, RAG-based document search, LLM API integrations, and production-ready AI features inside web applications.",
+      "We build AI integration for companies — including custom AI assistants, RAG-based document search, LLM API integrations, and production-ready AI features inside web applications.",
     ],
     whoFor: {
       heading: "Practical AI use cases",
@@ -522,7 +522,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     h1: "Business Automation Development",
     lead: "Replace manual processes with reliable software — API integrations, workflow automation, and connected systems.",
     intro: [
-      "Many US small and mid-sized businesses lose hours every week copying data between spreadsheets, CRMs, and internal tools. Custom automation turns those manual steps into software that runs consistently.",
+      "Many small and mid-sized businesses lose hours every week copying data between spreadsheets, CRMs, and internal tools. Custom automation turns those manual steps into software that runs consistently.",
       "We build business automation for teams that need API integrations, CRM connections, automated reporting, data synchronization, and workflow automation tailored to how they actually operate.",
     ],
     whoFor: {
@@ -570,7 +570,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
           "Not always. Some automation projects are focused integrations or internal tools. Others grow into full web platforms as needs expand.",
       },
       {
-        question: "Do you work with US businesses remotely?",
+        question: "Do you work with businesses remotely?",
         answer:
           "Yes. Automation projects are well suited to remote delivery with clear documentation and async updates.",
       },
