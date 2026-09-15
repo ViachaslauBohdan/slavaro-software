@@ -13,6 +13,7 @@ export const ROUTES = {
   about: "/about",
   contact: "/contact",
   privacy: "/privacy",
+  examples: "/examples",
 } as const
 
 export type RouteKey = keyof typeof ROUTES
@@ -30,6 +31,7 @@ export const INDEXABLE_ROUTES: RouteKey[] = [
   "about",
   "contact",
   "privacy",
+  "examples",
 ]
 
 export function absoluteUrl(path: string): string {

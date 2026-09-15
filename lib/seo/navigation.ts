@@ -13,6 +13,7 @@ export const serviceNavLinks = [
 
 export const primaryNavLinks = [
   { name: "Services", href: ROUTES.mvpDevelopment, children: serviceNavLinks },
+  { name: "Examples", href: ROUTES.examples },
   { name: "About", href: ROUTES.about },
   { name: "Contact", href: ROUTES.contact },
 ] as const
@@ -22,6 +23,7 @@ export const footerServiceLinks = serviceNavLinks
 export const footerCompanyLinks = [
   { name: "About", href: ROUTES.about },
   { name: "Contact", href: ROUTES.contact },
+  { name: "Examples", href: ROUTES.examples },
   { name: "Privacy Policy", href: ROUTES.privacy },
   { name: "How it works", href: "/#process" },
 ] as const

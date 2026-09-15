@@ -225,4 +225,18 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "How SLAVARO SOFTWARE collects and uses contact form data, cookies, and analytics when you use our website.",
     keywords: ["privacy policy", "GDPR contact form"],
   },
+  examples: {
+    path: "/examples",
+    title: "Landing Page Examples by Industry | SLAVARO SOFTWARE",
+    description:
+      "Sixteen sample landing pages by industry — logistics, pharma, beauty, legal, travel, finance, healthcare, and more.",
+    keywords: [
+      "landing page examples",
+      "logistics company landing page",
+      "beauty salon website sample",
+      "law firm landing page",
+      "restaurant website sample",
+      "real estate landing page",
+    ],
+  },
 }

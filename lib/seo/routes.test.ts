@@ -11,7 +11,7 @@ describe("ROUTES", () => {
   it("includes all public marketing pages", () => {
     expect(ROUTES.home).toBe("/")
     expect(ROUTES.contact).toBe("/contact")
-    expect(INDEXABLE_ROUTES).toHaveLength(12)
+    expect(INDEXABLE_ROUTES).toHaveLength(13)
     expect(new Set(INDEXABLE_ROUTES).size).toBe(INDEXABLE_ROUTES.length)
   })
 })

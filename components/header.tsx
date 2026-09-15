@@ -128,20 +128,18 @@ export function Header() {
             </Link>
           ))}
           <div className="border-t border-border my-2 pt-2">
-            <Link
-              href="/about"
-              className="block py-3 text-sm text-muted-foreground hover:text-foreground"
-              onClick={() => setMobileOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className="block py-3 text-sm text-muted-foreground hover:text-foreground"
-              onClick={() => setMobileOpen(false)}
-            >
-              Contact
-            </Link>
+            {primaryNavLinks
+              .filter((item) => item.name !== "Services")
+              .map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block py-3 text-sm text-muted-foreground hover:text-foreground"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
             <button
               type="button"
               className="block w-full text-left py-3 text-sm text-muted-foreground hover:text-foreground"
