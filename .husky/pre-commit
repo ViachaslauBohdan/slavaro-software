@@ -1,1 +1,2 @@
 pnpm test
+E2E_SMOKE=1 pnpm exec playwright test
