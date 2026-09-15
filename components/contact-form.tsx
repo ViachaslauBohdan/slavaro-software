@@ -94,9 +94,6 @@ export function ContactForm({ variant = "home" }: { variant?: "home" | "page" })
               </a>
             </Button>
           </div>
-          <p className="mt-6 text-sm text-subtle-foreground">
-            {site.email} · {site.phone}
-          </p>
         </FadeIn>
 
         <FadeIn delay={100}>

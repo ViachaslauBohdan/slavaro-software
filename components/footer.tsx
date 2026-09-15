@@ -64,11 +64,10 @@ export function Footer() {
               <p>NIP: {legal.nip}</p>
               <p className="mt-1">REGON: {legal.regon}</p>
               <p className="mt-1">
-                <a href={`mailto:${site.email}`} className="hover:text-foreground transition-colors">
+                <a href={`mailto:${site.email}`} className="block hover:text-foreground transition-colors">
                   {site.email}
                 </a>
-                {" · "}
-                <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="hover:text-foreground transition-colors">
+                <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="block hover:text-foreground transition-colors">
                   {site.phone}
                 </a>
               </p>

@@ -4,20 +4,22 @@ import { businessOutcomes } from "@/lib/site-content"
 
 export function BusinessValue() {
   return (
-    <Section className="section-alt border-y border-border">
+    <Section
+      className="border-y border-border"
+    >
       <FadeIn>
         <p className="eyebrow mb-3">Why work with us</p>
-        <h2 className="text-3xl sm:text-4xl font-bold max-w-xl text-balance">
+        <h2 className="max-w-xl text-balance text-3xl font-bold sm:text-4xl">
           Outcomes that matter to your business
         </h2>
       </FadeIn>
 
-      <div className="mt-14 grid sm:grid-cols-2 gap-4">
+      <div className="mt-14 grid gap-4 sm:grid-cols-2">
         {businessOutcomes.map((outcome, i) => (
           <FadeIn key={outcome.title} delay={i * 80}>
-            <div className="surface-elevated p-6 lg:p-7 h-full">
-              <h3 className="text-lg font-semibold mb-2">{outcome.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{outcome.description}</p>
+            <div className="surface-glass h-full p-6 lg:p-7 transition-colors duration-300 hover:border-primary/35">
+              <h3 className="mb-2 text-lg font-semibold">{outcome.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{outcome.description}</p>
             </div>
           </FadeIn>
         ))}

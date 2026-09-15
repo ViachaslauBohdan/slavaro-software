@@ -8,45 +8,59 @@ import { ROUTES } from "@/lib/seo/routes"
 
 export function MvpSection() {
   return (
-    <Section id="mvp">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+    <Section
+      id="mvp"
+    >
+      <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
         <FadeIn>
           <p className="eyebrow mb-3">Fast MVP development</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-balance">
+          <h2 className="text-balance text-3xl font-bold sm:text-4xl">
             Have an idea? Get to MVP faster.
           </h2>
-          <p className="mt-5 text-muted-foreground leading-relaxed">
+          <p className="mt-5 leading-relaxed text-muted-foreground">
             We work directly with founders to cut unnecessary scope, identify the core user journey,
             and build the first version that gets in front of real customers — fast.
           </p>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
+          <p className="mt-4 leading-relaxed text-muted-foreground">
             Speed to market matters. You don&apos;t need a perfect product on day one. You need
             something real enough to validate, sell, or raise on.
           </p>
           <Link
             href={ROUTES.mvpDevelopment}
-            className="inline-flex mt-8 items-center justify-center rounded-md px-7 py-3 text-sm font-medium btn-primary"
+            className="btn-primary mt-8 inline-flex items-center justify-center rounded-md px-7 py-3 text-sm font-medium"
           >
             Tell Us Your Idea
           </Link>
           <p className="mt-4 text-sm text-subtle-foreground">
-            <Link href={ROUTES.mvpDevelopment} className="text-link hover:underline underline-offset-4">
+            <Link href={ROUTES.mvpDevelopment} className="text-link underline-offset-4 hover:underline">
               Learn more about MVP development services
             </Link>
           </p>
         </FadeIn>
 
         <FadeIn delay={100}>
-          <div className="surface-elevated p-6 lg:p-8">
-            <p className="text-sm font-medium text-foreground mb-5">What we build</p>
-            <ul className="space-y-3">
-              {mvpTypes.map((type) => (
+          <div className="surface-glass rounded-2xl p-6 lg:p-8">
+            <div className="mb-6 flex items-center justify-between">
+              <p className="text-sm font-medium text-foreground">What we build</p>
+              <span className="rounded-full border border-border/80 bg-secondary/60 px-2.5 py-1 text-[11px] text-subtle-foreground">
+                MVP scope
+              </span>
+            </div>
+            <ul>
+              {mvpTypes.map((type, i) => (
                 <li
                   key={type}
-                  className="flex items-center justify-between border-b border-border/80 pb-3 last:border-0 last:pb-0"
+                  className="flex items-center justify-between border-b border-border/60 py-3.5 first:pt-0 last:border-0 last:pb-0"
                 >
-                  <span className="text-sm text-muted-foreground">{type}</span>
-                  <span className="text-xs text-accent" aria-hidden="true">→</span>
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 font-mono text-[11px] text-subtle-foreground">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-sm text-muted-foreground">{type}</span>
+                  </div>
+                  <span className="text-xs text-accent" aria-hidden>
+                    →
+                  </span>
                 </li>
               ))}
             </ul>

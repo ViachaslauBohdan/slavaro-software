@@ -38,8 +38,6 @@ export default function ExamplesPage() {
       <main id="main-content">
         <div className="relative overflow-hidden hero-bg">
           <div className="pointer-events-none absolute inset-0 grid-line opacity-40" />
-          <div className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-24 top-40 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
 
           <Section className="relative pt-28 lg:pt-32 pb-8 lg:pb-12">
             <Breadcrumbs items={breadcrumbs} />
@@ -93,7 +91,6 @@ export default function ExamplesPage() {
 
           <FadeIn delay={400}>
             <div className="relative mt-20 overflow-hidden rounded-2xl border border-border bg-card p-8 sm:p-10 lg:p-12">
-              <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-primary/15 blur-3xl" />
               <div className="relative max-w-2xl">
                 <h2 className="text-2xl font-bold sm:text-3xl">Use these in outreach</h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
