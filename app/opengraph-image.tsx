@@ -16,12 +16,12 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: 80,
-          background: "linear-gradient(180deg, #07111F 0%, #0B1D35 100%)",
-          color: "#F8FAFC",
+          background: "linear-gradient(180deg, #FFFFFF 0%, #FAFBFC 100%)",
+          color: "#1C2434",
           fontFamily: "system-ui, sans-serif",
         }}
       >
-        <div style={{ display: "flex", fontSize: 28, fontWeight: 600, marginBottom: 24, color: "#A8B3C5" }}>
+        <div style={{ display: "flex", fontSize: 28, fontWeight: 600, marginBottom: 24, color: "#0F766E" }}>
           {site.name}
         </div>
         <div
@@ -35,7 +35,7 @@ export default function OpenGraphImage() {
         >
           MVP and Web Application Development
         </div>
-        <div style={{ display: "flex", fontSize: 26, marginTop: 32, color: "#3B82F6" }}>
+        <div style={{ display: "flex", fontSize: 26, marginTop: 32, color: "#5B6578" }}>
           {site.tagline} · Serving clients worldwide
         </div>
       </div>
