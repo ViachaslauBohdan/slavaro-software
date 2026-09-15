@@ -1,0 +1,86 @@
+/* Main site forces light heading color (dark theme). Demo pages must own contrast. */
+.demo-layout-root {
+  color: var(--demo-text);
+}
+
+.demo-layout-root h1,
+.demo-layout-root h2,
+.demo-layout-root h3,
+.demo-layout-root h4,
+.demo-layout-root h5,
+.demo-layout-root h6 {
+  color: inherit !important;
+  font-family: inherit;
+}
+
+.demo-layout-root a {
+  color: inherit;
+}
+
+@keyframes demo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes demo-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes demo-underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.demo-marquee-track {
+  animation: demo-marquee 32s linear infinite;
+}
+
+.demo-fade-up {
+  animation: demo-fade-up 0.7s ease-out both;
+}
+
+.demo-fade-up-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.demo-fade-up-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.demo-fade-up-delay-3 {
+  animation-delay: 0.36s;
+}
+
+.demo-kinetic-underline {
+  transform-origin: left;
+  animation: demo-underline 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.demo-h-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--demo-border) transparent;
+}
+
+.demo-h-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.demo-h-scroll::-webkit-scrollbar-thumb {
+  background: var(--demo-border);
+  border-radius: 999px;
+}

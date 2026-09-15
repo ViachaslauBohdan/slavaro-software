@@ -49,17 +49,17 @@ export default function ExamplesPage() {
                 Sample landings by industry
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-                Sixteen industry-specific landings — logistics, pharma, beauty, legal, travel,
-                finance, and more. Send the one that matches your prospect&apos;s world.
+                Sixteen industries across three distinct design systems — Lumina (editorial),
+                Atlas (product), and Voltage (kinetic). Same URLs, radically different UI.
               </p>
             </FadeIn>
 
             <FadeIn delay={120}>
               <div className="mt-10 flex flex-wrap gap-3">
                 {[
+                  { value: "3", label: "Design systems" },
                   { value: "16", label: "Industries" },
                   { value: "6", label: "Service types" },
-                  { value: "48h", label: "Typical delivery" },
                 ].map((stat) => (
                   <div
                     key={stat.label}
@@ -78,7 +78,7 @@ export default function ExamplesPage() {
           <ExamplesGallery
             demos={industryDemos}
             title="By industry"
-            description="Show prospects a landing that looks like it belongs in their world — not a generic SaaS template."
+            description="Each industry uses Lumina, Atlas, or Voltage — so the gallery feels like different studios, not one template recolored."
             badge="Industry"
           />
 
