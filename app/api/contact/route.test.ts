@@ -24,8 +24,6 @@ describe("POST /api/contact", () => {
     process.env.RESEND_API_KEY = "test-resend-key"
     process.env.CONTACT_TO_EMAIL = "contact@slavaro.com"
     process.env.CONTACT_FROM_EMAIL = "SLAVARO SOFTWARE <noreply@slavaro.com>"
-    process.env.TELEGRAM_BOT_TOKEN = "telegram-token"
-    process.env.TELEGRAM_CHAT_ID = "123456"
   })
 
   afterEach(() => {
@@ -49,7 +47,7 @@ describe("POST /api/contact", () => {
     })
   })
 
-  it("returns 200 when notifications succeed", async () => {
+  it("returns 200 when email succeeds", async () => {
     const response = await POST(
       makeRequest({
         name: "Jane Founder",
@@ -62,10 +60,10 @@ describe("POST /api/contact", () => {
 
     expect(response.status).toBe(200)
     await expect(response.json()).resolves.toEqual({ ok: true })
-    expect(fetch).toHaveBeenCalledTimes(2)
+    expect(fetch).toHaveBeenCalledTimes(1)
   })
 
-  it("returns 500 when a notification channel fails", async () => {
+  it("returns 500 when email fails", async () => {
     vi.stubGlobal(
       "fetch",
       vi.fn().mockResolvedValue({
@@ -86,7 +84,7 @@ describe("POST /api/contact", () => {
 
     expect(response.status).toBe(500)
     await expect(response.json()).resolves.toMatchObject({
-      error: expect.stringContaining("Failed to send to"),
+      error: "Failed to send email",
     })
   })
 })
