@@ -28,8 +28,8 @@ https://calendly.com/slawandr1/30min
 lub telefonicznie: +48 537 437 454
 
 Pozdrawiamy,  
-Volska Landing  
-https://volska-landing.vercel.app/
+SLAVARO SOFTWARE  
+https://slavaro-landing.vercel.app/
 
 ---
 
@@ -43,10 +43,10 @@ uprzejmie wracam do wiadomości o ofercie **tylko strony landing**:
 **projekt tego samego dnia + realizacja w 48 godzin**.
 
 Jeśli temat aktualny, proszę o odpowiedź lub wybór terminu:  
-https://calendly.com/slawandr1/30min · +48 537 437 454 · https://volska-landing.vercel.app/
+https://calendly.com/slawandr1/30min · +48 537 437 454 · https://slavaro-landing.vercel.app/
 
 Pozdrawiamy,  
-Volska Landing
+SLAVARO SOFTWARE
 
 ---
 
@@ -59,5 +59,5 @@ Dzień dobry, [Firma],
 na ten moment zamykam wątek. Gdy pojawi się potrzeba szybkiej strony landing, zapraszam do kontaktu tymi samymi kanałami.
 
 Pozdrawiamy,  
-Volska Landing  
-https://volska-landing.vercel.app/
+SLAVARO SOFTWARE  
+https://slavaro-landing.vercel.app/

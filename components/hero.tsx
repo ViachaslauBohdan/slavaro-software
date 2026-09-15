@@ -1,176 +1,103 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Clock, Phone, Palette, Rocket, MessageSquare, TrendingUp } from "lucide-react"
-import Image from "next/image"
+import { deliveryPipeline, site } from "@/lib/site-content"
+import { ROUTES } from "@/lib/seo/routes"
+import { FadeIn } from "@/components/fade-in"
 
-export function Hero() {
-  const highlights = [
-    { icon: Phone, text: "Kickoff call — we align on your offer and goals" },
-    { icon: Palette, text: "Same day — your landing page design" },
-    { icon: Rocket, text: "Within 48 hours — full landing page live" },
-  ]
-
-  const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
-    e.preventDefault()
-    const targetId = href.replace("#", "")
-    const element = document.getElementById(targetId)
-
-    if (element) {
-      const headerOffset = 80
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.scrollY - headerOffset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      })
-    }
-  }
-
+function ProductPreview() {
   return (
-    <section className="relative pt-28 pb-14 lg:pt-32 lg:pb-20 overflow-hidden">
-      <div className="absolute inset-0">
-        <Image
-          src="/images/hero-bg.jpg"
-          alt="Modern office workspace"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <Badge
-              variant="secondary"
-              className="mb-6 px-4 py-2 text-sm font-medium border-primary/20 bg-background/80 backdrop-blur-sm"
-            >
-              Fast delivery · design same day · landing in 48h
-            </Badge>
-
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
-              Landing pages with{" "}
-              <span className="text-primary">same-day design · 48-hour delivery</span>
-            </h1>
-
-            <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-xl text-pretty">
-              After your kickoff call you get your{" "}
-              <span className="font-semibold text-foreground">page design the same day</span>. Your{" "}
-              <span className="font-semibold text-foreground">full landing page is delivered within 48 hours</span>
-              {" "}
-              — mobile-ready, conversion-focused, with instant lead notifications.
-            </p>
-
-            <div className="mt-10 flex items-center gap-4 flex-wrap">
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base shadow-lg hover:scale-105 transition-transform"
-                onClick={(e) => scrollToSection(e, "#contact")}
-              >
-                Get started
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="px-8 py-6 text-base bg-background/50 backdrop-blur-sm hover:scale-105 transition-transform"
-                onClick={(e) => scrollToSection(e, "#pricing")}
-              >
-                View pricing
-              </Button>
-            </div>
-
-            <div className="mt-12 space-y-3">
-              {highlights.map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="p-1.5 rounded-full bg-primary/10">
-                    <item.icon className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-sm text-foreground">{item.text}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-4 text-sm text-muted-foreground">
-              <span className="inline-flex items-center gap-2">
-                <MessageSquare className="h-4 w-4 text-primary" />
-                Telegram & email lead alerts
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <TrendingUp className="h-4 w-4 text-primary" />
-                Built to turn visitors into clients
-              </span>
-            </div>
+    <div className="relative mx-auto w-full max-w-lg">
+      <div className="relative surface-elevated overflow-hidden">
+        <div className="flex items-center gap-2 border-b border-border px-4 py-3 bg-secondary">
+          <div className="flex gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full bg-border" />
+            <span className="h-2.5 w-2.5 rounded-full bg-border" />
+            <span className="h-2.5 w-2.5 rounded-full bg-border" />
           </div>
+          <div className="mx-auto h-5 w-40 rounded bg-card" />
+        </div>
 
-          <div className="relative hidden lg:block">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="col-span-2 relative h-64 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-border">
-                <Image
-                  src="/images/landing-mockup.jpg"
-                  alt="Landing page mockup"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-              </div>
-
-              <div className="relative h-48 rounded-xl overflow-hidden shadow-xl ring-1 ring-border">
-                <Image
-                  src="/images/team-working.jpg"
-                  alt="Team collaboration"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
-              </div>
-
-              <div className="relative h-48 rounded-xl overflow-hidden shadow-xl ring-1 ring-border">
-                <Image
-                  src="/images/mobile-responsive.jpg"
-                  alt="Mobile responsive landing page"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
-              </div>
+        <div className="grid grid-cols-12 gap-3 p-4">
+          <div className="col-span-3 space-y-2">
+            <div className="h-3 w-full rounded bg-secondary" />
+            <div className="h-3 w-4/5 rounded bg-border" />
+            <div className="h-3 w-full rounded bg-border" />
+            <div className="h-3 w-3/5 rounded bg-border" />
+          </div>
+          <div className="col-span-9 space-y-3">
+            <div className="grid grid-cols-3 gap-2">
+              <div className="h-16 rounded-md border border-border bg-secondary" />
+              <div className="h-16 rounded-md border border-border bg-secondary" />
+              <div className="h-16 rounded-md border border-border bg-secondary" />
             </div>
-
-            <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl p-4 shadow-lg">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Clock className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-foreground">48h</p>
-                  <p className="text-xs text-muted-foreground">Landing page delivery</p>
-                  <p className="text-[10px] text-muted-foreground/80 mt-0.5">Design same day</p>
-                </div>
-              </div>
+            <div className="h-28 rounded-md border border-border bg-secondary p-3">
+              <div className="h-2 w-1/3 rounded bg-border mb-2" />
+              <div className="h-2 w-full rounded bg-border/80 mb-1.5" />
+              <div className="h-2 w-5/6 rounded bg-border/80 mb-1.5" />
+              <div className="h-2 w-2/3 rounded bg-border/80" />
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="mt-14 pt-8 border-t border-border/50">
-          <p className="text-center text-sm font-medium text-muted-foreground mb-8">
-            Trusted by businesses ready to grow
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-            {["Startups", "SMBs", "Agencies", "Consultants", "E-commerce", "Service businesses"].map(
-              (client) => (
-                <div
-                  key={client}
-                  className="text-xl font-semibold text-muted-foreground/50 hover:text-primary transition-colors cursor-default"
-                >
-                  {client}
-                </div>
-              )
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+        {deliveryPipeline.map((step, i) => (
+          <div key={step} className="flex items-center gap-2">
+            <span className="text-xs font-medium text-subtle-foreground">{step}</span>
+            {i < deliveryPipeline.length - 1 && (
+              <span className="pipeline-arrow text-xs" aria-hidden="true">
+                →
+              </span>
             )}
           </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export function Hero() {
+  return (
+    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden hero-bg">
+      <div className="absolute inset-0 grid-line opacity-40" />
+
+      <div className="relative mx-auto max-w-6xl px-5 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-16 items-center">
+          <FadeIn>
+            <p className="eyebrow mb-6">{site.tagline}</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold leading-[1.08] text-balance text-foreground">
+              MVP &amp; Web Application Development
+            </h1>
+            <p className="mt-4 text-xl sm:text-2xl font-semibold text-[#3B82F6]">
+              From idea to working product — fast.
+            </p>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
+              We help founders and businesses design, build, and launch web platforms, MVPs, and
+              automation — without hiring an entire development team.
+            </p>
+            <p className="mt-4 text-sm text-subtle-foreground">
+              You bring the idea or business problem. We handle the technical delivery.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Button size="lg" className="rounded-md px-7" asChild>
+                <Link href={ROUTES.contact}>Discuss Your Project</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-md px-7" asChild>
+                <Link href={ROUTES.about}>See What We Build</Link>
+              </Button>
+            </div>
+
+            <p className="mt-8 text-sm text-subtle-foreground">
+              Senior engineering team · 10+ years experience · End-to-end delivery
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={120} className="lg:pt-4">
+            <ProductPreview />
+          </FadeIn>
         </div>
       </div>
     </section>
