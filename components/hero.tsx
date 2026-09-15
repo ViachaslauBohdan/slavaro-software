@@ -91,7 +91,7 @@ export function Hero() {
             </div>
 
             <p className="mt-8 text-sm text-subtle-foreground">
-              Senior engineering team · 8+ years experience · End-to-end delivery
+              Senior engineering team · 10+ years experience · End-to-end delivery
             </p>
           </FadeIn>
 

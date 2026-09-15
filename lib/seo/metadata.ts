@@ -172,7 +172,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     path: "/about",
     title: "About SLAVARO SOFTWARE — Senior Technical Delivery Partner | SLAVARO SOFTWARE",
     description:
-      "8+ years building production software for SaaS, fintech, IoT, and enterprise teams. Senior technical delivery partner serving founders and businesses worldwide — direct, accountable, end-to-end.",
+      "10+ years building production software for SaaS, fintech, IoT, and enterprise teams. Senior technical delivery partner serving founders and businesses worldwide — direct, accountable, end-to-end.",
   },
   contact: {
     path: "/contact",

@@ -19,7 +19,7 @@ export function About() {
             Senior team. One accountable delivery partner.
           </h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">
-            Senior technical delivery partner with 8+ years building
+            Senior technical delivery partner with 10+ years building
             production software for startups and established companies. We take projects from idea
             through launch: scope, architecture, development, and deployment.
           </p>

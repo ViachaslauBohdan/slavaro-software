@@ -46,7 +46,7 @@ export default function AboutPage() {
             About {site.name}
           </h1>
           <p className="mt-5 text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Senior technical delivery partner with 8+ years of commercial software engineering
+            Senior technical delivery partner with 10+ years of commercial software engineering
             experience — serving founders and businesses that need a product shipped, not another
             layer of agency overhead.
           </p>
@@ -65,7 +65,7 @@ export default function AboutPage() {
               and an MVP built end-to-end for Tenerifly.
             </p>
             <p>
-              We are based in Warsaw, Poland, and work remotely with companies worldwide on B2B
+              We are based in {site.location}, and work remotely with companies worldwide on B2B
               engagements. {site.market}.
             </p>
           </div>
@@ -116,12 +116,6 @@ export default function AboutPage() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               {techStack.join(" · ")}
             </p>
-          </div>
-
-          <div className="mt-12 text-sm">
-            <a href={`mailto:${site.email}`} className="text-foreground hover:underline underline-offset-4">
-              {site.email}
-            </a>
           </div>
 
           <div className="mt-16 surface-elevated p-8 max-w-3xl">

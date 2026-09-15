@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import { Phone, FileText, Rocket } from "lucide-react"
-import { deliverySteps, whyVolska, site } from "@/lib/site-content"
+import { deliverySteps, whySlavaro, site } from "@/lib/site-content"
 
 const stepIcons = [Phone, FileText, Rocket]
 
@@ -70,7 +70,7 @@ export function Expertise() {
               Why work with {site.name}?
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {whyVolska.map((item) => (
+              {whySlavaro.map((item) => (
                 <div key={item.title} className="flex items-start gap-4">
                   <div className="h-2 w-2 rounded-full bg-primary-foreground mt-2 shrink-0" />
                   <div>

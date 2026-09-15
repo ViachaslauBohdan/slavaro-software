@@ -3,6 +3,8 @@ import { site } from "@/lib/site-content"
 import { footerCompanyLinks, footerServiceLinks } from "@/lib/seo/navigation"
 
 export function Footer() {
+  const { legal } = site
+
   return (
     <footer className="border-t border-border py-12 section-alt">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
@@ -48,15 +50,34 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm text-subtle-foreground">
+        <div className="mt-10 pt-6 border-t border-border space-y-4 text-sm text-subtle-foreground">
+          <div className="grid sm:grid-cols-2 gap-4 leading-relaxed">
+            <div>
+              <p className="font-medium text-foreground">{site.name}</p>
+              <p className="mt-1">{legal.fullName}</p>
+              <p className="mt-1">{legal.legalForm}</p>
+              <p className="mt-1">
+                {legal.street}, {legal.postalCode} {legal.city}, {legal.country}
+              </p>
+            </div>
+            <div>
+              <p>NIP: {legal.nip}</p>
+              <p className="mt-1">REGON: {legal.regon}</p>
+              <p className="mt-1">
+                <a href={`mailto:${site.email}`} className="hover:text-foreground transition-colors">
+                  {site.email}
+                </a>
+                {" · "}
+                <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="hover:text-foreground transition-colors">
+                  {site.phone}
+                </a>
+              </p>
+            </div>
+          </div>
+
           <p>
             &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <a href={`mailto:${site.email}`} className="hover:text-foreground transition-colors">
-              {site.email}
-            </a>
-          </div>
         </div>
       </div>
     </footer>

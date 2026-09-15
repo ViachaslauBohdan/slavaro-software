@@ -24,7 +24,7 @@ export function Portfolio() {
             Production systems shipped
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            8+ years across fintech, IoT, SaaS, and enterprise AI — from MVP to platform scale.
+            10+ years across fintech, IoT, SaaS, and enterprise AI — from MVP to platform scale.
           </p>
         </div>
 

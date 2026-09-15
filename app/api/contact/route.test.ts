@@ -22,7 +22,7 @@ describe("POST /api/contact", () => {
     )
 
     process.env.RESEND_API_KEY = "test-resend-key"
-    process.env.CONTACT_TO_EMAIL = "contact@slavaro.com"
+    process.env.CONTACT_TO_EMAIL = "slawandr1@gmail.com"
     process.env.CONTACT_FROM_EMAIL = "SLAVARO SOFTWARE <noreply@slavaro.com>"
   })
 

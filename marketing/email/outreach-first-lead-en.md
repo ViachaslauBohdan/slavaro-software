@@ -28,7 +28,7 @@ https://calendly.com/slawandr1/30min
 or call: +48 537 437 454
 
 Kind regards,  
-Volska Landing  
+SLAVARO SOFTWARE  
 https://slavaro-landing.vercel.app/
 
 ---
@@ -46,7 +46,7 @@ If useful, please reply with a time, or book directly:
 https://calendly.com/slawandr1/30min · +48 537 437 454 · https://slavaro-landing.vercel.app/
 
 Kind regards,  
-Volska Landing
+SLAVARO SOFTWARE
 
 ---
 
@@ -59,5 +59,5 @@ Hello [Company],
 I’ll close this thread for now. If you need a fast landing page later, feel free to use the same links above.
 
 Kind regards,  
-Volska Landing  
+SLAVARO SOFTWARE  
 https://slavaro-landing.vercel.app/

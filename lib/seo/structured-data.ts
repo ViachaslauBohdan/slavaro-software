@@ -43,11 +43,20 @@ export function organizationSchema() {
     "@type": "ProfessionalService",
     "@id": `${getSiteUrl()}/#organization`,
     name: site.name,
+    legalName: site.legal.fullName,
     url: getSiteUrl(),
     email: site.email,
     telephone: site.phone,
+    taxID: site.legal.nip,
     description:
       "Senior technical delivery partner providing MVP development, custom web application development, SaaS development, software project rescue, AI integration, and business automation for companies worldwide.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: site.legal.street,
+      addressLocality: site.legal.city,
+      postalCode: site.legal.postalCode,
+      addressCountry: "PL",
+    },
     areaServed: {
       "@type": "Place",
       name: "Worldwide",

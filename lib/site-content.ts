@@ -3,11 +3,22 @@ export const site = {
   tagline: "Technical Delivery Partner",
   person: "Viachaslau Bohdan",
   role: "Senior Technical Delivery Partner",
-  location: "Warsaw, Poland",
+  location: "Zgorzała, Poland",
   market: "Serving founders and businesses worldwide",
-  email: "contact@slavaro.com",
+  email: "slawandr1@gmail.com",
   phone: "+48 537 437 454",
   calendly: "https://calendly.com/slawandr1/30min",
+  legal: {
+    fullName: "VIACHASLAU BOHDAN SLAVARO SOFTWARE",
+    owner: "Viachaslau Bohdan",
+    nip: "7010709123",
+    regon: "387998487",
+    street: "ul. Jemiołuszki 96 lok. 2",
+    postalCode: "05-500",
+    city: "Zgorzała",
+    country: "Poland",
+    legalForm: "Indywidualna działalność gospodarcza (CEIDG)",
+  },
 } as const
 
 export const navItems = [
