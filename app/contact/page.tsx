@@ -26,7 +26,7 @@ export default function ContactPage() {
         ]}
       />
       <Header />
-      <main>
+      <main id="main-content">
         <div className="mx-auto max-w-6xl px-5 lg:px-8 pt-28 lg:pt-32">
           <Breadcrumbs items={breadcrumbs} />
         </div>

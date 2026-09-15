@@ -11,9 +11,23 @@ export type PageSeo = {
   ogTitle?: string
 }
 
+function socialImages(title: string) {
+  const url = absoluteUrl("/opengraph-image")
+  return [
+    {
+      url,
+      width: 1200,
+      height: 630,
+      alt: title,
+    },
+  ]
+}
+
 export function buildPageMetadata(page: PageSeo): Metadata {
   const indexable = isProductionDeployment()
   const url = absoluteUrl(page.path)
+  const ogTitle = page.ogTitle ?? page.title
+  const images = socialImages(ogTitle)
 
   return {
     title: page.title,
@@ -22,6 +36,7 @@ export function buildPageMetadata(page: PageSeo): Metadata {
     authors: [{ name: site.person }],
     creator: site.person,
     publisher: site.name,
+    category: "technology",
     alternates: {
       canonical: url,
     },
@@ -34,6 +49,7 @@ export function buildPageMetadata(page: PageSeo): Metadata {
             follow: true,
             "max-image-preview": "large",
             "max-snippet": -1,
+            "max-video-preview": -1,
           },
         }
       : { index: false, follow: false },
@@ -42,13 +58,15 @@ export function buildPageMetadata(page: PageSeo): Metadata {
       locale: "en_US",
       url,
       siteName: site.name,
-      title: page.ogTitle ?? page.title,
+      title: ogTitle,
       description: page.description,
+      images,
     },
     twitter: {
       card: "summary_large_image",
-      title: page.ogTitle ?? page.title,
+      title: ogTitle,
       description: page.description,
+      images: [absoluteUrl("/opengraph-image")],
     },
   }
 }
@@ -56,9 +74,9 @@ export function buildPageMetadata(page: PageSeo): Metadata {
 export const PAGE_SEO: Record<string, PageSeo> = {
   home: {
     path: "/",
-    title: "MVP & Custom Web Application Development | SLAVARO SOFTWARE",
+    title: "MVP & Web App Development | SLAVARO SOFTWARE",
     description:
-      "Senior technical delivery partner for founders and SMBs. MVP development, custom web applications, SaaS builds, product rescue, AI integration, and business automation — from scope to production launch.",
+      "Senior technical partner for founders and SMBs. MVP development, SaaS, web apps, product rescue, and AI — from scope to production launch.",
     keywords: [
       "MVP development",
       "custom web application development",
@@ -66,75 +84,82 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "startup software development",
       "software development partner",
       "technical delivery partner",
+      "product rescue",
+      "AI integration services",
     ],
   },
   mvpDevelopment: {
     path: "/mvp-development",
-    title: "MVP Development Services for Startups | SLAVARO SOFTWARE",
+    title: "MVP Development Services | SLAVARO SOFTWARE",
     description:
-      "Rapid MVP development for startups and SaaS founders. Scope, build, and launch a production-ready MVP — proof of concept, authentication, payments, and deployment included.",
+      "Build and launch a production-ready MVP fast. Scope, architecture, auth, payments, and deployment — without hiring a full engineering team.",
     keywords: [
       "MVP development services",
       "startup MVP development",
       "SaaS MVP development",
       "rapid MVP development",
       "build an MVP",
+      "hire MVP developers",
     ],
   },
   webApplicationDevelopment: {
     path: "/web-application-development",
-    title: "Custom Web Application Development Services | SLAVARO SOFTWARE",
+    title: "Custom Web Application Development | SLAVARO SOFTWARE",
     description:
-      "Custom web application development for businesses. Customer portals, internal tools, marketplaces, booking systems, and admin panels — built for production from day one.",
+      "Custom web apps for business: portals, internal tools, marketplaces, booking systems, and admin panels — built for production from day one.",
     keywords: [
       "custom web application development",
       "web application development services",
       "web platform development",
       "custom web app development",
+      "business web application",
     ],
   },
   saasDevelopment: {
     path: "/saas-development",
-    title: "SaaS Development Services for Startups | SLAVARO SOFTWARE",
+    title: "SaaS Development Services | SLAVARO SOFTWARE",
     description:
-      "SaaS application development for founders. Multi-tenant architecture, subscriptions, onboarding, and scalable backends — one senior delivery team from MVP through launch.",
+      "SaaS development for founders: multi-tenant architecture, subscriptions, onboarding, and scalable backends from MVP through launch.",
     keywords: [
       "SaaS development services",
       "SaaS application development",
       "SaaS development partner",
       "SaaS MVP development",
+      "build a SaaS product",
     ],
   },
   startupSoftwareDevelopment: {
     path: "/startup-software-development",
     title: "Software Development for Startups | SLAVARO SOFTWARE",
     description:
-      "Software development partner for startups. Ship your product without hiring a full team — architecture, frontend, backend, and launch handled by our senior team.",
+      "Startup software development partner. Architecture, frontend, backend, and launch — ship your product without hiring a full team first.",
     keywords: [
       "software development for startups",
       "startup software development",
       "startup development partner",
       "technical partner for startup",
+      "startup engineering partner",
     ],
   },
   productRescue: {
     path: "/product-rescue",
-    title: "MVP & Software Project Rescue Services | SLAVARO SOFTWARE",
+    title: "MVP & Software Project Rescue | SLAVARO SOFTWARE",
     description:
-      "Finish an unfinished MVP or web application. Take over existing codebases, fix bugs blocking launch, productionize AI prototypes, and ship — without an unnecessary rebuild.",
+      "Finish unfinished MVPs and web apps. Take over codebases, fix launch blockers, productionize AI prototypes — without an unnecessary rebuild.",
     keywords: [
       "MVP rescue",
       "finish my MVP",
       "software project rescue",
       "unfinished software project",
       "productionize prototype",
+      "take over existing codebase",
     ],
   },
   reactDevelopment: {
     path: "/react-development",
     title: "React, Vue & Angular Development | SLAVARO SOFTWARE",
     description:
-      "React, Vue, and Angular development for SaaS and product teams. Modern frontends, server-side rendering, design systems, and performance — built for maintainability and scale.",
+      "React, Vue, and Angular development for SaaS and product teams. Modern frontends, design systems, and performance built to scale.",
     keywords: [
       "React development services",
       "Vue development services",
@@ -142,42 +167,62 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "React developer",
       "Vue developer",
       "Angular developer",
+      "frontend development services",
     ],
   },
   aiIntegration: {
     path: "/ai-integration",
-    title: "AI Integration & Custom AI Assistant Development | SLAVARO SOFTWARE",
+    title: "AI Integration Services | SLAVARO SOFTWARE",
     description:
-      "Practical AI integration for businesses. Custom AI assistants, RAG document search, LLM workflows, and knowledge-base tools that reduce manual work — not demo projects.",
+      "Practical AI for business: custom assistants, RAG document search, LLM workflows, and knowledge tools that reduce manual work.",
     keywords: [
       "AI integration services",
       "custom AI assistant development",
       "RAG development services",
       "LLM integration services",
+      "business AI automation",
     ],
   },
   businessAutomation: {
     path: "/business-automation",
-    title: "Business Automation & API Integration Services | SLAVARO SOFTWARE",
+    title: "Business Automation Services | SLAVARO SOFTWARE",
     description:
-      "Business automation development for companies. API integrations, CRM connections, workflow automation, and reporting — replace spreadsheet processes with reliable software.",
+      "Business automation and API integrations: CRM connections, workflows, and reporting that replace spreadsheet processes with reliable software.",
     keywords: [
       "business automation development",
       "workflow automation development",
       "API integration services",
       "custom business automation",
+      "CRM integration development",
     ],
   },
   about: {
     path: "/about",
-    title: "About SLAVARO SOFTWARE — Senior Technical Delivery Partner | SLAVARO SOFTWARE",
+    title: "About | Senior Delivery Partner | SLAVARO SOFTWARE",
     description:
-      "10+ years building production software for SaaS, fintech, IoT, and enterprise teams. Senior technical delivery partner serving founders and businesses worldwide — direct, accountable, end-to-end.",
+      "10+ years shipping production software for SaaS, fintech, IoT, and enterprise. Direct, accountable technical delivery worldwide.",
+    keywords: [
+      "technical delivery partner",
+      "senior software engineer for hire",
+      "software development company Poland",
+    ],
   },
   contact: {
     path: "/contact",
-    title: "Discuss Your Software Project | SLAVARO SOFTWARE",
+    title: "Contact | Discuss Your Project | SLAVARO SOFTWARE",
     description:
-      "Tell us what you're building, fixing, or automating. MVP development, web platforms, product rescue, and AI integration for startups and businesses. Response within 24 hours.",
+      "Tell us what you're building, fixing, or automating. MVP, web platforms, rescue, and AI for startups and businesses. Reply within 24 hours.",
+    keywords: [
+      "contact software development partner",
+      "hire MVP developer",
+      "book software discovery call",
+    ],
+  },
+  privacy: {
+    path: "/privacy",
+    title: "Privacy Policy | SLAVARO SOFTWARE",
+    description:
+      "How SLAVARO SOFTWARE collects and uses contact form data, cookies, and analytics when you use our website.",
+    keywords: ["privacy policy", "GDPR contact form"],
   },
 }

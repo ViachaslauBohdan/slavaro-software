@@ -12,6 +12,7 @@ export const ROUTES = {
   businessAutomation: "/business-automation",
   about: "/about",
   contact: "/contact",
+  privacy: "/privacy",
 } as const
 
 export type RouteKey = keyof typeof ROUTES
@@ -28,6 +29,7 @@ export const INDEXABLE_ROUTES: RouteKey[] = [
   "businessAutomation",
   "about",
   "contact",
+  "privacy",
 ]
 
 export function absoluteUrl(path: string): string {

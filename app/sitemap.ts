@@ -14,15 +14,18 @@ const PRIORITIES: Record<string, number> = {
   "/business-automation": 0.8,
   "/about": 0.6,
   "/contact": 0.7,
+  "/privacy": 0.3,
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Stable-ish stamp per deploy day (avoids fake "always now" freshness)
   const lastModified = new Date()
+  lastModified.setUTCHours(0, 0, 0, 0)
 
   return Object.values(PAGE_SEO).map((page) => ({
     url: absoluteUrl(page.path),
     lastModified,
-    changeFrequency: page.path === "/" ? "weekly" : "monthly",
+    changeFrequency: page.path === "/" ? "weekly" : page.path === "/privacy" ? "yearly" : "monthly",
     priority: PRIORITIES[page.path] ?? 0.5,
   }))
 }

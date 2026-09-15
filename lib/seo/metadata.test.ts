@@ -10,7 +10,7 @@ afterEach(() => {
 
 describe("PAGE_SEO", () => {
   it("defines metadata for every indexable page", () => {
-    expect(Object.keys(PAGE_SEO)).toHaveLength(11)
+    expect(Object.keys(PAGE_SEO)).toHaveLength(12)
     for (const page of Object.values(PAGE_SEO)) {
       expect(page.title.length).toBeGreaterThan(10)
       expect(page.description.length).toBeGreaterThan(40)

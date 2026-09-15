@@ -39,7 +39,7 @@ export default function AboutPage() {
         ]}
       />
       <Header />
-      <main>
+      <main id="main-content">
         <Section className="pt-28 lg:pt-32">
           <Breadcrumbs items={breadcrumbs} />
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-3xl text-balance">

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { FormEvent, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -15,6 +16,7 @@ import {
 import { Section } from "@/components/section"
 import { FadeIn } from "@/components/fade-in"
 import { contactNeeds, site } from "@/lib/site-content"
+import { ROUTES } from "@/lib/seo/routes"
 
 export function ContactForm({ variant = "home" }: { variant?: "home" | "page" }) {
   const [agreed, setAgreed] = useState(false)
@@ -184,7 +186,14 @@ export function ContactForm({ variant = "home" }: { variant?: "home" | "page" })
                   onCheckedChange={(checked) => setAgreed(checked as boolean)}
                 />
                 <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed">
-                  I agree to be contacted about my inquiry.
+                  I agree to be contacted about my inquiry. See our{" "}
+                  <Link
+                    href={ROUTES.privacy}
+                    className="text-link hover:underline underline-offset-4"
+                  >
+                    Privacy Policy
+                  </Link>
+                  .
                 </label>
               </div>
 

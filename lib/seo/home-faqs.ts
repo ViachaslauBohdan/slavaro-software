@@ -31,4 +31,19 @@ export const HOME_FAQS: FaqItem[] = [
     answer:
       "Common stacks include React, Vue, Angular, TypeScript, Node.js, NestJS, PostgreSQL, AWS, and Docker. AI work may include RAG pipelines, vector databases, and LLM APIs. The stack is chosen for maintainability and product fit.",
   },
+  {
+    question: "How much does a typical engagement cost?",
+    answer:
+      "Pricing depends on scope. Focused MVPs and landing-style builds can start in the low thousands of euros. Full web platforms and SaaS products are scoped after discovery with fixed milestones where possible.",
+  },
+  {
+    question: "Who will I work with day to day?",
+    answer:
+      "You work directly with a senior delivery partner — not through layers of account managers or junior handoffs. Architecture, development, and launch stay under one accountable team.",
+  },
+  {
+    question: "Do you sign NDAs and work under a contract?",
+    answer:
+      "Yes. Commercial work is done under a written agreement. We can sign a mutual NDA before detailed discovery when needed.",
+  },
 ]

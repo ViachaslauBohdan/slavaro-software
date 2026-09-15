@@ -55,7 +55,7 @@ export function ServicePageTemplate({ pageKey }: { pageKey: string }) {
     <>
       <JsonLd data={schema} />
       <Header />
-      <main>
+      <main id="main-content">
         <Section className="pt-28 lg:pt-32">
           <article>
             <Breadcrumbs items={breadcrumbs} />

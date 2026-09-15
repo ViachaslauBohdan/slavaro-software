@@ -20,6 +20,7 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
 }
 
 export function webSiteSchema() {
+  const orgId = `${getSiteUrl()}/#organization`
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -29,25 +30,26 @@ export function webSiteSchema() {
     description:
       "Senior technical delivery partner for startups and businesses. MVP development, custom web applications, SaaS, product rescue, and AI integration.",
     inLanguage: "en",
-    publisher: {
-      "@type": "Organization",
-      name: site.name,
-      url: getSiteUrl(),
-    },
+    publisher: { "@id": orgId },
   }
 }
 
 export function organizationSchema() {
+  const base = getSiteUrl()
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": `${getSiteUrl()}/#organization`,
+    "@id": `${base}/#organization`,
     name: site.name,
     legalName: site.legal.fullName,
-    url: getSiteUrl(),
+    alternateName: ["Slavaro", "SLAVARO"],
+    url: base,
+    logo: absoluteUrl("/icon.svg"),
+    image: absoluteUrl("/opengraph-image"),
     email: site.email,
     telephone: site.phone,
     taxID: site.legal.nip,
+    vatID: site.legal.nip,
     description:
       "Senior technical delivery partner providing MVP development, custom web application development, SaaS development, software project rescue, AI integration, and business automation for companies worldwide.",
     address: {
@@ -57,11 +59,25 @@ export function organizationSchema() {
       postalCode: site.legal.postalCode,
       addressCountry: "PL",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      addressCountry: "PL",
+    },
     areaServed: {
       "@type": "Place",
       name: "Worldwide",
     },
-    availableLanguage: "en",
+    availableLanguage: ["en", "pl", "ru"],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: site.email,
+        telephone: site.phone,
+        availableLanguage: ["en", "pl", "ru"],
+        areaServed: "Worldwide",
+      },
+    ],
     founder: personSchema(),
     knowsAbout: [
       "MVP Development",
@@ -73,20 +89,74 @@ export function organizationSchema() {
       "Angular Development",
       "AI Integration",
       "Business Process Automation",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
     ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Software development services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "MVP Development",
+            url: absoluteUrl("/mvp-development"),
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Custom Web Application Development",
+            url: absoluteUrl("/web-application-development"),
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "SaaS Development",
+            url: absoluteUrl("/saas-development"),
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Product Rescue",
+            url: absoluteUrl("/product-rescue"),
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "AI Integration",
+            url: absoluteUrl("/ai-integration"),
+          },
+        },
+      ],
+    },
   }
 }
 
 export function personSchema() {
   return {
+    "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${getSiteUrl()}/#person`,
     name: site.person,
     jobTitle: site.role,
     email: site.email,
+    telephone: site.phone,
     url: absoluteUrl("/about"),
-    worksFor: {
-      "@type": "Organization",
-      name: site.name,
+    worksFor: { "@id": `${getSiteUrl()}/#organization` },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: site.legal.city,
+      addressCountry: "PL",
     },
   }
 }
@@ -110,6 +180,7 @@ export function webPageSchema({
     isPartOf: { "@id": `${getSiteUrl()}/#website` },
     about: { "@id": `${getSiteUrl()}/#organization` },
     inLanguage: "en",
+    primaryImageOfPage: absoluteUrl("/opengraph-image"),
   }
 }
 
@@ -125,6 +196,7 @@ export function serviceSchema({
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${absoluteUrl(path)}#service`,
     name,
     description,
     url: absoluteUrl(path),
@@ -134,6 +206,7 @@ export function serviceSchema({
       name: "Worldwide",
     },
     serviceType: name,
+    category: "Software Development",
   }
 }
 

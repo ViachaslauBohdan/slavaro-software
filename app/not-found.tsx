@@ -7,7 +7,7 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-6xl px-5 lg:px-8 py-32 text-center">
+      <main id="main-content" className="mx-auto max-w-6xl px-5 lg:px-8 py-32 text-center">
         <h1 className="text-3xl font-bold">Page not found</h1>
         <p className="mt-4 text-muted-foreground">
           The page you are looking for does not exist or has moved.

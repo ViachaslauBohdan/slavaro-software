@@ -101,6 +101,16 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         answer:
           "Yes. Many engagements continue after launch for new features, performance improvements, integrations, or ongoing product development.",
       },
+      {
+        question: "How much does MVP development cost?",
+        answer:
+          "Cost depends on scope, integrations, and timeline. After a short discovery call we provide a fixed-scope estimate with milestones so you know what you are paying for before work starts.",
+      },
+      {
+        question: "Do I need a technical co-founder first?",
+        answer:
+          "No. Many founders hire us as their technical delivery partner until product-market fit justifies a full-time engineering hire.",
+      },
     ],
     related: [
       { href: ROUTES.saasDevelopment, label: "SaaS development services" },
