@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { site } from "@/lib/site-content"
-import { footerCompanyLinks, footerServiceLinks } from "@/lib/seo/navigation"
+import { footerCompanyLinks, footerServiceLinks, myAppsUrl } from "@/lib/seo/navigation"
 
 export function Footer() {
   const { legal } = site
@@ -74,6 +74,17 @@ export function Footer() {
             </div>
           </div>
 
+          <p>
+            My apps:{" "}
+            <a
+              href={myAppsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-foreground transition-colors"
+            >
+              {myAppsUrl}
+            </a>
+          </p>
           <p>
             &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>

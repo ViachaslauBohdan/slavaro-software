@@ -7,6 +7,12 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { site } from "@/lib/site-content"
 import { primaryNavLinks, serviceNavLinks } from "@/lib/seo/navigation"
+
+const topLevelNavLinks = primaryNavLinks.filter((item) => item.name !== "Services")
+
+function isExternalNavLink(item: (typeof topLevelNavLinks)[number]) {
+  return "external" in item && item.external
+}
 import { scrollToId } from "@/lib/scroll"
 import { cn } from "@/lib/utils"
 
@@ -82,9 +88,18 @@ export function Header() {
             )}
           </div>
 
-          {primaryNavLinks
-            .filter((item) => item.name !== "Services")
-            .map((item) => (
+          {topLevelNavLinks.map((item) =>
+            isExternalNavLink(item) ? (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3.5 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {item.name}
+              </a>
+            ) : (
               <Link
                 key={item.href}
                 href={item.href}
@@ -92,7 +107,8 @@ export function Header() {
               >
                 {item.name}
               </Link>
-            ))}
+            )
+          )}
         </div>
 
         <div className="hidden lg:block">
@@ -128,9 +144,19 @@ export function Header() {
             </Link>
           ))}
           <div className="border-t border-border my-2 pt-2">
-            {primaryNavLinks
-              .filter((item) => item.name !== "Services")
-              .map((item) => (
+            {topLevelNavLinks.map((item) =>
+              isExternalNavLink(item) ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block py-3 text-sm text-muted-foreground hover:text-foreground"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ) : (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -139,7 +165,8 @@ export function Header() {
                 >
                   {item.name}
                 </Link>
-              ))}
+              )
+            )}
             <button
               type="button"
               className="block w-full text-left py-3 text-sm text-muted-foreground hover:text-foreground"

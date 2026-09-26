@@ -11,10 +11,13 @@ export const serviceNavLinks = [
   { name: "Automation", href: ROUTES.businessAutomation },
 ] as const
 
+export const myAppsUrl = "https://my-apps-psi-eight.vercel.app/"
+
 export const primaryNavLinks = [
   { name: "Services", href: ROUTES.mvpDevelopment, children: serviceNavLinks },
   { name: "Examples", href: ROUTES.examples },
   { name: "About", href: ROUTES.about },
+  { name: "My apps", href: myAppsUrl, external: true },
   { name: "Contact", href: ROUTES.contact },
 ] as const
 
